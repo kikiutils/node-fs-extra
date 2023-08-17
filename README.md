@@ -144,7 +144,7 @@ Synchronous versions of functions are appended with 'Sync'.
 - utimes
 - writeFile
 
-### From **fs-extra** package
+### From **[fs-extra](https://www.npmjs.com/package/fs-extra)** package
 - copy
 - emptyDir
 - ensureFile

@@ -41,11 +41,11 @@ Originally used operation:
 import fse from 'fs-extra';
 
 async function r(o: string, n: string) {
-	try {
-		await fse.rename(o, n);
-		return true;
-	} catch (error) { }
-	return false;
+  try {
+    await fse.rename(o, n);
+    return true;
+  } catch (error) { }
+  return false;
 }
 
 const result = await r(oldPath, newPath);
@@ -68,9 +68,9 @@ Originally used operation:
 import fse from 'fs-extra';
 
 async function rJ(path: string) {
-	try {
-		return await fse.readJson(path);
-	} catch (error) { }
+  try {
+    return await fse.readJson(path);
+  } catch (error) { }
 }
 
 const result = await rJ(path);
@@ -108,15 +108,17 @@ v20.5.1
 
 To install and set up the library, run:
 
-```sh
-$ npm i @kikiutils/fs-extra
+```bash
+$ npm i @kikiutils/fs-extra     # Npm
+$ pnpm add @kikiutils/fs-extra  # Pnpm
+$ yarn add @kikiutils/fs-extra  # Yarn
 ```
 
-Or if you prefer using Pnpm or Yarn:
-
-```sh
-$ pnpm add @kikiutils/fs-extra
-$ yarn add @kikiutils/fs-extra
+If you use typescript, the **@types/fs-extra** package must be installed for full type hinting and checking:
+```bash
+$ npm i -D @types/fs-extra    # Npm
+$ pnpm add -D @types/fs-extra # Pnpm
+$ yarn add -D @types/fs-extra # Yarn
 ```
 
 ## Methods

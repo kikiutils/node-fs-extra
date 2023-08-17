@@ -1,0 +1,31 @@
+{
+  "name": "@kikiutils/fs-extra",
+  "version": "1.0.0",
+  "description": "The fs-extra package wrapped with try/catch.",
+  "license": "MIT",
+  "author": {
+    "name": "kiki-kanri"
+  },
+  "homepage": "https://github.com/kiki-kanri/kikiutils-node-fs-extra#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiki-kanri/kikiutils-node-fs-extra.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kiki-kanri/kikiutils-node-fs-extra/issues"
+  },
+  "type": "commonjs",
+  "main": "./lib/index.js",
+  "files": [
+    "./lib/**/*"
+  ],
+  "scripts": {
+    "build": "rm -rf ./lib && tsc"
+  },
+  "keywords": [
+    "fs-extra"
+  ],
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}

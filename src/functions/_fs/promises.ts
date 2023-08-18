@@ -18,14 +18,16 @@ export const unlink = tryAndGetBoolean(fsp.unlink);
 export const utimes = tryAndGetBoolean(fsp.utimes);
 export const writeFile = tryAndGetBoolean(fsp.writeFile);
 
-// Get Data TODO: overloads
-// export const lstat = tryAndGetData(fsp.lstat);
-// export const mkdir = tryAndGetData(fsp.mkdir);
-// export const mkdtemp = tryAndGetData(fsp.mkdtemp);
+// Get Data
 export const open = tryAndGetData(fsp.open);
 export const opendir = tryAndGetData(fsp.opendir);
-// export const readdir = tryAndGetData(fsp.readdir);
-// export const readFile = tryAndGetData(fsp.readFile);
-// export const readlink = tryAndGetData(fsp.readlink);
-// export const realpath = tryAndGetData(fsp.realpath);
-// export const stat = tryAndGetData(fsp.stat);
+
+// TODO: overloads
+export const lstat = tryAndGetData(fsp.lstat);
+export const mkdir = tryAndGetData(fsp.mkdir);
+export const mkdtemp = tryAndGetData(fsp.mkdtemp);
+export const readdir = tryAndGetData(fsp.readdir);
+export const readFile = tryAndGetData(fsp.readFile);
+export const readlink = tryAndGetData(fsp.readlink);
+export const realpath = tryAndGetData(fsp.realpath);
+export const stat = tryAndGetData(fsp.stat);

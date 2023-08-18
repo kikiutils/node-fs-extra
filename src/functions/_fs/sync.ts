@@ -19,13 +19,15 @@ export const utimesSync = tryAndGetBoolean(fs.utimesSync);
 export const writeFileSync = tryAndGetBoolean(fs.writeFileSync);
 
 // Get Data
-// export const lstatSync = tryAndGetData(fs.lstatSync);
-// export const mkdirSync = tryAndGetData(fs.mkdirSync);
-// export const mkdtempSync = tryAndGetData(fs.mkdtempSync);
 export const openSync = tryAndGetData(fs.openSync);
 export const opendirSync = tryAndGetData(fs.opendirSync);
-// export const readdirSync = tryAndGetData(fs.readdirSync);
-// export const readFileSync = tryAndGetData(fs.readFileSync);
-// export const readlinkSync = tryAndGetData(fs.readlinkSync);
-// export const realpathSync = tryAndGetData(fs.realpathSync);
-// export const statSync = tryAndGetData(fs.statSync);
+
+// TODO: overloads
+export const lstatSync = tryAndGetData(fs.lstatSync);
+export const mkdirSync = tryAndGetData(fs.mkdirSync);
+export const mkdtempSync = tryAndGetData(fs.mkdtempSync);
+export const readdirSync = tryAndGetData(fs.readdirSync);
+export const readFileSync = tryAndGetData(fs.readFileSync);
+export const readlinkSync = tryAndGetData(fs.readlinkSync);
+export const realpathSync = tryAndGetData(fs.realpathSync);
+export const statSync = tryAndGetData(fs.statSync);

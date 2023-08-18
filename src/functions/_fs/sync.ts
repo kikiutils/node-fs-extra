@@ -9,6 +9,12 @@ export const chmodSync = tB(fs.chmodSync);
 export const chownSync = tB(fs.chownSync);
 export const closeSync = tB(fs.closeSync);
 export const copyFileSync = tB(fs.copyFileSync);
+
+/**
+ * This function is supported in Node v16.7.0 and later.
+ *
+ * If you are using a version prior to 16.7.0, please refrain from using this function.
+ */
 export const cpSync = tB(fs.cpSync);
 export const fchmodSync = tB(fs.fchmodSync);
 export const fchownSync = tB(fs.fchownSync);
@@ -48,5 +54,11 @@ export const readdirSync = tD(fs.readdirSync);
 export const readlinkSync = tD(fs.readlinkSync);
 export const realpathSync = tD(fs.realpathSync);
 export const statSync = tD(fs.statSync);
+
+/**
+ * This function is supported in Node from v18.15.0 up to, but not including v19, as well as v19.6.0 and later.
+ *
+ * If you are using a version outside of the specified range, please refrain from using this function.
+ */
 export const statfsSync = tD(fs.statfsSync);
 export const writeSync = tD(fs.writeSync);

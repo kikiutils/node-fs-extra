@@ -10,6 +10,12 @@ export const chmod = tB(fsp.chmod);
 export const chown = tB(fsp.chown);
 export const close = tB(fs.close.__promisify__);
 export const copyFile = tB(fsp.copyFile);
+
+/**
+ * This function is supported in Node v16.7.0 and later.
+ *
+ * If you are using a version prior to 16.7.0, please refrain from using this function.
+ */
 export const cp = tB(fsp.cp);
 export const fchmod = tB(fs.fchmod.__promisify__);
 export const fchown = tB(fs.fchown.__promisify__);
@@ -46,5 +52,11 @@ export const readdir = tD(fsp.readdir);
 export const readlink = tD(fsp.readlink);
 export const realpath = tD(fsp.realpath);
 export const stat = tD(fsp.stat);
+
+/**
+ * This function is supported in Node from v18.15.0 up to, but not including v19, as well as v19.6.0 and later.
+ *
+ * If you are using a version outside of the specified range, please refrain from using this function.
+ */
 export const statfs = tD(fsp.statfs);
 export const write = tD(fs.write.__promisify__);

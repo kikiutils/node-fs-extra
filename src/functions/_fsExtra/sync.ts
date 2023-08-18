@@ -1,24 +1,25 @@
-import { tryAndGetBoolean, tryAndGetData } from '@kikiutils/wrappers';
 import fse from 'fs-extra';
 
+import { tB, tD } from '../../wrappers';
+
 // Get boolean
-export const copySync  = tryAndGetBoolean(fse.copySync);
-export const emptyDirSync = tryAndGetBoolean(fse.emptyDirSync);
-export const ensureDirSync = tryAndGetBoolean(fse.ensureDirSync);
-export const ensureFileSync = tryAndGetBoolean(fse.ensureFileSync);
-export const ensureLinkSync = tryAndGetBoolean(fse.ensureLinkSync);
-export const ensureSymlinkSync = tryAndGetBoolean(fse.ensureSymlinkSync);
+export const copySync  = tB(fse.copySync);
+export const emptyDirSync = tB(fse.emptyDirSync);
+export const ensureDirSync = tB(fse.ensureDirSync);
+export const ensureFileSync = tB(fse.ensureFileSync);
+export const ensureLinkSync = tB(fse.ensureLinkSync);
+export const ensureSymlinkSync = tB(fse.ensureSymlinkSync);
 export const mkdirpSync = ensureDirSync;
 export const mkdirsSync = ensureDirSync;
-export const moveSync = tryAndGetBoolean(fse.moveSync);
-export const outputFileSync = tryAndGetBoolean(fse.outputFileSync);
-export const outputJSONSync = tryAndGetBoolean(fse.outputJSONSync);
-export const outputJsonSync = tryAndGetBoolean(fse.outputJsonSync);
-export const removeSync = tryAndGetBoolean(fse.removeSync);
-export const writeJsonSync = tryAndGetBoolean(fse.writeJsonSync);
+export const moveSync = tB(fse.moveSync);
+export const outputFileSync = tB(fse.outputFileSync);
+export const outputJSONSync = tB(fse.outputJSONSync);
+export const outputJsonSync = tB(fse.outputJsonSync);
+export const removeSync = tB(fse.removeSync);
+export const writeJsonSync = tB(fse.writeJsonSync);
 
 // Get data
-export const readJsonSync = tryAndGetData(fse.readJsonSync);
+export const readJsonSync = tD(fse.readJsonSync);
 
 // Original functions
 export { pathExistsSync } from 'fs-extra';

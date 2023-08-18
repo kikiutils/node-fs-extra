@@ -1,51 +1,52 @@
-import { tryAndGetBoolean, tryAndGetData } from '@kikiutils/wrappers';
 import fs from 'fs';
 
+import { tB, tD } from '../../wrappers';
+
 // Get boolean
-export const accessSync = tryAndGetBoolean(fs.accessSync);
-export const appendFileSync = tryAndGetBoolean(fs.appendFileSync);
-export const chmodSync = tryAndGetBoolean(fs.chmodSync);
-export const chownSync = tryAndGetBoolean(fs.chownSync);
-export const closeSync = tryAndGetBoolean(fs.closeSync);
-export const copyFileSync = tryAndGetBoolean(fs.copyFileSync);
-export const cpSync = tryAndGetBoolean(fs.cpSync);
-export const fchmodSync = tryAndGetBoolean(fs.fchmodSync);
-export const fchownSync = tryAndGetBoolean(fs.fchownSync);
-export const fdatasyncSync = tryAndGetBoolean(fs.fdatasyncSync);
-export const fsyncSync = tryAndGetBoolean(fs.fsyncSync);
-export const ftruncateSync = tryAndGetBoolean(fs.ftruncateSync);
-export const futimesSync = tryAndGetBoolean(fs.futimesSync);
-export const lchownSync = tryAndGetBoolean(fs.lchownSync);
-export const linkSync = tryAndGetBoolean(fs.linkSync);
-export const lutimesSync = tryAndGetBoolean(fs.lutimesSync);
-export const renameSync = tryAndGetBoolean(fs.renameSync);
-export const rmSync = tryAndGetBoolean(fs.rmSync);
-export const rmdirSync = tryAndGetBoolean(fs.rmdirSync);
-export const symlinkSync = tryAndGetBoolean(fs.symlinkSync);
-export const truncateSync = tryAndGetBoolean(fs.truncateSync);
-export const unlinkSync = tryAndGetBoolean(fs.unlinkSync);
-export const utimesSync = tryAndGetBoolean(fs.utimesSync);
-export const writeFileSync = tryAndGetBoolean(fs.writeFileSync);
+export const accessSync = tB(fs.accessSync);
+export const appendFileSync = tB(fs.appendFileSync);
+export const chmodSync = tB(fs.chmodSync);
+export const chownSync = tB(fs.chownSync);
+export const closeSync = tB(fs.closeSync);
+export const copyFileSync = tB(fs.copyFileSync);
+export const cpSync = tB(fs.cpSync);
+export const fchmodSync = tB(fs.fchmodSync);
+export const fchownSync = tB(fs.fchownSync);
+export const fdatasyncSync = tB(fs.fdatasyncSync);
+export const fsyncSync = tB(fs.fsyncSync);
+export const ftruncateSync = tB(fs.ftruncateSync);
+export const futimesSync = tB(fs.futimesSync);
+export const lchownSync = tB(fs.lchownSync);
+export const linkSync = tB(fs.linkSync);
+export const lutimesSync = tB(fs.lutimesSync);
+export const renameSync = tB(fs.renameSync);
+export const rmSync = tB(fs.rmSync);
+export const rmdirSync = tB(fs.rmdirSync);
+export const symlinkSync = tB(fs.symlinkSync);
+export const truncateSync = tB(fs.truncateSync);
+export const unlinkSync = tB(fs.unlinkSync);
+export const utimesSync = tB(fs.utimesSync);
+export const writeFileSync = tB(fs.writeFileSync);
 
 // Get data
-export const openSync = tryAndGetData(fs.openSync);
-export const opendirSync = tryAndGetData(fs.opendirSync);
-export const readvSync = tryAndGetData(fs.readvSync);
-export const writevSync = tryAndGetData(fs.writevSync);
+export const openSync = tD(fs.openSync);
+export const opendirSync = tD(fs.opendirSync);
+export const readvSync = tD(fs.readvSync);
+export const writevSync = tD(fs.writevSync);
 
 // Original functions
 export { existsSync } from 'fs';
 
 // TODO: overloads
-export const fstatSync = tryAndGetData(fs.fstatSync);
-export const lstatSync = tryAndGetData(fs.lstatSync);
-export const mkdirSync = tryAndGetData(fs.mkdirSync);
-export const mkdtempSync = tryAndGetData(fs.mkdtempSync);
-export const readFileSync = tryAndGetData(fs.readFileSync);
-export const readSync = tryAndGetData(fs.readSync);
-export const readdirSync = tryAndGetData(fs.readdirSync);
-export const readlinkSync = tryAndGetData(fs.readlinkSync);
-export const realpathSync = tryAndGetData(fs.realpathSync);
-export const statSync = tryAndGetData(fs.statSync);
-export const statfsSync = tryAndGetData(fs.statfsSync);
-export const writeSync = tryAndGetData(fs.writeSync);
+export const fstatSync = tD(fs.fstatSync);
+export const lstatSync = tD(fs.lstatSync);
+export const mkdirSync = tD(fs.mkdirSync);
+export const mkdtempSync = tD(fs.mkdtempSync);
+export const readFileSync = tD(fs.readFileSync);
+export const readSync = tD(fs.readSync);
+export const readdirSync = tD(fs.readdirSync);
+export const readlinkSync = tD(fs.readlinkSync);
+export const realpathSync = tD(fs.realpathSync);
+export const statSync = tD(fs.statSync);
+export const statfsSync = tD(fs.statfsSync);
+export const writeSync = tD(fs.writeSync);

@@ -13,13 +13,15 @@ export const mkdirpSync = ensureDirSync;
 export const mkdirsSync = ensureDirSync;
 export const moveSync = tB(fse.moveSync);
 export const outputFileSync = tB(fse.outputFileSync);
-export const outputJSONSync = tB(fse.outputJSONSync);
 export const outputJsonSync = tB(fse.outputJsonSync);
+export const outputJSONSync = outputJsonSync;
 export const removeSync = tB(fse.removeSync);
 export const writeJsonSync = tB(fse.writeJsonSync);
+export const writeJSONSync = writeJsonSync;
 
 // Get data
 export const readJsonSync = tD(fse.readJsonSync);
+export const readJSONSync = readJsonSync;
 
 // Original functions
 export { pathExistsSync } from 'fs-extra';

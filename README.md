@@ -9,13 +9,14 @@
   - [Table of contents](#table-of-contents)
   - [Description](#description)
   - [Examples](#examples)
-    - [rename](#rename)
     - [readJson](#readjson)
+    - [rename](#rename)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Methods](#methods)
     - [Native fs promises](#native-fs-promises)
     - [From **fs-extra** package](#from-fs-extra-package)
+    - [Overloads](#overloads)
   - [Versioning](#versioning)
   - [Authors](#authors)
   - [License](#license)
@@ -33,6 +34,31 @@ The rest of the functions will return the value they should have returned, or re
 ## Examples
 
 You can use this package to simplify your code like this:
+
+### readJson
+Originally used operation:
+```typescript
+import fse from 'fs-extra';
+
+async function rJ(path: string) {
+  try {
+    return await fse.readJson(path);
+  } catch (error) { }
+}
+
+const result = await rJ(path);
+// Any json data - successfully read
+// undefined - an error occurred
+```
+
+Use this package:
+```typescript
+import kFse from '@kikiutils/fs-extra';
+
+const result = await kFse.readJson(path);
+// Any json data - successfully read
+// undefined - an error occurred
+```
 
 ### rename
 
@@ -60,31 +86,6 @@ import kFse from '@kikiutils/fs-extra';
 const result = await kFse.rename(oldPath, newPath);
 // true - successfully renamed
 // false - an error occurred
-```
-
-### readJson
-Originally used operation:
-```typescript
-import fse from 'fs-extra';
-
-async function rJ(path: string) {
-  try {
-    return await fse.readJson(path);
-  } catch (error) { }
-}
-
-const result = await rJ(path);
-// Any json data - successfully read
-// undefined - an error occurred
-```
-
-Use this package:
-```typescript
-import kFse from '@kikiutils/fs-extra';
-
-const result = await kFse.readJson(path);
-// Any json data - successfully read
-// undefined - an error occurred
 ```
 
 ## Prerequisites
@@ -160,6 +161,19 @@ Synchronous versions of functions are appended with 'Sync'.
 - readJson
 - remove
 - writeJson
+
+### Overloads
+
+The overloads of these functions are overwritten, and the current type hints are not completely correct, which will be fixed later.
+
+- lstat
+- mkdir
+- mkdtemp
+- readdir
+- readFile
+- readlink
+- realpath
+- stat
 
 ## Versioning
 This project adheres to [Semantic Versioning](http://semver.org).

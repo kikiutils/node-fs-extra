@@ -13,20 +13,21 @@
     - [rename](#rename)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-  - [Methods](#methods)
-    - [Functions not exported](#functions-not-exported)
+  - [Functions](#functions)
+    - [Not exported](#not-exported)
     - [Overloads types](#overloads-types)
+    - [Will be affected by the node version](#will-be-affected-by-the-node-version)
   - [Versioning](#versioning)
   - [Authors](#authors)
   - [License](#license)
 
 ## Description
 
-When using native fs or fs-extra functions, often you're more concerned with whether the operation succeeded than with the specifics of any error.
+When using native fs or fs-extra functions, you often care more about the operation's success than the specifics of any error.
 
 This package wraps the native fs and fs-extra functions without using try/catch blocks to prevent errors from stopping execution.
 
-The function that originally returned void will return boolean, true means the execution is successful, and vice versa.
+The function that originally returned void will return boolean, true indicates successful execution, and false indicates failure.
 
 The rest of the functions will return the value they should have returned, or return undefined in case of an error.
 
@@ -35,7 +36,9 @@ The rest of the functions will return the value they should have returned, or re
 You can simplify your code using this package as follows:
 
 ### readJson
-Originally used operation:
+
+Original approach:
+
 ```typescript
 import fse from 'fs-extra';
 
@@ -50,7 +53,8 @@ const result = await rJ(path);
 // undefined - an error occurred
 ```
 
-Use this package:
+Using this package:
+
 ```typescript
 import kFse from '@kikiutils/fs-extra';
 
@@ -61,7 +65,8 @@ const result = await kFse.readJson(path);
 
 ### rename
 
-Originally used operation:
+Original approach:
+
 ```typescript
 import fse from 'fs-extra';
 
@@ -78,7 +83,8 @@ const result = await r(oldPath, newPath);
 // false - an error occurred
 ```
 
-Use this package:
+Using this package:
+
 ```typescript
 import kFse from '@kikiutils/fs-extra';
 
@@ -89,12 +95,13 @@ const result = await kFse.rename(oldPath, newPath);
 
 ## Prerequisites
 
-This package requires NodeJS (version 16 or later) and NPM, though other package managers can also be used.
+This package requires Node v16 or later and NPM, although other package managers can also be used.
 
-[Node](http://nodejs.org/) and [NPM](https://npmjs.org/) are really easy to install.
+**However, please be aware that [some functions may be affected](#will-be-affected-by-the-node-version) by the Node version.**
 
-To make sure you have them available on your machine,
-try running the following command.
+[Node](http://nodejs.org/) are really easy to install.
+
+To check your installed versions, run the following command.
 
 ```bash
 $ node -v && npm -v
@@ -106,7 +113,7 @@ v20.5.1
 
 **Before installing,** please read the [prerequisites](#prerequisites).
 
-To install and set up the library, run:
+To install and use this package, run:
 
 ```bash
 $ npm i @kikiutils/fs-extra     # Npm
@@ -114,7 +121,7 @@ $ pnpm add @kikiutils/fs-extra  # Pnpm
 $ yarn add @kikiutils/fs-extra  # Yarn
 ```
 
-For full type hinting and checking in a development environment, ensure the @types/fs-extra package is installed:
+For full type hinting and checking in a development environment, install the @types/fs-extra package:
 
 ```bash
 $ npm i -D @types/fs-extra    # Npm
@@ -122,19 +129,19 @@ $ pnpm add -D @types/fs-extra # Pnpm
 $ yarn add -D @types/fs-extra # Yarn
 ```
 
-## Methods
+## Functions
 
-You can use most of the functions exported from native fs, fs/promises, and fs-extra.
+You can use most of the functions exported from native fs, fs/promises and fs-extra.
 
 - [node:fs-promises-api](https://nodejs.org/api/fs.html#promises-api)
 - [node:fs-synchronous-api](https://nodejs.org/api/fs.html#synchronous-api)
 - [fs-extra](https://www.npmjs.com/package/fs-extra)
 
-### Functions not exported
+### Not exported
 
-Deprecated functions have no export.
+Deprecated functions are not exported.
 
-These methods don't require wrapping. For clarity, directly import them from fs or fs/promises:
+These functions don't need wrapping. For clarity, directly import them from fs or fs/promises:
 
 - fs.watch
 - fs.watchFile
@@ -142,7 +149,9 @@ These methods don't require wrapping. For clarity, directly import them from fs 
 
 ### Overloads types
 
-The overloaded types for these functions have been overridden. Note that the current type hints may not be entirely accurate; corrections will be made in future updates.
+The overloaded types for these functions have been overridden.
+
+Please note that the current type hints may not be entirely accurate. Corrections will be made in future updates.
 
 - fstat
 - fstatSync
@@ -169,7 +178,16 @@ The overloaded types for these functions have been overridden. Note that the cur
 - write
 - writeSync
 
+### Will be affected by the node version
+
+`fs.cpSync` and `fsp.cp` are available starting from Node v16.7.0.
+
+`fs.statfsSync` and `fsp.statfs` are available starting from Node v18.15.0 up to but not including v19, as well as v19.6.0 and later.
+
+Avoid using these functions if your Node version falls outside the specified ranges.
+
 ## Versioning
+
 We adhere to [Semantic Versioning](http://semver.org) for this project.
 
 For the versions available, see the [versions on npm](https://www.npmjs.com/package/@kikiutils/fs-extra?activeTab=versions).

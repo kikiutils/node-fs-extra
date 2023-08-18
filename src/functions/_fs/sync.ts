@@ -18,7 +18,7 @@ export const unlinkSync = tryAndGetBoolean(fs.unlinkSync);
 export const utimesSync = tryAndGetBoolean(fs.utimesSync);
 export const writeFileSync = tryAndGetBoolean(fs.writeFileSync);
 
-// Get Data
+// Get data
 export const openSync = tryAndGetData(fs.openSync);
 export const opendirSync = tryAndGetData(fs.opendirSync);
 

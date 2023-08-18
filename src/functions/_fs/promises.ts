@@ -18,7 +18,7 @@ export const unlink = tryAndGetBoolean(fsp.unlink);
 export const utimes = tryAndGetBoolean(fsp.utimes);
 export const writeFile = tryAndGetBoolean(fsp.writeFile);
 
-// Get Data
+// Get data
 export const open = tryAndGetData(fsp.open);
 export const opendir = tryAndGetData(fsp.opendir);
 

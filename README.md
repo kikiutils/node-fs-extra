@@ -115,7 +115,7 @@ $ pnpm add @kikiutils/fs-extra  # Pnpm
 $ yarn add @kikiutils/fs-extra  # Yarn
 ```
 
-If you use typescript, the **@types/fs-extra** package must be installed for full type hinting and checking:
+In a development environment, the **@types/fs-extra** package must be installed for full type hinting and checking:
 ```bash
 $ npm i -D @types/fs-extra    # Npm
 $ pnpm add -D @types/fs-extra # Pnpm

@@ -14,16 +14,15 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Methods](#methods)
-    - [Native fs promises](#native-fs-promises)
-    - [From **fs-extra** package](#from-fs-extra-package)
-    - [Overloads](#overloads)
+    - [Functions not exported](#functions-not-exported)
+    - [Overloads types](#overloads-types)
   - [Versioning](#versioning)
   - [Authors](#authors)
   - [License](#license)
 
 ## Description
 
-When using the native fs or fs-extra functions, usually you only need to know if the operation succeeded, not any details about the error.
+When using native fs or fs-extra functions, often you're more concerned with whether the operation succeeded than with the specifics of any error.
 
 This package wraps the native fs and fs-extra functions without using try/catch blocks to prevent errors from stopping execution.
 
@@ -33,7 +32,7 @@ The rest of the functions will return the value they should have returned, or re
 
 ## Examples
 
-You can use this package to simplify your code like this:
+You can simplify your code using this package as follows:
 
 ### readJson
 Originally used operation:
@@ -90,7 +89,7 @@ const result = await kFse.rename(oldPath, newPath);
 
 ## Prerequisites
 
-This package requires NodeJS (version 16 or later) and NPM or other package manager.
+This package requires NodeJS (version 16 or later) and NPM, though other package managers can also be used.
 
 [Node](http://nodejs.org/) and [NPM](https://npmjs.org/) are really easy to install.
 
@@ -115,7 +114,8 @@ $ pnpm add @kikiutils/fs-extra  # Pnpm
 $ yarn add @kikiutils/fs-extra  # Yarn
 ```
 
-In a development environment, the **@types/fs-extra** package must be installed for full type hinting and checking:
+For full type hinting and checking in a development environment, ensure the @types/fs-extra package is installed:
+
 ```bash
 $ npm i -D @types/fs-extra    # Npm
 $ pnpm add -D @types/fs-extra # Pnpm
@@ -124,59 +124,53 @@ $ yarn add -D @types/fs-extra # Yarn
 
 ## Methods
 
-Synchronous versions of functions are appended with 'Sync'.
+You can use most of the functions exported from native fs, fs/promises, and fs-extra.
 
-### Native fs promises
-- access
-- appendFile
-- chmod
-- chown
-- copyFile
-- lchown
-- link
-- open
-- opendir
-- rename
-- rm
-- rmdir
-- symlink
-- truncate
-- unlink
-- utimes
-- writeFile
+- [node:fs-promises-api](https://nodejs.org/api/fs.html#promises-api)
+- [node:fs-synchronous-api](https://nodejs.org/api/fs.html#synchronous-api)
+- [fs-extra](https://www.npmjs.com/package/fs-extra)
 
-### From **[fs-extra](https://www.npmjs.com/package/fs-extra)** package
-- copy
-- emptyDir
-- ensureFile
-- ensureDir
-- ensureLink
-- ensureSymlink
-- mkdirp
-- mkdirs
-- move
-- outputFile
-- outputJson
-- pathExists
-- readJson
-- remove
-- writeJson
+### Functions not exported
 
-### Overloads
+Deprecated functions have no export.
 
-The overloads of these functions are overwritten, and the current type hints are not completely correct, which will be fixed later.
+These methods don't require wrapping. For clarity, directly import them from fs or fs/promises:
 
+- fs.watch
+- fs.watchFile
+- fs.promise.watch
+
+### Overloads types
+
+The overloaded types for these functions have been overridden. Note that the current type hints may not be entirely accurate; corrections will be made in future updates.
+
+- fstat
+- fstatSync
 - lstat
+- lstatSync
 - mkdir
+- mkdirSync
 - mkdtemp
-- readdir
+- mkdtempSync
+- read
 - readFile
+- readFileSync
+- readSync
+- readdir
+- readdirSync
 - readlink
+- readlinkSync
 - realpath
+- realpathSync
 - stat
+- statSync
+- statfs
+- statfsSync
+- write
+- writeSync
 
 ## Versioning
-This project adheres to [Semantic Versioning](http://semver.org).
+We adhere to [Semantic Versioning](http://semver.org) for this project.
 
 For the versions available, see the [versions on npm](https://www.npmjs.com/package/@kikiutils/fs-extra?activeTab=versions).
 

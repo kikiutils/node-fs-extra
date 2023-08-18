@@ -1,6 +1,6 @@
 {
   "name": "@kikiutils/fs-extra",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "The native fs and fs-extra package functions wrapped with try/catch.",
   "license": "MIT",
   "author": {
@@ -23,7 +23,7 @@
     "build": "rm -rf ./lib && tsc"
   },
   "dependencies": {
-    "@kikiutils/wrappers": "^1.0.1",
+    "@kikiutils/wrappers": "^1.0.2",
     "fs-extra": "^11.1.1"
   },
   "devDependencies": {

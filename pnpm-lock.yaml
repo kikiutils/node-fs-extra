@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@kikiutils/wrappers':
-    specifier: ^1.0.1
-    version: 1.0.1
+    specifier: ^1.0.2
+    version: 1.0.2
   fs-extra:
     specifier: ^11.1.1
     version: 11.1.1
@@ -25,8 +25,8 @@ devDependencies:
 
 packages:
 
-  /@kikiutils/wrappers@1.0.1:
-    resolution: {integrity: sha512-Qxsa2dRDwElgAuew7FQNqZ1exw48WiPy/eWVX43jjoJxhc7WCfBP//xir05fKipMGYIcieqcPssMc/VlEYGigA==}
+  /@kikiutils/wrappers@1.0.2:
+    resolution: {integrity: sha512-fGl+qWuxpg7kJ8Z3ZAPK1rKpN+OfrH4ecEZNu/ZpM/CHaMHGQsTGGwClPzeLc6nWzNVJx32bU/X/3jYgVPwx1A==}
     dev: false
 
   /@types/fs-extra@11.0.1:

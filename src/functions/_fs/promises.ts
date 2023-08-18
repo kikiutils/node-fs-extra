@@ -34,9 +34,6 @@ export const opendir = tryAndGetData(fsp.opendir);
 export const readv = tryAndGetData(fs.readv.__promisify__);
 export const writev = tryAndGetData(fs.writev.__promisify__);
 
-// Original functions
-export { watch } from 'fs/promises';
-
 // TODO: overloads
 export const fstat = tryAndGetData(fs.fstat.__promisify__);
 export const lstat = tryAndGetData(fsp.lstat);

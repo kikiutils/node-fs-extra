@@ -8,11 +8,11 @@
 - [@kikiutils/fs-extra](#kikiutilsfs-extra)
   - [Table of contents](#table-of-contents)
   - [Description](#description)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
   - [Examples](#examples)
     - [readJson](#readjson)
     - [rename](#rename)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
   - [Functions](#functions)
     - [Not exported](#not-exported)
     - [Overloads types](#overloads-types)
@@ -30,6 +30,42 @@ This package wraps the native fs and fs-extra functions without using try/catch 
 The function that originally returned void will return boolean, true indicates successful execution, and false indicates failure.
 
 The rest of the functions will return the value they should have returned, or return undefined in case of an error.
+
+## Prerequisites
+
+This package requires Node v16 or later and NPM, although other package managers can also be used.
+
+**However, please be aware that [some functions may be affected](#will-be-affected-by-the-node-version) by the Node version.**
+
+[Node](http://nodejs.org/) are really easy to install.
+
+To check your installed versions, run the following command.
+
+```bash
+$ node -v && npm -v
+v20.5.1
+9.8.1
+```
+
+## Installation
+
+**Before installing,** please read the [prerequisites](#prerequisites).
+
+To install and use this package, run:
+
+```bash
+$ npm i @kikiutils/fs-extra     # Npm
+$ pnpm add @kikiutils/fs-extra  # Pnpm
+$ yarn add @kikiutils/fs-extra  # Yarn
+```
+
+For full type hinting and checking in a development environment, install the @types/fs-extra package:
+
+```bash
+$ npm i -D @types/fs-extra    # Npm
+$ pnpm add -D @types/fs-extra # Pnpm
+$ yarn add -D @types/fs-extra # Yarn
+```
 
 ## Examples
 
@@ -93,45 +129,15 @@ const result = await kFse.rename(oldPath, newPath);
 // false - an error occurred
 ```
 
-## Prerequisites
-
-This package requires Node v16 or later and NPM, although other package managers can also be used.
-
-**However, please be aware that [some functions may be affected](#will-be-affected-by-the-node-version) by the Node version.**
-
-[Node](http://nodejs.org/) are really easy to install.
-
-To check your installed versions, run the following command.
-
-```bash
-$ node -v && npm -v
-v20.5.1
-9.8.1
-```
-
-## Installation
-
-**Before installing,** please read the [prerequisites](#prerequisites).
-
-To install and use this package, run:
-
-```bash
-$ npm i @kikiutils/fs-extra     # Npm
-$ pnpm add @kikiutils/fs-extra  # Pnpm
-$ yarn add @kikiutils/fs-extra  # Yarn
-```
-
-For full type hinting and checking in a development environment, install the @types/fs-extra package:
-
-```bash
-$ npm i -D @types/fs-extra    # Npm
-$ pnpm add -D @types/fs-extra # Pnpm
-$ yarn add -D @types/fs-extra # Yarn
-```
-
 ## Functions
 
 You can use most of the functions exported from native fs, fs/promises and fs-extra.
+
+However, functions that don't end with "Sync" all return promises and do not accept callbacks.
+
+This is because when using a callback, errors are passed into the callback, which is meaningless for the wrapper.
+
+If you wish to use callbacks, please import from the original package.
 
 - [node:fs-promises-api](https://nodejs.org/api/fs.html#promises-api)
 - [node:fs-synchronous-api](https://nodejs.org/api/fs.html#synchronous-api)

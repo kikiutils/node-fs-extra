@@ -25,26 +25,23 @@
 
 When using native fs or fs-extra functions, you often care more about the operation's success than the specifics of any error.
 
-This package wraps the native fs and fs-extra functions without using try/catch blocks to prevent errors from stopping execution.
+This package wraps the native fs, fs/promises and fs-extra package of functions so that you don't need to use try/catch to prevent errors from stopping your program.
 
-The function that originally returned void will return boolean, true indicates successful execution, and false indicates failure.
+The original return void function is wrapped so that it will return true if it succeeds and false if it fails.
 
-The rest of the functions will return the value they should have returned, or return undefined in case of an error.
+The rest of the functions return the original data if they succeed, or undefined if they fail.
 
 ## Prerequisites
 
-This package requires Node v16 or later and NPM, although other package managers can also be used.
+This package requires Node v16 or above.
 
-**However, please be aware that [some functions may be affected](#will-be-affected-by-the-node-version) by the Node version.**
+**However, please note that some [functions are affected](#will-be-affected-by-the-node-version) by the Node version.**
 
-[Node](http://nodejs.org/) are really easy to install.
-
-To check your installed versions, run the following command.
+To check your installed version, run the following command.
 
 ```bash
-$ node -v && npm -v
+$ node -v
 v20.5.1
-9.8.1
 ```
 
 ## Installation
@@ -131,13 +128,13 @@ const result = await kFse.rename(oldPath, newPath);
 
 ## Functions
 
-You can use most of the functions exported from native fs, fs/promises and fs-extra.
+You can use most of the functions exported from the native fs, fs/promises and fs-extra package.
 
-However, functions that don't end with "Sync" all return promises and do not accept callbacks.
+However, all functions that do not end with "Sync" return a promise and do not accept callback arguments.
 
-This is because when using a callback, errors are passed into the callback, which is meaningless for the wrapper.
+This is because with callback, errors are passed into the callback, which makes no sense when using wrappers.
 
-If you wish to use callbacks, please import from the original package.
+If you need to use callbacks, import them in from the original package.
 
 - [node:fs-promises-api](https://nodejs.org/api/fs.html#promises-api)
 - [node:fs-synchronous-api](https://nodejs.org/api/fs.html#synchronous-api)
@@ -145,9 +142,9 @@ If you wish to use callbacks, please import from the original package.
 
 ### Not exported
 
-Deprecated functions are not exported.
+Deprecated functions will not be exported.
 
-These functions don't need wrapping. For clarity, directly import them from fs or fs/promises:
+These functions do not need to be wrapped and have similar names but different functions. To avoid confusion, please import them yourself from fs or fs/promises:
 
 - fs.watch
 - fs.watchFile
@@ -155,9 +152,9 @@ These functions don't need wrapping. For clarity, directly import them from fs o
 
 ### Overloads types
 
-The overloaded types for these functions have been overridden.
+The overloads type of these functions have been broken or merged.
 
-Please note that the current type hints may not be entirely accurate. Corrections will be made in future updates.
+Please note that the current type hints may not be completely accurate. We will correct this in a future update.
 
 - fstat
 - fstatSync

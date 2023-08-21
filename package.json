@@ -24,7 +24,7 @@
   },
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@kikiutils/wrappers": "^1.0.4",
+    "@kikiutils/wrappers": "^1.0.5",
     "fs-extra": "^11.1.1"
   },
   "devDependencies": {

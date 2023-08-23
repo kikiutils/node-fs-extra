@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@kikiutils/wrappers':
-    specifier: ^1.0.5
-    version: 1.0.5
+    specifier: ^1.0.6
+    version: 1.0.6
   fs-extra:
     specifier: ^11.1.1
     version: 11.1.1
@@ -20,8 +20,8 @@ devDependencies:
     specifier: ^6.1.1
     version: 6.1.1
   '@types/node':
-    specifier: ^20.5.1
-    version: 20.5.1
+    specifier: ^20.5.3
+    version: 20.5.3
   pkgroll:
     specifier: ^1.11.0
     version: 1.11.0(typescript@5.1.6)
@@ -233,8 +233,8 @@ packages:
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
     dev: true
 
-  /@kikiutils/wrappers@1.0.5:
-    resolution: {integrity: sha512-nFkecRBUw12VXZZ1sQeFDzHta0zSvQraB6Cho3JA5Cxx+va5wrgLKUXZZ99TQPWJTrZ8IWLecboSMqPGxc7I+Q==}
+  /@kikiutils/wrappers@1.0.6:
+    resolution: {integrity: sha512-V50z61Jl6OcTvKI3I2w+UyqVaBqHjPmrj1bQmp1kH9Sim66DofoKqN0N7ciWK28qTgiIcF06+Of7M3DKpZbdBg==}
     engines: {node: '>= 16.0.0'}
     dev: false
 
@@ -297,8 +297,8 @@ packages:
       rollup: 2.79.1
     dev: true
 
-  /@rollup/plugin-node-resolve@15.2.0(rollup@2.79.1):
-    resolution: {integrity: sha512-mKur03xNGT8O9ODO6FtT43ITGqHWZbKPdVJHZb+iV9QYcdlhUUB0wgknvA4KCUmC5oHJF6O2W1EgmyOQyVUI4Q==}
+  /@rollup/plugin-node-resolve@15.2.1(rollup@2.79.1):
+    resolution: {integrity: sha512-nsbUg588+GDSu8/NS8T4UAshO6xeaOfINNuXeVHcKV02LJtoRaM1SiOacClw4kws1SFiNhdLGxlbMY9ga/zs/w==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^2.78.0||^3.0.0
@@ -352,17 +352,17 @@ packages:
     resolution: {integrity: sha512-MxObHvNl4A69ofaTRU8DFqvgzzv8s9yRtaPPm5gud9HDNvpB3GPQFvNuTWAI59B9huVGV5jXYJwbCsmBsOGYWA==}
     dependencies:
       '@types/jsonfile': 6.1.1
-      '@types/node': 20.5.1
+      '@types/node': 20.5.3
     dev: true
 
   /@types/jsonfile@6.1.1:
     resolution: {integrity: sha512-GSgiRCVeapDN+3pqA35IkQwasaCh/0YFH5dEF6S88iDvEn901DjOeH3/QPY+XYP1DFzDZPvIvfeEgk+7br5png==}
     dependencies:
-      '@types/node': 20.5.1
+      '@types/node': 20.5.3
     dev: true
 
-  /@types/node@20.5.1:
-    resolution: {integrity: sha512-4tT2UrL5LBqDwoed9wZ6N3umC4Yhz3W3FloMmiiG4JwmUJWpie0c7lcnUNd4gtMKuDEO4wRVS8B6Xa0uMRsMKg==}
+  /@types/node@20.5.3:
+    resolution: {integrity: sha512-ITI7rbWczR8a/S6qjAW7DMqxqFMjjTo61qZVWJ1ubPvbIQsL5D/TvwjYEalM8Kthpe3hTzOGrF2TGbAu2uyqeA==}
     dev: true
 
   /@types/resolve@1.20.2:
@@ -565,7 +565,7 @@ packages:
       '@rollup/plugin-commonjs': 24.1.0(rollup@2.79.1)
       '@rollup/plugin-inject': 5.0.3(rollup@2.79.1)
       '@rollup/plugin-json': 6.0.0(rollup@2.79.1)
-      '@rollup/plugin-node-resolve': 15.2.0(rollup@2.79.1)
+      '@rollup/plugin-node-resolve': 15.2.1(rollup@2.79.1)
       '@rollup/plugin-replace': 5.0.2(rollup@2.79.1)
       '@rollup/pluginutils': 5.0.3(rollup@2.79.1)
       esbuild: 0.18.20

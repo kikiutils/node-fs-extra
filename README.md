@@ -14,6 +14,7 @@
     - [readJson](#readjson)
     - [rename](#rename)
   - [Functions](#functions)
+    - [Additional](#additional)
     - [Not exported](#not-exported)
     - [Overloads types](#overloads-types)
     - [Will be affected by the node version](#will-be-affected-by-the-node-version)
@@ -139,6 +140,11 @@ If you need to use callbacks, import them in from the original package.
 - [node:fs-promises-api](https://nodejs.org/api/fs.html#promises-api)
 - [node:fs-synchronous-api](https://nodejs.org/api/fs.html#synchronous-api)
 - [fs-extra](https://www.npmjs.com/package/fs-extra)
+
+### Additional
+
+- `getFileSize` - Use stat to get file size.
+- `getFileSizeSync` - Use statSync to get file size.
 
 ### Not exported
 

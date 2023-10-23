@@ -8,7 +8,7 @@ export const access = tB(fsp.access);
 export const appendFile = tB(fsp.appendFile);
 export const chmod = tB(fsp.chmod);
 export const chown = tB(fsp.chown);
-export const close = tB(fs.close.__promisify__);
+export const close = tB(fs.close?.__promisify__);
 export const copyFile = tB(fsp.copyFile);
 
 /**
@@ -17,12 +17,12 @@ export const copyFile = tB(fsp.copyFile);
  * If you are using a version prior to 16.7.0, please refrain from using this function.
  */
 export const cp = tB(fsp.cp);
-export const fchmod = tB(fs.fchmod.__promisify__);
-export const fchown = tB(fs.fchown.__promisify__);
-export const fdatasync = tB(fs.fdatasync.__promisify__);
-export const fsync = tB(fs.fsync.__promisify__);
-export const ftruncate = tB(fs.ftruncate.__promisify__);
-export const futimes = tB(fs.futimes.__promisify__);
+export const fchmod = tB(fs.fchmod?.__promisify__);
+export const fchown = tB(fs.fchown?.__promisify__);
+export const fdatasync = tB(fs.fdatasync?.__promisify__);
+export const fsync = tB(fs.fsync?.__promisify__);
+export const ftruncate = tB(fs.ftruncate?.__promisify__);
+export const futimes = tB(fs.futimes?.__promisify__);
 export const lchown = tB(fsp.lchown);
 export const link = tB(fsp.link);
 export const lutimes = tB(fsp.lutimes);
@@ -38,15 +38,15 @@ export const writeFile = tB(fsp.writeFile);
 // Get data
 export const open = tD(fsp.open);
 export const opendir = tD(fsp.opendir);
-export const readv = tD(fs.readv.__promisify__);
-export const writev = tD(fs.writev.__promisify__);
+export const readv = tD(fs.readv?.__promisify__);
+export const writev = tD(fs.writev?.__promisify__);
 
 // TODO: overloads
-export const fstat = tD(fs.fstat.__promisify__);
+export const fstat = tD(fs.fstat?.__promisify__);
 export const lstat = tD(fsp.lstat);
 export const mkdir = tD(fsp.mkdir);
 export const mkdtemp = tD(fsp.mkdtemp);
-export const read = tD(fs.read.__promisify__);
+export const read = tD(fs.read?.__promisify__);
 export const readFile = tD(fsp.readFile);
 export const readdir = tD(fsp.readdir);
 export const readlink = tD(fsp.readlink);
@@ -59,4 +59,4 @@ export const stat = tD(fsp.stat);
  * If you are using a version outside of the specified range, please refrain from using this function.
  */
 export const statfs = tD(fsp.statfs);
-export const write = tD(fs.write.__promisify__);
+export const write = tD(fs.write?.__promisify__);

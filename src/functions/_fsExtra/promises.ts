@@ -4,8 +4,8 @@ import { tB, tD } from '../../wrappers';
 
 type FuncName = 'ensureDir' | 'ensureLink' | 'ensureSymlink' | 'move' | 'outputFile' | 'outputJson' | 'readJson' | 'writeJson';
 type FseParameters = {
-	[K in `${FuncName}Sync`]: Parameters<typeof fse[K]>;
-}
+	[K in `${FuncName}Sync`]: Parameters<(typeof fse)[K]>;
+};
 
 // Get boolean
 export const copy = tB(async (...args: [src: string, dest: string, options?: fse.CopyOptions]) => await fse.copy(...args));

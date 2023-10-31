@@ -3,7 +3,7 @@ import fse from 'fs-extra';
 import { tB, tD } from '../../wrappers';
 
 // Get boolean
-export const copySync  = tB(fse.copySync);
+export const copySync = tB(fse.copySync);
 export const emptyDirSync = tB(fse.emptyDirSync);
 export const ensureDirSync = tB(fse.ensureDirSync);
 export const ensureFileSync = tB(fse.ensureFileSync);

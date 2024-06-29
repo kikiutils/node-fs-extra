@@ -3,16 +3,10 @@
   "version": "1.3.2",
   "description": "The native fs, fs/promises and fs-extra package functions wrapped with try/catch.",
   "license": "MIT",
-  "author": {
-    "name": "kiki-kanri"
-  },
-  "homepage": "https://github.com/kiki-kanri/kikiutils-node-fs-extra#readme",
+  "author": "kiki-kanri",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kiki-kanri/kikiutils-node-fs-extra.git"
-  },
-  "bugs": {
-    "url": "https://github.com/kiki-kanri/kikiutils-node-fs-extra/issues"
   },
   "type": "commonjs",
   "main": "./dist/index.js",

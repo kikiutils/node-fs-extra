@@ -1,35 +1,46 @@
-type AnyFunction = (...args: any[]) => any;
+type AnyFunction<P extends any[], R> = (...args: P) => R;
+type AnyPromiseFunction<P extends any[], R> = (...args: P) => Promise<R>;
 
-export const tB = <F extends AnyFunction, P extends Parameters<F>, RT extends ReturnType<F> extends Promise<any> ? Promise<boolean> : boolean>(toWrapFunction?: F): ((...args: P) => RT) => {
-	if (!toWrapFunction) {
-		return () => {
-			throw new Error('The funciton passed to the wrapper is not realized, please check if the nodejs/deno/bun version supports this function.');
-		};
-	}
+const throwToWrapFunctionIsUndefinedError = () => {
+	throw new Error('The funciton passed to the wrapper is not realized, please check if the nodejs/deno/bun version supports this function.');
+};
 
-	return function (...args: P) {
+export const pTB = <P extends any[], R>(toWrapFunction?: AnyPromiseFunction<P, R>): ((...args: P) => Promise<boolean>) => {
+	if (!toWrapFunction) return throwToWrapFunctionIsUndefinedError;
+	return async (...args: P) => {
 		try {
-			const result = toWrapFunction(...args);
-			if (result instanceof Promise) return result.then(() => true).catch(() => false) as RT;
-			return true as RT;
+			await toWrapFunction(...args);
+			return true;
 		} catch (error) {}
-		return false as RT;
+		return false;
 	};
 };
 
-export const tD = <F extends AnyFunction, P extends Parameters<F>, R extends ReturnType<F>, RT extends R extends Promise<any> ? Promise<Awaited<R> | T> : R | T, T = undefined>(toWrapFunction?: F, returnValueOnError?: T): ((...args: P) => RT) => {
-	if (!toWrapFunction) {
-		return () => {
-			throw new Error('The funciton passed to the wrapper is not realized, please check if the nodejs/deno/bun version supports this function.');
-		};
-	}
-
-	return function (...args: P) {
+export const pTD = <P extends any[], R>(toWrapFunction?: AnyPromiseFunction<P, R>): ((...args: P) => Promise<R | undefined>) => {
+	if (!toWrapFunction) return throwToWrapFunctionIsUndefinedError;
+	return async (...args: P) => {
 		try {
-			const result = toWrapFunction(...args);
-			if (result instanceof Promise) return result.catch(() => returnValueOnError);
-			return result;
+			return toWrapFunction(...args);
 		} catch (error) {}
-		return returnValueOnError;
+	};
+};
+
+export const tB = <P extends any[], R>(toWrapFunction?: AnyFunction<P, R>): ((...args: P) => boolean) => {
+	if (!toWrapFunction) return throwToWrapFunctionIsUndefinedError;
+	return (...args: P) => {
+		try {
+			toWrapFunction(...args);
+			return true;
+		} catch (error) {}
+		return false;
+	};
+};
+
+export const tD = <P extends any[], R>(toWrapFunction?: AnyFunction<P, R>): ((...args: P) => R | undefined) => {
+	if (!toWrapFunction) return throwToWrapFunctionIsUndefinedError;
+	return (...args: P) => {
+		try {
+			return toWrapFunction(...args);
+		} catch (error) {}
 	};
 };

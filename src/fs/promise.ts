@@ -4,152 +4,152 @@ import type { BigIntStats, BigIntStatsFs, BufferEncodingOption, Dirent, MakeDire
 import fsp from 'node:fs/promises';
 import type { FileHandle } from 'node:fs/promises';
 
-import { tB, tD } from '../wrappers';
+import { pTB, pTD } from '../wrappers';
 
 /**
  * @see {@link fsp.access}
  */
-export const access = tB(fsp.access);
+export const access = pTB(fsp.access);
 
 /**
  * @see {@link fsp.copyFile}
  */
-export const copyFile = tB(fsp.copyFile);
+export const copyFile = pTB(fsp.copyFile);
 
 /**
  * @see {@link fsp.open}
  */
-export const open = tD(fsp.open);
+export const open = pTD(fsp.open);
 
 /**
  * @see {@link fsp.rename}
  */
-export const rename = tB(fsp.rename);
+export const rename = pTB(fsp.rename);
 
 /**
  * @see {@link fsp.truncate}
  */
-export const truncate = tB(fsp.truncate);
+export const truncate = pTB(fsp.truncate);
 
 /**
  * @see {@link fsp.rmdir}
  */
-export const rmdir = tB(fsp.rmdir);
+export const rmdir = pTB(fsp.rmdir);
 
 /**
  * @see {@link fsp.rm}
  */
-export const rm = tB(fsp.rm);
+export const rm = pTB(fsp.rm);
 
 /**
  * @see {@link fsp.symlink}
  */
-export const symlink = tB(fsp.symlink);
+export const symlink = pTB(fsp.symlink);
 
 /**
  * @see {@link fsp.link}
  */
-export const link = tB(fsp.link);
+export const link = pTB(fsp.link);
 
 /**
  * @see {@link fsp.unlink}
  */
-export const unlink = tB(fsp.unlink);
+export const unlink = pTB(fsp.unlink);
 
 /**
  * @see {@link fsp.chmod}
  */
-export const chmod = tB(fsp.chmod);
+export const chmod = pTB(fsp.chmod);
 
 /**
  * @see {@link fsp.lchmod}
  */
-export const lchmod = tB(fsp.lchmod);
+export const lchmod = pTB(fsp.lchmod);
 
 /**
  * @see {@link fsp.lchown}
  */
-export const lchown = tB(fsp.lchown);
+export const lchown = pTB(fsp.lchown);
 
 /**
  * @see {@link fsp.lutimes}
  */
-export const lutimes = tB(fsp.lutimes);
+export const lutimes = pTB(fsp.lutimes);
 
 /**
  * @see {@link fsp.chown}
  */
-export const chown = tB(fsp.chown);
+export const chown = pTB(fsp.chown);
 
 /**
  * @see {@link fsp.utimes}
  */
-export const utimes = tB(fsp.utimes);
+export const utimes = pTB(fsp.utimes);
 
 /**
  * @see {@link fsp.writeFile}
  */
-export const writeFile = tB(fsp.writeFile);
+export const writeFile = pTB(fsp.writeFile);
 
 /**
  * @see {@link fsp.appendFile}
  */
-export const appendFile = tB(fsp.appendFile);
+export const appendFile = pTB(fsp.appendFile);
 
 /**
  * @see {@link fsp.opendir}
  */
-export const opendir = tD(fsp.opendir);
+export const opendir = pTD(fsp.opendir);
 
 /**
  * @see {@link fsp.cp}
  */
-export const cp = tB(fsp.cp);
+export const cp = pTB(fsp.cp);
 
 /**
  * @see {@link fs.ftruncate.__promisify__}
  */
-export const ftruncate = tB(fs.ftruncate?.__promisify__);
+export const ftruncate = pTB(fs.ftruncate?.__promisify__);
 
 /**
  * @see {@link fs.fchown.__promisify__}
  */
-export const fchown = tB(fs.fchown?.__promisify__);
+export const fchown = pTB(fs.fchown?.__promisify__);
 
 /**
  * @see {@link fs.fchmod.__promisify__}
  */
-export const fchmod = tB(fs.fchmod?.__promisify__);
+export const fchmod = pTB(fs.fchmod?.__promisify__);
 
 /**
  * @see {@link fs.close.__promisify__}
  */
-export const close = tB(fs.close?.__promisify__);
+export const close = pTB(fs.close?.__promisify__);
 
 /**
  * @see {@link fs.futimes.__promisify__}
  */
-export const futimes = tB(fs.futimes?.__promisify__);
+export const futimes = pTB(fs.futimes?.__promisify__);
 
 /**
  * @see {@link fs.fsync.__promisify__}
  */
-export const fsync = tB(fs.fsync?.__promisify__);
+export const fsync = pTB(fs.fsync?.__promisify__);
 
 /**
  * @see {@link fs.fdatasync.__promisify__}
  */
-export const fdatasync = tB(fs.fdatasync?.__promisify__);
+export const fdatasync = pTB(fs.fdatasync?.__promisify__);
 
 /**
  * @see {@link fs.writev.__promisify__}
  */
-export const writev = tD(fs.writev?.__promisify__);
+export const writev = pTD(fs.writev?.__promisify__);
 
 /**
  * @see {@link fs.readv.__promisify__}
  */
-export const readv = tD(fs.readv?.__promisify__);
+export const readv = pTD(fs.readv?.__promisify__);
 
 // Overload functions
 
@@ -165,7 +165,7 @@ export async function mkdir(path: PathLike, options?: any) {
 		if (options?.recursive === true) return result;
 		return true;
 	} catch (error) {
-		if (options?.recursive === true) return undefined;
+		if (options?.recursive === true) return;
 		return false;
 	}
 }

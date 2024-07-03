@@ -294,8 +294,9 @@ export async function fstat(fd: number, options?: any) {
 export async function write<TBuffer extends NodeJS.ArrayBufferView>(fd: number, buffer?: TBuffer, offset?: number, length?: number, position?: number | null): Promise<{ bytesWritten: number; buffer: TBuffer } | undefined>;
 // @ts-ignore
 export async function write(fd: number, string: string, position?: number | null, encoding?: BufferEncoding | null): Promise<{ bytesWritten: number; buffer: string } | undefined>;
-export async function write(...args: [any]) {
+export async function write(...args: any[]) {
 	try {
+		// @ts-ignore
 		return await fs.write?.__promisify__(...args);
 	} catch (error) {}
 }
@@ -306,8 +307,9 @@ export async function write(...args: [any]) {
 export async function read<TBuffer extends NodeJS.ArrayBufferView>(fd: number, buffer: TBuffer, offset: number, length: number, position: number | null): Promise<{ bytesRead: number; buffer: TBuffer } | undefined>;
 export async function read<TBuffer extends NodeJS.ArrayBufferView>(fd: number, options: ReadAsyncOptions<TBuffer>): Promise<{ bytesRead: number; buffer: TBuffer } | undefined>;
 export async function read(fd: number): Promise<{ bytesRead: number; buffer: NodeJS.ArrayBufferView } | undefined>;
-export async function read(...args: [any]) {
+export async function read(...args: any[]) {
 	try {
+		// @ts-ignore
 		return await fs.read?.__promisify__(...args);
 	} catch (error) {}
 }

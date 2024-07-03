@@ -5,7 +5,7 @@ const throwToWrapFunctionIsUndefinedError = () => {
 	throw new Error('The funciton passed to the wrapper is not realized, please check if the nodejs/deno/bun version supports this function.');
 };
 
-export const pTB = <P extends any[], R>(toWrapFunction?: AnyPromiseFunction<P, R>): ((...args: P) => Promise<boolean>) => {
+export const pTB = <P extends any[], R>(toWrapFunction?: AnyPromiseFunction<P, R>) => {
 	if (!toWrapFunction) return throwToWrapFunctionIsUndefinedError;
 	return async (...args: P) => {
 		try {
@@ -16,16 +16,16 @@ export const pTB = <P extends any[], R>(toWrapFunction?: AnyPromiseFunction<P, R
 	};
 };
 
-export const pTD = <P extends any[], R>(toWrapFunction?: AnyPromiseFunction<P, R>): ((...args: P) => Promise<R | undefined>) => {
+export const pTD = <P extends any[], R>(toWrapFunction?: AnyPromiseFunction<P, R>) => {
 	if (!toWrapFunction) return throwToWrapFunctionIsUndefinedError;
 	return async (...args: P) => {
 		try {
-			return toWrapFunction(...args);
+			return await toWrapFunction(...args);
 		} catch (error) {}
 	};
 };
 
-export const tB = <P extends any[], R>(toWrapFunction?: AnyFunction<P, R>): ((...args: P) => boolean) => {
+export const tB = <P extends any[], R>(toWrapFunction?: AnyFunction<P, R>) => {
 	if (!toWrapFunction) return throwToWrapFunctionIsUndefinedError;
 	return (...args: P) => {
 		try {
@@ -36,7 +36,7 @@ export const tB = <P extends any[], R>(toWrapFunction?: AnyFunction<P, R>): ((..
 	};
 };
 
-export const tD = <P extends any[], R>(toWrapFunction?: AnyFunction<P, R>): ((...args: P) => R | undefined) => {
+export const tD = <P extends any[], R>(toWrapFunction?: AnyFunction<P, R>) => {
 	if (!toWrapFunction) return throwToWrapFunctionIsUndefinedError;
 	return (...args: P) => {
 		try {

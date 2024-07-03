@@ -1,8 +1,7 @@
-import type { Abortable } from 'node:events';
+import type { Abortable } from 'events';
 import fs from 'node:fs';
 import type { BigIntStats, BigIntStatsFs, BufferEncodingOption, Dirent, MakeDirectoryOptions, Mode, ObjectEncodingOptions, OpenMode, PathLike, ReadAsyncOptions, StatsFs, StatFsOptions, StatOptions, Stats } from 'node:fs';
 import fsp from 'node:fs/promises';
-import type { FileHandle } from 'node:fs/promises';
 
 import { pTB, pTD } from '../wrappers';
 
@@ -266,9 +265,9 @@ export async function mkdtemp(prefix: string, options?: any) {
  * @see {@link fsp.readFile}
  */
 // @ts-ignore
-export async function readFile(path: PathLike | FileHandle, options?: ({ encoding?: null; flag?: OpenMode } & Abortable) | null): Promise<Buffer | undefined>;
-export async function readFile(path: PathLike | FileHandle, options: ({ encoding: BufferEncoding; flag?: OpenMode } & Abortable) | BufferEncoding): Promise<string | undefined>;
-export async function readFile(path: PathLike | FileHandle, options?: (ObjectEncodingOptions & Abortable & { flag?: OpenMode }) | BufferEncoding | null): Promise<string | Buffer | undefined>;
+export async function readFile(path: PathLike | fsp.FileHandle, options?: ({ encoding?: null; flag?: OpenMode } & Abortable) | null): Promise<Buffer | undefined>;
+export async function readFile(path: PathLike | fsp.FileHandle, options: ({ encoding: BufferEncoding; flag?: OpenMode } & Abortable) | BufferEncoding): Promise<string | undefined>;
+export async function readFile(path: PathLike | fsp.FileHandle, options?: (ObjectEncodingOptions & Abortable & { flag?: OpenMode }) | BufferEncoding | null): Promise<string | Buffer | undefined>;
 export async function readFile(path: PathLike, options?: any) {
 	try {
 		return await fsp.readFile(path, options);

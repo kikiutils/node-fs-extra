@@ -15,7 +15,8 @@ import type {
 	StatsFs,
 	StatFsOptions,
 	StatOptions,
-	Stats
+	Stats,
+	StatSyncOptions
 } from 'node:fs';
 
 import { tB, tD } from '../wrappers';
@@ -293,3 +294,21 @@ export function readFileSync(path: PathOrFileDescriptor, options?: any) {
 		return fs.readFileSync(path, options);
 	} catch (error) {}
 }
+
+/**
+ * @see {@link fs.statSync}
+ */
+export function statSync(path: PathLike, options?: StatSyncOptions & { bigint?: false }): Stats | undefined;
+// @ts-ignore
+export function statSync(path: PathLike, options: StatSyncOptions & { bigint: true }): BigIntStats | undefined;
+export function statSync(path: PathLike, options?: StatSyncOptions): Stats | BigIntStats | undefined;
+export function statSync(path: PathLike, options?: any) {
+	try {
+		return fs.statSync(path, options);
+	} catch (error) {}
+}
+
+/**
+ * @see {@link fs.lstatSync}
+ */
+export const lstatSync = statSync;

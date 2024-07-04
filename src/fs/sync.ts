@@ -24,6 +24,11 @@ import { tB, tD } from '../wrappers';
 export { existsSync } from 'fs';
 
 /**
+ * @see {@link fs.appendFileSync}
+ */
+export const appendFileSync = tB(fs.appendFileSync);
+
+/**
  * @see {@link fs.closeSync}
  */
 export const closeSync = tB(fs.closeSync);

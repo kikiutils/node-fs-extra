@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.1.0
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.0.0...v2.1.0)
+
+### 🚀 Enhancements
+
+- Add `appendFileSync` function ([32bf2ab](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/32bf2ab))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.0.0
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.3.2...v2.0.0)

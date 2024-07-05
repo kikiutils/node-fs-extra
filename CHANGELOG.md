@@ -1,5 +1,23 @@
 # Changelog
 
+## v2.2.0
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.1.0...v2.2.0)
+
+### 🚀 Enhancements
+
+- Add ToWrapFunctionIsUndefinedError class and update error handling in wrapper ([1843d59](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/1843d59))
+- Add runtime checks for availability of corresponding features in overloaded functions ([e237101](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/e237101))
+- Add functions and corresponding sync versions ([66f40ee](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/66f40ee))
+
+### 📖 Documentation
+
+- Update README ([a350071](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/a350071))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.1.0
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.0.0...v2.1.0)

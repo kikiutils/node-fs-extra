@@ -55,8 +55,17 @@ If you need to use callbacks, import them from the original package.
 
 ### Additional
 
+The following functions all have corresponding sync versions.
+
 - `getFileSize` - Uses `stat` to get the file size.
-- `getFileSizeSync` - Uses `statSync` to get the file size.
+- `pathIsBlockDevice` - Uses `stat` to check if a path is a block device.
+- `pathIsCharacterDevice` - Uses `stat` to check if a path is a character device.
+- `pathIsDirectory`, `pathIsDir` - Uses `stat` to check if a path is a directory.
+- `pathIsFIFO` - Uses `stat` to check if a path is a FIFO (named pipe).
+- `pathIsFile` - Uses `stat` to check if a path is a file.
+- `pathIsSocket` - Uses `stat` to check if a path is a socket.
+- `pathIsSymbolicLink` - Uses `stat` to check if a path is a symbolic link.
+- `readFileToBlob` - Reads a file and returns its contents as a Blob.
 
 ### Not wrapped
 
@@ -71,7 +80,7 @@ These functions do not need to be wrapped and have similar names but different f
 ## Usage
 
 
-**If the function being used does not have a corresponding functionality due to differences in the environment (such as NodeJS version, deno, or bun), an error will be thrown directly when it is used.**
+**If the function being used does not have a corresponding functionality due to differences in the environment (such as NodeJS version, deno, or bun), a `ToWrapFunctionIsUndefinedError` will be thrown directly when it is used.**
 
 ```typescript
 import kFse from '@kikiutils/fs-extra';

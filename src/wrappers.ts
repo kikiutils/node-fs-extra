@@ -1,8 +1,17 @@
 type AnyFunction<P extends any[], R> = (...args: P) => R;
 type AnyPromiseFunction<P extends any[], R> = (...args: P) => Promise<R>;
 
+export class ToWrapFunctionIsUndefinedError extends Error {
+	constructor() {
+		super(`The funciton passed to the wrapper is not realized, please check if the nodejs/deno/bun version supports this function.`);
+		this.name = this.constructor.name;
+		Error.captureStackTrace?.(this, this.constructor);
+	}
+}
+
+export const toWrapFunctionIsUndefinedError = new ToWrapFunctionIsUndefinedError();
 const throwToWrapFunctionIsUndefinedError = () => {
-	throw new Error('The funciton passed to the wrapper is not realized, please check if the nodejs/deno/bun version supports this function.');
+	throw toWrapFunctionIsUndefinedError;
 };
 
 export const pTB = <P extends any[], R>(toWrapFunction?: AnyPromiseFunction<P, R>) => {

@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import type { BigIntStats, BigIntStatsFs, BufferEncodingOption, Dirent, MakeDirectoryOptions, Mode, ObjectEncodingOptions, OpenMode, PathLike, ReadAsyncOptions, StatsFs, StatFsOptions, StatOptions, Stats } from 'node:fs';
 import fsp from 'node:fs/promises';
 
-import { pTB, pTD } from '../wrappers';
+import { pTB, pTD, toWrapFunctionIsUndefinedError } from '../wrappers';
 
 /**
  * @see {@link fsp.access}
@@ -159,6 +159,7 @@ export async function mkdir(path: PathLike, options: MakeDirectoryOptions & { re
 export async function mkdir(path: PathLike, options?: Mode | (MakeDirectoryOptions & { recursive?: false }) | null): Promise<boolean>;
 export async function mkdir(path: PathLike, options?: Mode | MakeDirectoryOptions | null): Promise<string | undefined>;
 export async function mkdir(path: PathLike, options?: any) {
+	if (!fsp.mkdir) throw toWrapFunctionIsUndefinedError;
 	try {
 		const result = await fsp.mkdir(path, options);
 		if (options?.recursive === true) return result;
@@ -178,6 +179,7 @@ export async function readdir(path: PathLike, options: { encoding: 'buffer'; wit
 export async function readdir(path: PathLike, options?: (ObjectEncodingOptions & { withFileTypes?: false; recursive?: boolean }) | BufferEncoding | null): Promise<string[] | Buffer[] | undefined>;
 export async function readdir(path: PathLike, options: ObjectEncodingOptions & { withFileTypes: true; recursive?: boolean }): Promise<Dirent[] | undefined>;
 export async function readdir(path: PathLike, options?: any) {
+	if (!fsp.readdir) throw toWrapFunctionIsUndefinedError;
 	try {
 		return await fsp.readdir(path, options);
 	} catch (error) {}
@@ -191,6 +193,7 @@ export async function readlink(path: PathLike, options?: ObjectEncodingOptions |
 export async function readlink(path: PathLike, options: BufferEncodingOption): Promise<Buffer | undefined>;
 export async function readlink(path: PathLike, options?: ObjectEncodingOptions | string | null): Promise<string | Buffer | undefined>;
 export async function readlink(path: PathLike, options?: any) {
+	if (!readlink) throw toWrapFunctionIsUndefinedError;
 	try {
 		return await fsp.readlink(path, options);
 	} catch (error) {}
@@ -204,6 +207,7 @@ export async function lstat(path: PathLike, opts?: StatOptions & { bigint?: fals
 export async function lstat(path: PathLike, opts: StatOptions & { bigint: true }): Promise<BigIntStats | undefined>;
 export async function lstat(path: PathLike, opts?: StatOptions): Promise<Stats | BigIntStats | undefined>;
 export async function lstat(path: PathLike, opts?: any) {
+	if (!fsp.lstat) throw toWrapFunctionIsUndefinedError;
 	try {
 		return await fsp.lstat(path, opts);
 	} catch (error) {}
@@ -217,6 +221,7 @@ export async function stat(path: PathLike, opts?: StatOptions & { bigint?: false
 export async function stat(path: PathLike, opts: StatOptions & { bigint: true }): Promise<BigIntStats | undefined>;
 export async function stat(path: PathLike, opts?: StatOptions): Promise<Stats | BigIntStats | undefined>;
 export async function stat(path: PathLike, opts?: any) {
+	if (!fsp.stat) throw toWrapFunctionIsUndefinedError;
 	try {
 		return await fsp.stat(path, opts);
 	} catch (error) {}
@@ -230,6 +235,7 @@ export async function statfs(path: PathLike, opts?: StatFsOptions & { bigint?: f
 export async function statfs(path: PathLike, opts: StatFsOptions & { bigint: true }): Promise<BigIntStatsFs | undefined>;
 export async function statfs(path: PathLike, opts?: StatFsOptions): Promise<StatsFs | BigIntStatsFs | undefined>;
 export async function statfs(path: PathLike, opts?: any) {
+	if (!fsp.statfs) throw toWrapFunctionIsUndefinedError;
 	try {
 		return await fsp.statfs(path, opts);
 	} catch (error) {}
@@ -243,6 +249,7 @@ export async function realpath(path: PathLike, options?: ObjectEncodingOptions |
 export async function realpath(path: PathLike, options: BufferEncodingOption): Promise<Buffer | undefined>;
 export async function realpath(path: PathLike, options?: ObjectEncodingOptions | BufferEncoding | null): Promise<string | Buffer | undefined>;
 export async function realpath(path: PathLike, options?: any) {
+	if (!fsp.realpath) throw toWrapFunctionIsUndefinedError;
 	try {
 		return await fsp.realpath(path, options);
 	} catch (error) {}
@@ -256,6 +263,7 @@ export async function mkdtemp(prefix: string, options?: ObjectEncodingOptions | 
 export async function mkdtemp(prefix: string, options: BufferEncodingOption): Promise<Buffer | undefined>;
 export async function mkdtemp(prefix: string, options?: ObjectEncodingOptions | BufferEncoding | null): Promise<string | Buffer | undefined>;
 export async function mkdtemp(prefix: string, options?: any) {
+	if (!fsp.mkdtemp) throw toWrapFunctionIsUndefinedError;
 	try {
 		return await fsp.mkdtemp(prefix, options);
 	} catch (error) {}
@@ -269,6 +277,7 @@ export async function readFile(path: PathLike | fsp.FileHandle, options?: ({ enc
 export async function readFile(path: PathLike | fsp.FileHandle, options: ({ encoding: BufferEncoding; flag?: OpenMode } & Abortable) | BufferEncoding): Promise<string | undefined>;
 export async function readFile(path: PathLike | fsp.FileHandle, options?: (ObjectEncodingOptions & Abortable & { flag?: OpenMode }) | BufferEncoding | null): Promise<string | Buffer | undefined>;
 export async function readFile(path: PathLike, options?: any) {
+	if (!fsp.readFile) throw toWrapFunctionIsUndefinedError;
 	try {
 		return await fsp.readFile(path, options);
 	} catch (error) {}
@@ -282,8 +291,9 @@ export async function fstat(fd: number, options?: StatOptions & { bigint?: false
 export async function fstat(fd: number, options: StatOptions & { bigint: true }): Promise<BigIntStats | undefined>;
 export async function fstat(fd: number, options?: StatOptions): Promise<Stats | BigIntStats | undefined>;
 export async function fstat(fd: number, options?: any) {
+	if (!fs.fstat?.__promisify__) throw toWrapFunctionIsUndefinedError;
 	try {
-		return await fs.fstat?.__promisify__(fd, options);
+		return await fs.fstat.__promisify__(fd, options);
 	} catch (error) {}
 }
 
@@ -294,9 +304,10 @@ export async function write<TBuffer extends NodeJS.ArrayBufferView>(fd: number, 
 // @ts-ignore
 export async function write(fd: number, string: string, position?: number | null, encoding?: BufferEncoding | null): Promise<{ bytesWritten: number; buffer: string } | undefined>;
 export async function write(...args: any[]) {
+	if (!fs.write?.__promisify__) throw toWrapFunctionIsUndefinedError;
 	try {
 		// @ts-ignore
-		return await fs.write?.__promisify__(...args);
+		return await fs.write.__promisify__(...args);
 	} catch (error) {}
 }
 
@@ -307,8 +318,9 @@ export async function read<TBuffer extends NodeJS.ArrayBufferView>(fd: number, b
 export async function read<TBuffer extends NodeJS.ArrayBufferView>(fd: number, options: ReadAsyncOptions<TBuffer>): Promise<{ bytesRead: number; buffer: TBuffer } | undefined>;
 export async function read(fd: number): Promise<{ bytesRead: number; buffer: NodeJS.ArrayBufferView } | undefined>;
 export async function read(...args: any[]) {
+	if (!fs.read?.__promisify__) throw toWrapFunctionIsUndefinedError;
 	try {
 		// @ts-ignore
-		return await fs.read?.__promisify__(...args);
+		return await fs.read.__promisify__(...args);
 	} catch (error) {}
 }

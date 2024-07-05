@@ -1,6 +1,8 @@
-import type { PathLike, StatOptions, StatSyncOptions } from 'node:fs';
+import type { Abortable } from 'events';
+import type { ObjectEncodingOptions, OpenMode, PathLike, PathOrFileDescriptor, StatOptions, StatSyncOptions } from 'node:fs';
+import type fsp from 'node:fs/promises';
 
-import { stat, statSync } from './fs';
+import { readFile, readFileSync, stat, statSync } from './fs';
 
 /**
  * Asynchronously retrieves the size of a file at the given path.
@@ -38,4 +40,186 @@ export function getFileSizeSync(path: PathLike, options: StatSyncOptions & { big
 export function getFileSizeSync(path: PathLike, options?: StatSyncOptions): number | bigint | undefined;
 export function getFileSizeSync(path: PathLike, options?: any) {
 	return statSync(path, options)?.size;
+}
+
+/**
+ * Asynchronously checks if the given path is a block device.
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a block device, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export async function pathIsBlockDevice(path: PathLike) {
+	return (await stat(path))?.isBlockDevice();
+}
+
+/**
+ * Synchronously checks if the given path is a block device.
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {boolean | undefined} - Returns true if the path is a block device, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export function pathIsBlockDeviceSync(path: PathLike) {
+	return statSync(path)?.isBlockDevice();
+}
+
+/**
+ * Asynchronously checks if the given path is a character device.
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a character device, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export async function pathIsCharacterDevice(path: PathLike) {
+	return (await stat(path))?.isCharacterDevice();
+}
+
+/**
+ * Synchronously checks if the given path is a character device.
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {boolean | undefined} - Returns true if the path is a character device, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export function pathIsCharacterDeviceSync(path: PathLike) {
+	return statSync(path)?.isCharacterDevice();
+}
+
+/**
+ * Asynchronously checks if the given path is a directory.
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a directory, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export async function pathIsDirectory(path: PathLike) {
+	return (await stat(path))?.isDirectory();
+}
+
+/**
+ * Synchronously checks if the given path is a directory.
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {boolean | undefined} - Returns true if the path is a directory, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export function pathIsDirectorySync(path: PathLike) {
+	return statSync(path)?.isDirectory();
+}
+
+/**
+ * @see {@link isDirectory}
+ */
+export const pathIsDir = pathIsDirectory;
+
+/**
+ * @see {@link isDirectorySync}
+ */
+export const pathIsDirSync = pathIsDirectorySync;
+
+/**
+ * Asynchronously checks if the given path is a FIFO (named pipe).
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a FIFO, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export async function pathIsFIFO(path: PathLike) {
+	return (await stat(path))?.isFIFO();
+}
+
+/**
+ * Synchronously checks if the given path is a FIFO (named pipe).
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {boolean | undefined} - Returns true if the path is a FIFO, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export function pathIsFIFOSync(path: PathLike) {
+	return statSync(path)?.isFIFO();
+}
+
+/**
+ * Asynchronously checks if the given path is a file.
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a file, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export async function pathIsFile(path: PathLike) {
+	return (await stat(path))?.isFile();
+}
+
+/**
+ * Synchronously checks if the given path is a file.
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {boolean | undefined} - Returns true if the path is a file, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export function pathIsFileSync(path: PathLike) {
+	return statSync(path)?.isFile();
+}
+
+/**
+ * Asynchronously checks if the given path is a socket.
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a socket, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export async function pathIsSocket(path: PathLike) {
+	return (await stat(path))?.isSocket();
+}
+
+/**
+ * Synchronously checks if the given path is a socket.
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {boolean | undefined} - Returns true if the path is a socket, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export function pathIsSocketSync(path: PathLike) {
+	return statSync(path)?.isSocket();
+}
+
+/**
+ * Asynchronously checks if the given path is a symbolic link.
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a symbolic link, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export async function pathIsSymbolicLink(path: PathLike) {
+	return (await stat(path))?.isSymbolicLink();
+}
+
+/**
+ * Synchronously checks if the given path is a symbolic link.
+ *
+ * @param {PathLike} path - The path to check.
+ * @returns {boolean | undefined} - Returns true if the path is a symbolic link, otherwise false, or undefined if the path does not exist or an error occurs.
+ */
+export function pathIsSymbolicLinkSync(path: PathLike) {
+	return statSync(path)?.isSymbolicLink();
+}
+
+/**
+ * Reads a file and returns its contents as a Blob.
+ *
+ * @param {PathLike | fsp.FileHandle} path - The path to the file.
+ * @param {ObjectEncodingOptions & Abortable & { flag?: OpenMode } | BufferEncoding | null} [options] - The options for reading the file.
+ * @returns {Promise<Blob | undefined>} - A promise that resolves to a Blob containing the file contents, or undefined if an error occurs.
+ */
+// @ts-ignore
+export async function readFileToBlob(path: PathLike | fsp.FileHandle, options?: ({ encoding?: null; flag?: OpenMode } & Abortable) | null): Promise<Blob | undefined>;
+export async function readFileToBlob(path: PathLike | fsp.FileHandle, options: ({ encoding: BufferEncoding; flag?: OpenMode } & Abortable) | BufferEncoding): Promise<Blob | undefined>;
+export async function readFileToBlob(path: PathLike | fsp.FileHandle, options?: (ObjectEncodingOptions & Abortable & { flag?: OpenMode }) | BufferEncoding | null): Promise<Blob | undefined>;
+export async function readFileToBlob(path: PathLike, options?: any) {
+	const file = await readFile(path, options);
+	if (file) return new Blob([file]);
+}
+
+/**
+ * Synchronously reads a file and returns its contents as a Blob.
+ *
+ * @param {PathOrFileDescriptor} path - The path to the file.
+ * @param {ObjectEncodingOptions & { flag?: string } | BufferEncoding | null} [options] - The options for reading the file.
+ * @returns {Blob | undefined} - A Blob containing the file contents, or undefined if an error occurs.
+ */
+// @ts-ignore
+export function readFileToBlobSync(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string } | null): Blob | undefined;
+export function readFileToBlobSync(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string } | BufferEncoding): Blob | undefined;
+export function readFileToBlobSync(path: PathOrFileDescriptor, options?: (ObjectEncodingOptions & { flag?: string }) | BufferEncoding | null): Blob | undefined;
+export function readFileToBlobSync(path: PathOrFileDescriptor, options?: any) {
+	const file = readFileSync(path, options);
+	if (file) return new Blob([file]);
 }

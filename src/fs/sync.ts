@@ -1,23 +1,5 @@
 import fs from 'node:fs';
-import type {
-	BigIntStats,
-	BigIntStatsFs,
-	BufferEncodingOption,
-	Dirent,
-	EncodingOption,
-	MakeDirectoryOptions,
-	Mode,
-	ObjectEncodingOptions,
-	PathLike,
-	PathOrFileDescriptor,
-	ReadPosition,
-	ReadSyncOptions,
-	StatsFs,
-	StatFsOptions,
-	StatOptions,
-	Stats,
-	StatSyncOptions
-} from 'node:fs';
+import type { PathLike } from 'node:fs';
 
 import { tB, tD, toWrapFunctionIsUndefinedError } from '../wrappers';
 
@@ -171,10 +153,10 @@ export const opendirSync = tD(fs.opendirSync);
 /**
  * @see {@link fs.fstatSync}
  */
-export function fstatSync(fd: number, options?: StatOptions & { bigint?: false }): Stats | undefined;
+export function fstatSync(fd: number, options?: fs.StatOptions & { bigint?: false }): fs.Stats | undefined;
 // @ts-ignore
 export function fstatSync(fd: number, options: StatOptions & { bigint: true }): BigIntStats | undefined;
-export function fstatSync(fd: number, options?: StatOptions): Stats | BigIntStats | undefined;
+export function fstatSync(fd: number, options?: fs.StatOptions): fs.Stats | fs.BigIntStats | undefined;
 export function fstatSync(fd: number, options?: any) {
 	if (!fs.fstatSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -185,10 +167,10 @@ export function fstatSync(fd: number, options?: any) {
 /**
  * @see {@link fs.statfsSync}
  */
-export function statfsSync(path: PathLike, options?: StatFsOptions & { bigint?: false }): StatsFs | undefined;
+export function statfsSync(path: PathLike, options?: fs.StatFsOptions & { bigint?: false }): fs.StatsFs | undefined;
 // @ts-ignore
 export function statfsSync(path: PathLike, options: StatFsOptions & { bigint: true }): BigIntStatsFs | undefined;
-export function statfsSync(path: PathLike, options?: StatFsOptions): StatsFs | BigIntStatsFs | undefined;
+export function statfsSync(path: PathLike, options?: fs.StatFsOptions): fs.StatsFs | fs.BigIntStatsFs | undefined;
 export function statfsSync(path: PathLike, options?: any) {
 	if (!fs.statfsSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -199,10 +181,10 @@ export function statfsSync(path: PathLike, options?: any) {
 /**
  * @see {@link fs.readlinkSync}
  */
-export function readlinkSync(path: PathLike, options?: EncodingOption): string | undefined;
+export function readlinkSync(path: PathLike, options?: fs.EncodingOption): string | undefined;
 // @ts-ignore
 export function readlinkSync(path: PathLike, options: BufferEncodingOption): Buffer | undefined;
-export function readlinkSync(path: PathLike, options?: EncodingOption): string | Buffer | undefined;
+export function readlinkSync(path: PathLike, options?: fs.EncodingOption): string | Buffer | undefined;
 export function readlinkSync(path: PathLike, options?: any) {
 	if (!fs.readlinkSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -213,10 +195,10 @@ export function readlinkSync(path: PathLike, options?: any) {
 /**
  * @see {@link fs.realpathSync}
  */
-export function realpathSync(path: PathLike, options?: EncodingOption): string | undefined;
+export function realpathSync(path: PathLike, options?: fs.EncodingOption): string | undefined;
 // @ts-ignore
 export function realpathSync(path: PathLike, options: BufferEncodingOption): Buffer | undefined;
-export function realpathSync(path: PathLike, options?: EncodingOption): string | Buffer | undefined;
+export function realpathSync(path: PathLike, options?: fs.EncodingOption): string | Buffer | undefined;
 export function realpathSync(path: PathLike, options?: any) {
 	if (!fs.realpathSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -227,9 +209,9 @@ export function realpathSync(path: PathLike, options?: any) {
 /**
  * @see {@link fs.mkdirSync}
  */
-export function mkdirSync(path: PathLike, options: MakeDirectoryOptions & { recursive: true }): string | undefined;
-export function mkdirSync(path: PathLike, options?: Mode | (MakeDirectoryOptions & { recursive?: false }) | null): boolean;
-export function mkdirSync(path: PathLike, options?: Mode | MakeDirectoryOptions | null): string | undefined;
+export function mkdirSync(path: PathLike, options: fs.MakeDirectoryOptions & { recursive: true }): string | undefined;
+export function mkdirSync(path: PathLike, options?: fs.Mode | (fs.MakeDirectoryOptions & { recursive?: false }) | null): boolean;
+export function mkdirSync(path: PathLike, options?: fs.Mode | fs.MakeDirectoryOptions | null): string | undefined;
 export function mkdirSync(path: PathLike, options?: any) {
 	if (!fs.mkdirSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -244,10 +226,10 @@ export function mkdirSync(path: PathLike, options?: any) {
 /**
  * @see {@link fs.mkdtempSync}
  */
-export function mkdtempSync(prefix: string, options?: EncodingOption): string | undefined;
+export function mkdtempSync(prefix: string, options?: fs.EncodingOption): string | undefined;
 // @ts-ignore
 export function mkdtempSync(prefix: string, options: BufferEncodingOption): Buffer | undefined;
-export function mkdtempSync(prefix: string, options?: EncodingOption): string | Buffer | undefined;
+export function mkdtempSync(prefix: string, options?: fs.EncodingOption): string | Buffer | undefined;
 export function mkdtempSync(prefix: string, options?: any) {
 	if (!fs.mkdtempSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -261,8 +243,8 @@ export function mkdtempSync(prefix: string, options?: any) {
 export function readdirSync(path: PathLike, options?: { encoding: BufferEncoding | null; withFileTypes?: false; recursive?: boolean } | BufferEncoding | null): string[] | undefined;
 // @ts-ignore
 export function readdirSync(path: PathLike, options: { encoding: 'buffer'; withFileTypes?: false; recursive?: boolean } | 'buffer'): Buffer[] | undefined;
-export function readdirSync(path: PathLike, options?: (ObjectEncodingOptions & { withFileTypes?: false; recursive?: boolean }) | BufferEncoding | null): string[] | Buffer[] | undefined;
-export function readdirSync(path: PathLike, options: ObjectEncodingOptions & { withFileTypes: true; recursive?: boolean }): Dirent[] | undefined;
+export function readdirSync(path: PathLike, options?: (fs.ObjectEncodingOptions & { withFileTypes?: false; recursive?: boolean }) | BufferEncoding | null): string[] | Buffer[] | undefined;
+export function readdirSync(path: PathLike, options: fs.ObjectEncodingOptions & { withFileTypes: true; recursive?: boolean }): fs.Dirent[] | undefined;
 export function readdirSync(path: PathLike, options?: any) {
 	if (!fs.readdirSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -286,8 +268,8 @@ export function writeSync(...args: any[]) {
 /**
  * @see {@link fs.readSync}
  */
-export function readSync(fd: number, buffer: NodeJS.ArrayBufferView, offset: number, length: number, position: ReadPosition | null): number | undefined;
-export function readSync(fd: number, buffer: NodeJS.ArrayBufferView, opts?: ReadSyncOptions): number | undefined;
+export function readSync(fd: number, buffer: NodeJS.ArrayBufferView, offset: number, length: number, position: fs.ReadPosition | null): number | undefined;
+export function readSync(fd: number, buffer: NodeJS.ArrayBufferView, opts?: fs.ReadSyncOptions): number | undefined;
 export function readSync(...args: any[]) {
 	if (!fs.readSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -299,11 +281,11 @@ export function readSync(...args: any[]) {
 /**
  * @see {@link fs.readFileSync}
  */
-export function readFileSync(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string } | null): Buffer | undefined;
+export function readFileSync(path: fs.PathOrFileDescriptor, options?: { encoding?: null; flag?: string } | null): Buffer | undefined;
 // @ts-ignore
-export function readFileSync(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string } | BufferEncoding): string | undefined;
-export function readFileSync(path: PathOrFileDescriptor, options?: (ObjectEncodingOptions & { flag?: string }) | BufferEncoding | null): string | Buffer | undefined;
-export function readFileSync(path: PathOrFileDescriptor, options?: any) {
+export function readFileSync(path: fs.PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string } | BufferEncoding): string | undefined;
+export function readFileSync(path: fs.PathOrFileDescriptor, options?: (fs.ObjectEncodingOptions & { flag?: string }) | BufferEncoding | null): string | Buffer | undefined;
+export function readFileSync(path: fs.PathOrFileDescriptor, options?: any) {
 	if (!fs.readFileSync) throw toWrapFunctionIsUndefinedError;
 	try {
 		return fs.readFileSync(path, options);
@@ -313,10 +295,10 @@ export function readFileSync(path: PathOrFileDescriptor, options?: any) {
 /**
  * @see {@link fs.statSync}
  */
-export function statSync(path: PathLike, options?: StatSyncOptions & { bigint?: false }): Stats | undefined;
+export function statSync(path: PathLike, options?: fs.StatSyncOptions & { bigint?: false }): fs.Stats | undefined;
 // @ts-ignore
-export function statSync(path: PathLike, options: StatSyncOptions & { bigint: true }): BigIntStats | undefined;
-export function statSync(path: PathLike, options?: StatSyncOptions): Stats | BigIntStats | undefined;
+export function statSync(path: PathLike, options: fs.StatSyncOptions & { bigint: true }): BigIntStats | undefined;
+export function statSync(path: PathLike, options?: fs.StatSyncOptions): fs.Stats | fs.BigIntStats | undefined;
 export function statSync(path: PathLike, options?: any) {
 	if (!fs.statSync) throw toWrapFunctionIsUndefinedError;
 	try {

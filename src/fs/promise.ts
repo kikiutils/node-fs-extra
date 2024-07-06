@@ -1,6 +1,6 @@
 import type { Abortable } from 'events';
 import fs from 'node:fs';
-import type { BigIntStats, BigIntStatsFs, BufferEncodingOption, Dirent, MakeDirectoryOptions, Mode, ObjectEncodingOptions, OpenMode, PathLike, ReadAsyncOptions, StatsFs, StatFsOptions, StatOptions, Stats } from 'node:fs';
+import type { ObjectEncodingOptions, PathLike, StatOptions } from 'node:fs';
 import fsp from 'node:fs/promises';
 
 import { pTB, pTD, toWrapFunctionIsUndefinedError } from '../wrappers';
@@ -155,9 +155,9 @@ export const readv = pTD(fs.readv?.__promisify__);
 /**
  * @see {@link fsp.mkdir}
  */
-export async function mkdir(path: PathLike, options: MakeDirectoryOptions & { recursive: true }): Promise<string | undefined>;
-export async function mkdir(path: PathLike, options?: Mode | (MakeDirectoryOptions & { recursive?: false }) | null): Promise<boolean>;
-export async function mkdir(path: PathLike, options?: Mode | MakeDirectoryOptions | null): Promise<string | undefined>;
+export async function mkdir(path: PathLike, options: fs.MakeDirectoryOptions & { recursive: true }): Promise<string | undefined>;
+export async function mkdir(path: PathLike, options?: fs.Mode | (fs.MakeDirectoryOptions & { recursive?: false }) | null): Promise<boolean>;
+export async function mkdir(path: PathLike, options?: fs.Mode | fs.MakeDirectoryOptions | null): Promise<string | undefined>;
 export async function mkdir(path: PathLike, options?: any) {
 	if (!fsp.mkdir) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -177,7 +177,7 @@ export async function readdir(path: PathLike, options?: (ObjectEncodingOptions &
 // @ts-ignore
 export async function readdir(path: PathLike, options: { encoding: 'buffer'; withFileTypes?: false; recursive?: boolean } | 'buffer'): Promise<Buffer[] | undefined>;
 export async function readdir(path: PathLike, options?: (ObjectEncodingOptions & { withFileTypes?: false; recursive?: boolean }) | BufferEncoding | null): Promise<string[] | Buffer[] | undefined>;
-export async function readdir(path: PathLike, options: ObjectEncodingOptions & { withFileTypes: true; recursive?: boolean }): Promise<Dirent[] | undefined>;
+export async function readdir(path: PathLike, options: ObjectEncodingOptions & { withFileTypes: true; recursive?: boolean }): Promise<fs.Dirent[] | undefined>;
 export async function readdir(path: PathLike, options?: any) {
 	if (!fsp.readdir) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -202,10 +202,10 @@ export async function readlink(path: PathLike, options?: any) {
 /**
  * @see {@link fsp.lstat}
  */
-export async function lstat(path: PathLike, opts?: StatOptions & { bigint?: false }): Promise<Stats | undefined>;
+export async function lstat(path: PathLike, opts?: StatOptions & { bigint?: false }): Promise<fs.Stats | undefined>;
 // @ts-ignore
 export async function lstat(path: PathLike, opts: StatOptions & { bigint: true }): Promise<BigIntStats | undefined>;
-export async function lstat(path: PathLike, opts?: StatOptions): Promise<Stats | BigIntStats | undefined>;
+export async function lstat(path: PathLike, opts?: StatOptions): Promise<fs.Stats | fs.BigIntStats | undefined>;
 export async function lstat(path: PathLike, opts?: any) {
 	if (!fsp.lstat) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -216,10 +216,10 @@ export async function lstat(path: PathLike, opts?: any) {
 /**
  * @see {@link fsp.stat}
  */
-export async function stat(path: PathLike, opts?: StatOptions & { bigint?: false }): Promise<Stats | undefined>;
+export async function stat(path: PathLike, opts?: StatOptions & { bigint?: false }): Promise<fs.Stats | undefined>;
 // @ts-ignore
 export async function stat(path: PathLike, opts: StatOptions & { bigint: true }): Promise<BigIntStats | undefined>;
-export async function stat(path: PathLike, opts?: StatOptions): Promise<Stats | BigIntStats | undefined>;
+export async function stat(path: PathLike, opts?: StatOptions): Promise<fs.Stats | fs.BigIntStats | undefined>;
 export async function stat(path: PathLike, opts?: any) {
 	if (!fsp.stat) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -230,10 +230,10 @@ export async function stat(path: PathLike, opts?: any) {
 /**
  * @see {@link fsp.statfs}
  */
-export async function statfs(path: PathLike, opts?: StatFsOptions & { bigint?: false }): Promise<StatsFs | undefined>;
+export async function statfs(path: PathLike, opts?: fs.StatFsOptions & { bigint?: false }): Promise<fs.StatsFs | undefined>;
 // @ts-ignore
 export async function statfs(path: PathLike, opts: StatFsOptions & { bigint: true }): Promise<BigIntStatsFs | undefined>;
-export async function statfs(path: PathLike, opts?: StatFsOptions): Promise<StatsFs | BigIntStatsFs | undefined>;
+export async function statfs(path: PathLike, opts?: fs.StatFsOptions): Promise<fs.StatsFs | fs.BigIntStatsFs | undefined>;
 export async function statfs(path: PathLike, opts?: any) {
 	if (!fsp.statfs) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -272,10 +272,10 @@ export async function mkdtemp(prefix: string, options?: any) {
 /**
  * @see {@link fsp.readFile}
  */
-export async function readFile(path: PathLike | fsp.FileHandle, options?: ({ encoding?: null; flag?: OpenMode } & Abortable) | null): Promise<Buffer | undefined>;
+export async function readFile(path: PathLike | fsp.FileHandle, options?: ({ encoding?: null; flag?: fs.OpenMode } & Abortable) | null): Promise<Buffer | undefined>;
 // @ts-ignore
 export async function readFile(path: PathLike | fsp.FileHandle, options: ({ encoding: BufferEncoding; flag?: OpenMode } & Abortable) | BufferEncoding): Promise<string | undefined>;
-export async function readFile(path: PathLike | fsp.FileHandle, options?: (ObjectEncodingOptions & Abortable & { flag?: OpenMode }) | BufferEncoding | null): Promise<string | Buffer | undefined>;
+export async function readFile(path: PathLike | fsp.FileHandle, options?: (ObjectEncodingOptions & Abortable & { flag?: fs.OpenMode }) | BufferEncoding | null): Promise<string | Buffer | undefined>;
 export async function readFile(path: PathLike | fsp.FileHandle, options?: any) {
 	if (!fsp.readFile) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -286,10 +286,10 @@ export async function readFile(path: PathLike | fsp.FileHandle, options?: any) {
 /**
  * @see {@link fs.fstat.__promisify__}
  */
-export async function fstat(fd: number, options?: StatOptions & { bigint?: false }): Promise<Stats | undefined>;
+export async function fstat(fd: number, options?: StatOptions & { bigint?: false }): Promise<fs.Stats | undefined>;
 // @ts-ignore
 export async function fstat(fd: number, options: StatOptions & { bigint: true }): Promise<BigIntStats | undefined>;
-export async function fstat(fd: number, options?: StatOptions): Promise<Stats | BigIntStats | undefined>;
+export async function fstat(fd: number, options?: StatOptions): Promise<fs.Stats | fs.BigIntStats | undefined>;
 export async function fstat(fd: number, options?: any) {
 	if (!fs.fstat?.__promisify__) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -315,7 +315,7 @@ export async function write(...args: any[]) {
  * @see {@link fs.read.__promisify__}
  */
 export async function read<TBuffer extends NodeJS.ArrayBufferView>(fd: number, buffer: TBuffer, offset: number, length: number, position: number | null): Promise<{ bytesRead: number; buffer: TBuffer } | undefined>;
-export async function read<TBuffer extends NodeJS.ArrayBufferView>(fd: number, options: ReadAsyncOptions<TBuffer>): Promise<{ bytesRead: number; buffer: TBuffer } | undefined>;
+export async function read<TBuffer extends NodeJS.ArrayBufferView>(fd: number, options: fs.ReadAsyncOptions<TBuffer>): Promise<{ bytesRead: number; buffer: TBuffer } | undefined>;
 export async function read(fd: number): Promise<{ bytesRead: number; buffer: NodeJS.ArrayBufferView } | undefined>;
 export async function read(...args: any[]) {
 	if (!fs.read?.__promisify__) throw toWrapFunctionIsUndefinedError;

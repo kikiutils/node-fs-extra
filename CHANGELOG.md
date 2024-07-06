@@ -1,5 +1,26 @@
 # Changelog
 
+## v2.2.1
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.2.0...v2.2.1)
+
+### 🩹 Fixes
+
+- Resolve type errors ([b2c57f5](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/b2c57f5))
+
+### 💅 Refactors
+
+- Change import method for some parameter types ([6f701be](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/6f701be))
+- Modify creation method and update comments for some fs-extra functions ([ffdb348](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/ffdb348))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([0c55f60](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/0c55f60))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.2.0
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.1.0...v2.2.0)

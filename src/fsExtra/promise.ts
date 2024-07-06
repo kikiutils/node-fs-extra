@@ -70,7 +70,7 @@ export const outputFile = pTB(async (...args: FseParameters['outputFileSync']) =
 /**
  * @see {@link fse.readJson}
  */
-export const readJson = pTD(async <T>(...args: FseParameters['readJsonSync']) => (await fse.readJson(...args)) as T);
+export const readJson = pTD(async <T = any>(...args: FseParameters['readJsonSync']) => (await fse.readJson(...args)) as T);
 
 /**
  * @see {@link fse.readJSON}

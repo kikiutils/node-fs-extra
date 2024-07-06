@@ -272,11 +272,11 @@ export async function mkdtemp(prefix: string, options?: any) {
 /**
  * @see {@link fsp.readFile}
  */
-// @ts-ignore
 export async function readFile(path: PathLike | fsp.FileHandle, options?: ({ encoding?: null; flag?: OpenMode } & Abortable) | null): Promise<Buffer | undefined>;
+// @ts-ignore
 export async function readFile(path: PathLike | fsp.FileHandle, options: ({ encoding: BufferEncoding; flag?: OpenMode } & Abortable) | BufferEncoding): Promise<string | undefined>;
 export async function readFile(path: PathLike | fsp.FileHandle, options?: (ObjectEncodingOptions & Abortable & { flag?: OpenMode }) | BufferEncoding | null): Promise<string | Buffer | undefined>;
-export async function readFile(path: PathLike, options?: any) {
+export async function readFile(path: PathLike | fsp.FileHandle, options?: any) {
 	if (!fsp.readFile) throw toWrapFunctionIsUndefinedError;
 	try {
 		return await fsp.readFile(path, options);

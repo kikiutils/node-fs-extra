@@ -1,11 +1,9 @@
 import fse from 'fs-extra';
 
 import { pTB, pTD } from '../wrappers';
+import type { FseParameters } from './types';
 
 export { pathExists } from 'fs-extra';
-
-type FunctionName = 'ensureDir' | 'ensureLink' | 'ensureSymlink' | 'move' | 'outputFile' | 'outputJson' | 'readJson' | 'writeJson';
-type FseParameters = { [K in `${FunctionName}Sync`]: Parameters<(typeof fse)[K]> };
 
 /**
  * @see {@link fse.copy}
@@ -23,7 +21,7 @@ export const move = pTB(async (...args: FseParameters['moveSync']) => await fse.
 export const ensureFile = pTB(async (file: string) => await fse.ensureFile(file));
 
 /**
- * @see {@link fse.createFile}
+ * @see {@link fse.ensureFile}
  */
 export const createFile = ensureFile;
 
@@ -33,7 +31,7 @@ export const createFile = ensureFile;
 export const ensureLink = pTB(async (...args: FseParameters['ensureLinkSync']) => await fse.ensureLink(...args));
 
 /**
- * @see {@link fse.createLink}
+ * @see {@link fse.ensureLink}
  */
 export const createLink = ensureLink;
 
@@ -43,7 +41,7 @@ export const createLink = ensureLink;
 export const ensureSymlink = pTB(async (...args: FseParameters['ensureSymlinkSync']) => await fse.ensureSymlink(...args));
 
 /**
- * @see {@link fse.createSymlink}
+ * @see {@link fse.ensureSymlink}
  */
 export const createSymlink = ensureSymlink;
 
@@ -53,12 +51,12 @@ export const createSymlink = ensureSymlink;
 export const ensureDir = pTB(async (...args: FseParameters['ensureDirSync']) => await fse.ensureDir(...args));
 
 /**
- * @see {@link fse.mkdirp}
+ * @see {@link fse.ensureDir}
  */
 export const mkdirp = ensureDir;
 
 /**
- * @see {@link fse.mkdirs}
+ * @see {@link fse.ensureDir}
  */
 export const mkdirs = ensureDir;
 
@@ -73,7 +71,7 @@ export const outputFile = pTB(async (...args: FseParameters['outputFileSync']) =
 export const readJson = pTD(async <T = any>(...args: FseParameters['readJsonSync']) => (await fse.readJson(...args)) as T);
 
 /**
- * @see {@link fse.readJSON}
+ * @see {@link fse.readJson}
  */
 export const readJSON = readJson;
 
@@ -83,7 +81,7 @@ export const readJSON = readJson;
 export const writeJson = pTB(async (...args: FseParameters['writeJsonSync']) => await fse.writeJson(...args));
 
 /**
- * @see {@link fse.writeJSON}
+ * @see {@link fse.writeJson}
  */
 export const writeJSON = writeJson;
 
@@ -93,7 +91,7 @@ export const writeJSON = writeJson;
 export const outputJson = pTB(async (...args: FseParameters['outputJsonSync']) => await fse.outputJson(...args));
 
 /**
- * @see {@link fse.outputJSON}
+ * @see {@link fse.outputJson}
  */
 export const outputJSON = outputJson;
 
@@ -108,6 +106,6 @@ export const remove = pTB(async (dir: string) => await fse.remove(dir));
 export const emptyDir = pTB(async (path: string) => await fse.emptyDir(path));
 
 /**
- * @see {@link fse.emptydir}
+ * @see {@link fse.emptyDir}
  */
 export const emptydir = emptyDir;

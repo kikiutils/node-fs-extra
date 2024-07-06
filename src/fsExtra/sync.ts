@@ -1,6 +1,7 @@
 import fse from 'fs-extra';
 
 import { tB, tD } from '../wrappers';
+import type { FseParameters } from './types';
 
 export { pathExistsSync } from 'fs-extra';
 
@@ -55,39 +56,39 @@ export const removeSync = tB(fse.removeSync);
 export const emptyDirSync = tB(fse.emptyDirSync);
 
 /**
- * @see {@link fse.createFileSync}
+ * @see {@link fse.ensureFileSync}
  */
-export const createFileSync = tB(fse.createFileSync);
+export const createFileSync = ensureFileSync;
 
 /**
- * @see {@link fse.createLinkSync}
+ * @see {@link fse.ensureLinkSync}
  */
-export const createLinkSync = tB(fse.createLinkSync);
+export const createLinkSync = ensureLinkSync;
 
 /**
- * @see {@link fse.createSymlinkSync}
+ * @see {@link fse.ensureSymlinkSync}
  */
-export const createSymlinkSync = tB(fse.createSymlinkSync);
+export const createSymlinkSync = ensureSymlinkSync;
 
 /**
- * @see {@link fse.mkdirsSync}
+ * @see {@link fse.ensureDirSync}
  */
-export const mkdirsSync = tB(fse.mkdirsSync);
+export const mkdirsSync = ensureDirSync;
 
 /**
- * @see {@link fse.mkdirpSync}
+ * @see {@link fse.ensureDirSync}
  */
-export const mkdirpSync = tB(fse.mkdirpSync);
+export const mkdirpSync = ensureDirSync;
 
 /**
  * @see {@link fse.readJsonSync}
  */
-export const readJsonSync = tD(fse.readJsonSync);
+export const readJsonSync = tD(<T = any>(...args: FseParameters['readJsonSync']) => fse.readJsonSync(...args) as T);
 
 /**
- * @see {@link fse.readJSONSync}
+ * @see {@link fse.readJsonSync}
  */
-export const readJSONSync = tD(fse.readJSONSync);
+export const readJSONSync = readJsonSync;
 
 /**
  * @see {@link fse.writeJsonSync}
@@ -95,16 +96,16 @@ export const readJSONSync = tD(fse.readJSONSync);
 export const writeJsonSync = tB(fse.writeJsonSync);
 
 /**
- * @see {@link fse.writeJSONSync}
+ * @see {@link fse.writeJsonSync}
  */
-export const writeJSONSync = tB(fse.writeJSONSync);
+export const writeJSONSync = writeJsonSync;
 
 /**
- * @see {@link fse.outputJSONSync}
+ * @see {@link fse.outputJsonSync}
  */
-export const outputJSONSync = tB(fse.outputJSONSync);
+export const outputJSONSync = outputJsonSync;
 
 /**
- * @see {@link fse.emptydirSync}
+ * @see {@link fse.emptyDirSync}
  */
-export const emptydirSync = tB(fse.emptydirSync);
+export const emptydirSync = emptyDirSync;

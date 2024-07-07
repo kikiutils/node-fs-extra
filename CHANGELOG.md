@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.2.2
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.2.1...v2.2.2)
+
+### 🩹 Fixes
+
+- Resolve type errors ([932cf1f](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/932cf1f))
+- Ensure entry point exports default ([945d7b2](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/945d7b2))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.2.1
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.2.0...v2.2.1)

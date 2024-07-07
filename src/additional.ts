@@ -215,7 +215,6 @@ export async function readFileToBlob(path: PathLike, options?: any) {
  * @param {ObjectEncodingOptions & { flag?: string } | BufferEncoding | null} [options] - The options for reading the file.
  * @returns {Blob | undefined} - A Blob containing the file contents, or undefined if an error occurs.
  */
-// @ts-ignore
 export function readFileToBlobSync(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string } | null): Blob | undefined;
 export function readFileToBlobSync(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string } | BufferEncoding): Blob | undefined;
 export function readFileToBlobSync(path: PathOrFileDescriptor, options?: (ObjectEncodingOptions & { flag?: string }) | BufferEncoding | null): Blob | undefined;

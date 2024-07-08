@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.2.3
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.2.2...v2.2.3)
+
+### 💅 Refactors
+
+- Change export method for pathExists and pathExistsSync ([12dc4c9](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/12dc4c9))
+- Modify entry point and method of exporting all functions ([5cc8b4f](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/5cc8b4f))
+- Modify build process ([1cadbda](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/1cadbda))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.2.2
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.2.1...v2.2.2)

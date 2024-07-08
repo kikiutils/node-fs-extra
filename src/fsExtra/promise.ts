@@ -3,8 +3,6 @@ import fse from 'fs-extra';
 import { pTB, pTD } from '../wrappers';
 import type { FseParameters } from './types';
 
-export { pathExists } from 'fs-extra';
-
 /**
  * @see {@link fse.copy}
  */
@@ -109,3 +107,4 @@ export const emptyDir = pTB(async (path: string) => await fse.emptyDir(path));
  * @see {@link fse.emptyDir}
  */
 export const emptydir = emptyDir;
+export const pathExists = fse.pathExists;

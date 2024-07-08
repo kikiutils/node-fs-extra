@@ -3,8 +3,6 @@ import fse from 'fs-extra';
 import { tB, tD } from '../wrappers';
 import type { FseParameters } from './types';
 
-export { pathExistsSync } from 'fs-extra';
-
 /**
  * @see {@link fse.copySync}
  */
@@ -109,3 +107,4 @@ export const outputJSONSync = outputJsonSync;
  * @see {@link fse.emptyDirSync}
  */
 export const emptydirSync = emptyDirSync;
+export const pathExistsSync = fse.pathExistsSync;

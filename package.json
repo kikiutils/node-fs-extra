@@ -9,15 +9,16 @@
     "url": "git+https://github.com/kiki-kanri/kikiutils-node-fs-extra.git"
   },
   "type": "module",
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
   "files": [
     "./dist"
   ],
   "scripts": {
-    "build": "rm -rf ./dist && tsc",
+    "build": "rm -rf ./dist && tsc-multi",
     "bumplog": "changelogen --bump",
     "prepack": "npm run build"
   },
+  "types": "./dist/index.d.ts",
   "dependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/jsonfile": "^6.1.4",
@@ -28,7 +29,7 @@
     "@kikiutils/tsconfigs": "^2.2.0",
     "@types/node": "^20.14.10",
     "changelogen": "^0.5.5",
-    "typescript": "^5.5.3"
+    "tsc-multi": "^1.1.0"
   },
   "keywords": [
     "copy",

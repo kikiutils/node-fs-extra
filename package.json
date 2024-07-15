@@ -14,7 +14,7 @@
     "./dist"
   ],
   "scripts": {
-    "build": "rm -rf ./dist && tsc-multi",
+    "build": "tsc-multi --clean && tsc-multi",
     "bumplog": "changelogen --bump",
     "prepack": "npm run build"
   },

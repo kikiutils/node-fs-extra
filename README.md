@@ -6,93 +6,87 @@
 
 Provides `node:fs`, `node:fs/promise` and `fs-extra` functions wrapped in try-catch.
 
-- [✨ Release Notes](/CHANGELOG.md)
-
-## Description
-
-When using native `node:fs` or `fs-extra` functions, you often care more about the operation's success than the specifics of any error.
-
-This package wraps the native `node:fs`, `node:fs/promises`, and `fs-extra` functions so that you don't need to use try-catch to prevent errors from stopping your program.
-
-The original void-returning functions are wrapped to return true if they succeed and false if they fail.
-
-The other functions return the original data if they succeed, or undefined if they fail.
-
-## Installation
-
-```bash
-# Using pnpm
-pnpm add @kikiutils/fs-extra
-
-# Using yarn
-yarn add @kikiutils/fs-extra
-
-# Using npm
-npm i @kikiutils/fs-extra
-
-# Using bun
-bun add @kikiutils/fs-extra
-```
+- [✨ Release Notes](./CHANGELOG.md)
 
 ## Environmental Requirements
 
-- ESM only
-- NodeJS 18 or higher
+- Node.js version 18 or higher
 
-## Functions
+## Installation
 
-You can use most of the functions exported from the native `node:fs`, `node:fs/promises`, and `fs-extra` packages.
+Add dependency (example using pnpm).
 
-However, all functions that do not end with "Sync" return a promise and do not accept callback arguments.
+```bash
+pnpm add @kikiutils/fs-extra
+```
 
-This is because with callbacks, errors are passed into the callback, which makes no sense when using wrappers.
+You can also use yarn, npm, or bun to add the dependency.
 
-If you need to use callbacks, import them from the original package.
-
-- [node:fs-promises-api](https://nodejs.org/api/fs.html#promises-api)
-- [node:fs-synchronous-api](https://nodejs.org/api/fs.html#synchronous-api)
-- [fs-extra](https://www.npmjs.com/package/fs-extra)
-
-### Additional
-
-The following functions all have corresponding sync versions.
-
-- `getFileSize` - Uses `stat` to get the file size.
-- `pathIsBlockDevice` - Uses `stat` to check if a path is a block device.
-- `pathIsCharacterDevice` - Uses `stat` to check if a path is a character device.
-- `pathIsDirectory`, `pathIsDir` - Uses `stat` to check if a path is a directory.
-- `pathIsFIFO` - Uses `stat` to check if a path is a FIFO (named pipe).
-- `pathIsFile` - Uses `stat` to check if a path is a file.
-- `pathIsSocket` - Uses `stat` to check if a path is a socket.
-- `pathIsSymbolicLink` - Uses `stat` to check if a path is a symbolic link.
-- `readFileToBlob` - Reads a file and returns its contents as a Blob.
-
-### Not wrapped
-
-Deprecated functions are not wrapped.
-
-These functions do not need to be wrapped and have similar names but different functionalities. To avoid confusion, please import them directly from `node:fs` or `node:fs/promises`:
-
-- fs.watch
-- fs.watchFile
-- fs.promise.watch
+That's it! You're ready to use this package in your project. Check out the instructions for [usage](#usage) below ✨.
 
 ## Usage
 
+When using `node:fs`, `node:fs/promises`, or `fs-extra` functions, you may only care about whether the operation succeeds, not the reason for any errors.
 
-**If the function being used does not have a corresponding functionality due to differences in the environment (such as NodeJS version, deno, or bun), a `ToWrapFunctionIsUndefinedError` will be thrown directly when it is used.**
+This package wraps these functions with try-catch to prevent errors from stopping the entire program.
+
+Functions that originally return void now return `true` on success and `false` on failure.
+
+Functions that originally return data now return the data on success and `undefined` on failure.
+
+> [!IMPORTANT]
+> If the function you are executing does not have a corresponding feature in the runtime, it will throw a `ToWrapFunctionIsUndefinedError` error.
 
 ```typescript
 import kFse from '@kikiutils/fs-extra';
+import { rename } from '@kikiutils/fs-extra';
 
 const data = await kFse.readJson(path);
 // Any json data - successfully read
 // undefined - an error occurred
 
-const result = await kFse.rename(oldPath, newPath);
+const result = await rename(oldPath, newPath);
 // true - successfully renamed
 // false - an error occurred
 ```
+
+See the description below to find out which functions are available.
+
+## Available Functions
+
+You can use most of the functions provided by `node:fs`, `node:fs/promises`, and `fs-extra`, but all functions that do not end with "Sync" will return a Promise.
+
+All functions do not have a callback parameter because errors are passed to the callback if used.
+
+If you need to use the callback functionality, please import and use the functions directly from the original package.
+
+- [node:fs-promises-api](https://nodejs.org/api/fs.html#promises-api)
+- [node:fs-synchronous-api](https://nodejs.org/api/fs.html#synchronous-api)
+- [fs-extra](https://www.npmjs.com/package/fs-extra)
+
+### Additional Functions
+
+The following functions have corresponding sync versions.
+
+- getFileSize - Uses `stat` to get the file size.
+- pathIsBlockDevice - Uses `stat` to check if a path is a block device.
+- pathIsCharacterDevice - Uses `stat` to check if a path is a character device.
+- pathIsDirectory, pathIsDir - Uses `stat` to check if a path is a directory.
+- pathIsFIFO - Uses `stat` to check if a path is a FIFO (named pipe).
+- pathIsFile - Uses `stat` to check if a path is a file.
+- pathIsSocket - Uses `stat` to check if a path is a socket.
+- pathIsSymbolicLink - Uses `stat` to check if a path is a symbolic link.
+- readFileToBlob - Reads a file and returns its contents as a Blob.
+
+### Unexported Functions
+
+Deprecated functions are not exported.
+
+The following functions do not need to be wrapped with try-catch. If you need to use them, please import them directly from `node:fs` or `node:fs/promises`:
+
+- fs.watch
+- fs.watchFile
+- fs.promise.watch
 
 ## License
 

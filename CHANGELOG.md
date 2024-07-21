@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.3.1
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.0...v2.3.1)
+
+### 📦 Build
+
+- Add ESM format files to build output ([059619c](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/059619c))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.3.0
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.2.3...v2.3.0)

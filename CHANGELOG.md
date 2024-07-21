@@ -1,5 +1,26 @@
 # Changelog
 
+## v2.3.0
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.2.3...v2.3.0)
+
+### 💅 Refactors
+
+- Update dependencies and modify build script ([a25cdcd](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/a25cdcd))
+
+### 📦 Build
+
+- Switch to Rollup ([4ebe54c](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/4ebe54c))
+
+### 🏡 Chore
+
+- Update .gitignore ([ea937a5](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/ea937a5))
+- Update dependencies, description, and README ([8530d02](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/8530d02))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.2.3
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.2.2...v2.2.3)

@@ -1,6 +1,6 @@
 {
   "name": "@kikiutils/fs-extra",
-  "version": "2.2.3",
+  "version": "2.3.0",
   "description": "Provides node:fs, node:fs/promise and fs-extra functions wrapped in try-catch.",
   "license": "MIT",
   "author": "kiki-kanri",

@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.3.2
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.1...v2.3.2)
+
+### 📖 Documentation
+
+- Update README and package.json description field ([a12ddfb](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/a12ddfb))
+
+### 📦 Build
+
+- Update rollup configuration ([d36a641](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/d36a641))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.3.1
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.0...v2.3.1)

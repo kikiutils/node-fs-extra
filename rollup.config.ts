@@ -8,6 +8,7 @@ import nodeExternals from 'rollup-plugin-node-externals';
 const generateOutputOptions = (format: 'cjs' | 'esm'): OutputOptions => ({
 	dir: './dist',
 	entryFileNames: `[name].${format === 'cjs' ? 'cjs' : 'mjs'}`,
+	exports: 'named',
 	externalLiveBindings: false,
 	format,
 	generatedCode: {

@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.3.3
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.2...v2.3.3)
+
+### 🩹 Fixes
+
+- Add default export to entry point ([c69f00a](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/c69f00a))
+
+### 🏡 Chore
+
+- Update tsconfig.json ([c0f51dd](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/c0f51dd))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.3.2
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.1...v2.3.2)

@@ -4,9 +4,17 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 
-Provides `node:fs`, `node:fs/promise` and `fs-extra` functions wrapped in try-catch.
+Wraps `node:fs`, `node:fs/promises`, and `fs-extra` functions with try-catch, returning success/failure indicators. Includes additional file and path utilities.
 
 - [✨ Release Notes](./CHANGELOG.md)
+
+## Features
+
+- 🛡️ Wraps `node:fs`, `node:fs/promises`, and `fs-extra` functions with try-catch for error prevention
+- ✔️ Returns `true` on success and `false` on failure for functions that originally return void
+- 📊 Returns data on success and `undefined` on failure for functions that originally return data
+- 🌐 Provides support for most `node:fs`, `node:fs/promises`, and `fs-extra` functions
+- 🔧 Additional utility functions for file and path operations
 
 ## Environmental Requirements
 

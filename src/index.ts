@@ -1,4 +1,2 @@
-export * from './additional';
-export * from './fs';
-export * from './fsExtra';
-export { ToWrapFunctionIsUndefinedError } from './wrappers';
+export * as default from './_index';
+export * from './_index';

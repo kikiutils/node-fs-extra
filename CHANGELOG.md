@@ -208,3 +208,318 @@
 ### ❤️ Contributors
 
 - kiki-kanri
+
+## v1.3.2
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.3.1...v1.3.2)
+
+### 🏡 Chore
+
+- Upgrade dependencies ([be5f594](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/be5f594))
+- Add prettier ([25a92e5](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/25a92e5))
+
+### 🎨 Styles
+
+- Format codes ([36285ed](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/36285ed))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.3.1
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.3.0...v1.3.1)
+
+### 🩹 Fixes
+
+- Fixed bun and deno error ([c214116](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/c214116))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([c2c8e7b](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/c2c8e7b))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.3.0
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.11...v1.3.0)
+
+### 🚀 Enhancements
+
+- Add get file size function ([b29c44e](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/b29c44e))
+
+### 📖 Documentation
+
+- Edit readme ([e4b0b61](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/e4b0b61))
+
+### 🏡 Chore
+
+- Upgrade dependencies and edit build script ([ce14fb6](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/ce14fb6))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.2.11
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.10...v1.2.11)
+
+### 🩹 Fixes
+
+- Upgrade build tool to fix output files cjs error ([cd579b4](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/cd579b4))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.2.10
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.9...v1.2.10)
+
+### 🏡 Chore
+
+- Upgrade dependencies ([5eefba0](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/5eefba0))
+- Change tsconfig extends target ([068407c](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/068407c))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.2.9
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.8...v1.2.9)
+
+### 💅 Refactors
+
+- Tsconfig use package to extends ([d658442](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/d658442))
+
+### 📦 Build
+
+- Change method and tool ([d193956](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/d193956))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([8683230](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/8683230))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.2.8
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.7...v1.2.8)
+
+### 📦 Build
+
+- Set externalLiveBindings to false ([ed8869f](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/ed8869f))
+
+### 🏡 Chore
+
+- Edit dependencies identifier ([db54a6d](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/db54a6d))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.2.7
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.6...v1.2.7)
+
+### 📦 Build
+
+- Change method and add or edit configs ([3b5d43d](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/3b5d43d))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([aa5812e](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/aa5812e))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.2.6
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.5...v1.2.6)
+
+### 📦 Build
+
+- Disable minify ([8403cb1](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/8403cb1))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([1d95c60](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/1d95c60))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.2.5
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.4...v1.2.5)
+
+### Commits
+
+- Edit readme.
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.2.4
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.3...v1.2.4)
+
+### Commits
+
+- Edit readme, up to 1.2.4.
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.2.3
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.2...v1.2.3)
+
+### Commits
+
+- Fixed json functions not fully exported problem.
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.2.2
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.1...v1.2.2)
+
+### Commits
+
+- Add comments to some functions.
+- Edit readme, up to 1.2.2.
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.2.1
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.0...v1.2.1)
+
+### Commits
+
+- Change build method, edit gitignore and other info.
+- Optimized code reduces output file size.
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.2.0
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.1.2...v1.2.0)
+
+### Commits
+
+- Edit _fsExtra export functions.
+- Edit fs and fs/promises files.
+- Remove watch function export.
+- Edit readme, up to 1.2.0.
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.1.2
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.1.1...v1.1.2)
+
+### Commits
+
+- Edit comment and split _fsExtra file.
+- Upgrade packages, up to 1.1.2.
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.1.1
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.1.0...v1.1.1)
+
+### Commits
+
+- Edit readme and other info, up to 1.1.1.
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.1.0
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.0.3...v1.1.0)
+
+### Commits
+
+- Edit readme.
+- Add some has overload functions.
+- Edit readme, up to 1.1.0.
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.0.3
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.0.2...v1.0.3)
+
+### Commits
+
+- Add @types/jsonfile to fixed build error.
+- Edited _fsExtra export and wrong wrapper usage.
+- Edit readme, up to 1.0.3.
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.0.2
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.0.1...v1.0.2)
+
+### Commits
+
+- Edit readme and remove packages.
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.0.1
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.0.0...v1.0.1)
+
+### Commits
+
+- Edit wrapper functions.
+
+### ❤️ Contributors
+
+- kiki-kanri
+
+## v1.0.0
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/cf438595502ad0f54e859100d984b772535ebc2b...v1.0.0)
+
+### Commits
+
+- Add base files.
+- Add packages.
+- Add wrapped functions files and types.
+- Add build script.
+
+### ❤️ Contributors
+
+- kiki-kanri

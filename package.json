@@ -17,6 +17,7 @@
     "prepack": "pnpm run build",
     "release": "pnpm run build && changelogen --release && pnpm publish"
   },
+  "types": "./dist/index.d.ts",
   "dependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/jsonfile": "^6.1.4",

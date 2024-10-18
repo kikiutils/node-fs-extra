@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.3.6
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.5...v2.3.6)
+
+### 🩹 Fixes
+
+- Add missing types field in package.json ([5787f8f](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/5787f8f))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([044d515](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/044d515))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.3.5
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.4...v2.3.5)

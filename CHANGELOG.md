@@ -1,5 +1,26 @@
 # Changelog
 
+## v2.3.5
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.4...v2.3.5)
+
+### 📖 Documentation
+
+- Update CHANGELOG ([5a2b29a](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/5a2b29a))
+
+### 🏡 Chore
+
+- Modify files permissions ([7b2f399](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/7b2f399))
+- Upgrade dependencies ([b6320b2](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/b6320b2))
+- Switch changelog generation package ([e9ec6b7](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/e9ec6b7))
+- Add release script to package.json ([e7f7fec](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/e7f7fec))
+- Remove main, module, and types fields from package.json and add exports configuration ([b0ee2e4](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/b0ee2e4))
+- Upgrade dependencies ([d35bf46](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/d35bf46))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.3.4
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.3...v2.3.4)

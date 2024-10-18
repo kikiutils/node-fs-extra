@@ -1,5 +1,5 @@
-import fs from 'node:fs';
-import type { PathLike } from 'node:fs';
+import fs from 'fs';
+import type { PathLike } from 'fs';
 
 import { tB, tD, toWrapFunctionIsUndefinedError } from '../wrappers';
 

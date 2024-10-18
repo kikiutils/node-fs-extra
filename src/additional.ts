@@ -1,6 +1,6 @@
 import type { Abortable } from 'events';
-import type { ObjectEncodingOptions, OpenMode, PathLike, PathOrFileDescriptor, StatOptions, StatSyncOptions } from 'node:fs';
-import type fsp from 'node:fs/promises';
+import type { ObjectEncodingOptions, OpenMode, PathLike, PathOrFileDescriptor, StatOptions, StatSyncOptions } from 'fs';
+import type fsp from 'fs/promises';
 
 import { readFile, readFileSync, stat, statSync } from './fs';
 

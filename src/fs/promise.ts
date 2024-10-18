@@ -1,7 +1,7 @@
 import type { Abortable } from 'events';
-import fs from 'node:fs';
-import type { PathLike } from 'node:fs';
-import fsp from 'node:fs/promises';
+import fs from 'fs';
+import type { PathLike } from 'fs';
+import fsp from 'fs/promises';
 
 import { pTB, pTD, toWrapFunctionIsUndefinedError } from '../wrappers';
 

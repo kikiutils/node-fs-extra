@@ -174,7 +174,7 @@ export async function mkdir(path: PathLike, options?: any) {
  * @see {@link fsp.readdir}
  */
 export async function readdir(path: PathLike, options?: (fs.ObjectEncodingOptions & { withFileTypes?: false; recursive?: boolean }) | BufferEncoding | null): Promise<string[] | undefined>;
-// @ts-ignore
+// @ts-expect-error
 export async function readdir(path: PathLike, options: { encoding: 'buffer'; withFileTypes?: false; recursive?: boolean } | 'buffer'): Promise<Buffer[] | undefined>;
 export async function readdir(path: PathLike, options?: (fs.ObjectEncodingOptions & { withFileTypes?: false; recursive?: boolean }) | BufferEncoding | null): Promise<string[] | Buffer[] | undefined>;
 export async function readdir(path: PathLike, options: fs.ObjectEncodingOptions & { withFileTypes: true; recursive?: boolean }): Promise<fs.Dirent[] | undefined>;
@@ -189,7 +189,7 @@ export async function readdir(path: PathLike, options?: any) {
  * @see {@link fsp.readlink}
  */
 export async function readlink(path: PathLike, options?: fs.ObjectEncodingOptions | BufferEncoding | null): Promise<string | undefined>;
-// @ts-ignore
+// @ts-expect-error
 export async function readlink(path: PathLike, options: fs.BufferEncodingOption): Promise<Buffer | undefined>;
 export async function readlink(path: PathLike, options?: fs.ObjectEncodingOptions | string | null): Promise<string | Buffer | undefined>;
 export async function readlink(path: PathLike, options?: any) {
@@ -203,7 +203,7 @@ export async function readlink(path: PathLike, options?: any) {
  * @see {@link fsp.lstat}
  */
 export async function lstat(path: PathLike, opts?: fs.StatOptions & { bigint?: false }): Promise<fs.Stats | undefined>;
-// @ts-ignore
+// @ts-expect-error
 export async function lstat(path: PathLike, opts: fs.StatOptions & { bigint: true }): Promise<fs.BigIntStats | undefined>;
 export async function lstat(path: PathLike, opts?: fs.StatOptions): Promise<fs.Stats | fs.BigIntStats | undefined>;
 export async function lstat(path: PathLike, opts?: any) {
@@ -217,7 +217,7 @@ export async function lstat(path: PathLike, opts?: any) {
  * @see {@link fsp.stat}
  */
 export async function stat(path: PathLike, opts?: fs.StatOptions & { bigint?: false }): Promise<fs.Stats | undefined>;
-// @ts-ignore
+// @ts-expect-error
 export async function stat(path: PathLike, opts: fs.StatOptions & { bigint: true }): Promise<fs.BigIntStats | undefined>;
 export async function stat(path: PathLike, opts?: fs.StatOptions): Promise<fs.Stats | fs.BigIntStats | undefined>;
 export async function stat(path: PathLike, opts?: any) {
@@ -231,7 +231,7 @@ export async function stat(path: PathLike, opts?: any) {
  * @see {@link fsp.statfs}
  */
 export async function statfs(path: PathLike, opts?: fs.StatFsOptions & { bigint?: false }): Promise<fs.StatsFs | undefined>;
-// @ts-ignore
+// @ts-expect-error
 export async function statfs(path: PathLike, opts: fs.StatFsOptions & { bigint: true }): Promise<fs.BigIntStatsFs | undefined>;
 export async function statfs(path: PathLike, opts?: fs.StatFsOptions): Promise<fs.StatsFs | fs.BigIntStatsFs | undefined>;
 export async function statfs(path: PathLike, opts?: any) {
@@ -245,7 +245,7 @@ export async function statfs(path: PathLike, opts?: any) {
  * @see {@link fsp.realpath}
  */
 export async function realpath(path: PathLike, options?: fs.ObjectEncodingOptions | BufferEncoding | null): Promise<string | undefined>;
-// @ts-ignore
+// @ts-expect-error
 export async function realpath(path: PathLike, options: fs.BufferEncodingOption): Promise<Buffer | undefined>;
 export async function realpath(path: PathLike, options?: fs.ObjectEncodingOptions | BufferEncoding | null): Promise<string | Buffer | undefined>;
 export async function realpath(path: PathLike, options?: any) {
@@ -259,7 +259,7 @@ export async function realpath(path: PathLike, options?: any) {
  * @see {@link fsp.mkdtemp}
  */
 export async function mkdtemp(prefix: string, options?: fs.ObjectEncodingOptions | BufferEncoding | null): Promise<string | undefined>;
-// @ts-ignore
+// @ts-expect-error
 export async function mkdtemp(prefix: string, options: fs.BufferEncodingOption): Promise<Buffer | undefined>;
 export async function mkdtemp(prefix: string, options?: fs.ObjectEncodingOptions | BufferEncoding | null): Promise<string | Buffer | undefined>;
 export async function mkdtemp(prefix: string, options?: any) {
@@ -273,7 +273,7 @@ export async function mkdtemp(prefix: string, options?: any) {
  * @see {@link fsp.readFile}
  */
 export async function readFile(path: PathLike | fsp.FileHandle, options?: ({ encoding?: null; flag?: fs.OpenMode } & Abortable) | null): Promise<Buffer | undefined>;
-// @ts-ignore
+// @ts-expect-error
 export async function readFile(path: PathLike | fsp.FileHandle, options: ({ encoding: BufferEncoding; flag?: fs.OpenMode } & Abortable) | BufferEncoding): Promise<string | undefined>;
 export async function readFile(path: PathLike | fsp.FileHandle, options?: (fs.ObjectEncodingOptions & Abortable & { flag?: fs.OpenMode }) | BufferEncoding | null): Promise<string | Buffer | undefined>;
 export async function readFile(path: PathLike | fsp.FileHandle, options?: any) {
@@ -287,7 +287,7 @@ export async function readFile(path: PathLike | fsp.FileHandle, options?: any) {
  * @see {@link fs.fstat.__promisify__}
  */
 export async function fstat(fd: number, options?: fs.StatOptions & { bigint?: false }): Promise<fs.Stats | undefined>;
-// @ts-ignore
+// @ts-expect-error
 export async function fstat(fd: number, options: fs.StatOptions & { bigint: true }): Promise<fs.BigIntStats | undefined>;
 export async function fstat(fd: number, options?: fs.StatOptions): Promise<fs.Stats | fs.BigIntStats | undefined>;
 export async function fstat(fd: number, options?: any) {
@@ -301,12 +301,12 @@ export async function fstat(fd: number, options?: any) {
  * @see {@link fs.write.__promisify__}
  */
 export async function write<TBuffer extends NodeJS.ArrayBufferView>(fd: number, buffer?: TBuffer, offset?: number, length?: number, position?: number | null): Promise<{ bytesWritten: number; buffer: TBuffer } | undefined>;
-// @ts-ignore
+// @ts-expect-error
 export async function write(fd: number, string: string, position?: number | null, encoding?: BufferEncoding | null): Promise<{ bytesWritten: number; buffer: string } | undefined>;
 export async function write(...args: any[]) {
 	if (!fs.write?.__promisify__) throw toWrapFunctionIsUndefinedError;
 	try {
-		// @ts-ignore
+		// @ts-expect-error
 		return await fs.write.__promisify__(...args);
 	} catch (error) {}
 }
@@ -320,7 +320,7 @@ export async function read(fd: number): Promise<{ bytesRead: number; buffer: Nod
 export async function read(...args: any[]) {
 	if (!fs.read?.__promisify__) throw toWrapFunctionIsUndefinedError;
 	try {
-		// @ts-ignore
+		// @ts-expect-error
 		return await fs.read.__promisify__(...args);
 	} catch (error) {}
 }

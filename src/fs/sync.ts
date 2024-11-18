@@ -157,10 +157,10 @@ export const opendirSync = tD(fs.opendirSync);
 /**
  * @see {@link fs.fstatSync}
  */
-export function fstatSync(fd: number, options?: fs.StatOptions & { bigint?: false }): fs.Stats | undefined;
+export function fstatSync(fd: number, options?: { bigint?: false } & fs.StatOptions): fs.Stats | undefined;
 // @ts-expect-error Ignore this error.
-export function fstatSync(fd: number, options: fs.StatOptions & { bigint: true }): fs.BigIntStats | undefined;
-export function fstatSync(fd: number, options?: fs.StatOptions): fs.Stats | fs.BigIntStats | undefined;
+export function fstatSync(fd: number, options: { bigint: true } & fs.StatOptions): fs.BigIntStats | undefined;
+export function fstatSync(fd: number, options?: fs.StatOptions): fs.BigIntStats | fs.Stats | undefined;
 export function fstatSync(fd: number, options?: any) {
 	if (!fs.fstatSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -171,10 +171,10 @@ export function fstatSync(fd: number, options?: any) {
 /**
  * @see {@link fs.statfsSync}
  */
-export function statfsSync(path: PathLike, options?: fs.StatFsOptions & { bigint?: false }): fs.StatsFs | undefined;
+export function statfsSync(path: PathLike, options?: { bigint?: false } & fs.StatFsOptions): fs.StatsFs | undefined;
 // @ts-expect-error Ignore this error.
-export function statfsSync(path: PathLike, options: fs.StatFsOptions & { bigint: true }): fs.BigIntStatsFs | undefined;
-export function statfsSync(path: PathLike, options?: fs.StatFsOptions): fs.StatsFs | fs.BigIntStatsFs | undefined;
+export function statfsSync(path: PathLike, options: { bigint: true } & fs.StatFsOptions): fs.BigIntStatsFs | undefined;
+export function statfsSync(path: PathLike, options?: fs.StatFsOptions): fs.BigIntStatsFs | fs.StatsFs | undefined;
 export function statfsSync(path: PathLike, options?: any) {
 	if (!fs.statfsSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -188,7 +188,7 @@ export function statfsSync(path: PathLike, options?: any) {
 export function readlinkSync(path: PathLike, options?: fs.EncodingOption): string | undefined;
 // @ts-expect-error Ignore this error.
 export function readlinkSync(path: PathLike, options: fs.BufferEncodingOption): Buffer | undefined;
-export function readlinkSync(path: PathLike, options?: fs.EncodingOption): string | Buffer | undefined;
+export function readlinkSync(path: PathLike, options?: fs.EncodingOption): Buffer | string | undefined;
 export function readlinkSync(path: PathLike, options?: any) {
 	if (!fs.readlinkSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -202,7 +202,7 @@ export function readlinkSync(path: PathLike, options?: any) {
 export function realpathSync(path: PathLike, options?: fs.EncodingOption): string | undefined;
 // @ts-expect-error Ignore this error.
 export function realpathSync(path: PathLike, options: fs.BufferEncodingOption): Buffer | undefined;
-export function realpathSync(path: PathLike, options?: fs.EncodingOption): string | Buffer | undefined;
+export function realpathSync(path: PathLike, options?: fs.EncodingOption): Buffer | string | undefined;
 export function realpathSync(path: PathLike, options?: any) {
 	if (!fs.realpathSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -213,9 +213,9 @@ export function realpathSync(path: PathLike, options?: any) {
 /**
  * @see {@link fs.mkdirSync}
  */
-export function mkdirSync(path: PathLike, options: fs.MakeDirectoryOptions & { recursive: true }): string | undefined;
-export function mkdirSync(path: PathLike, options?: fs.Mode | (fs.MakeDirectoryOptions & { recursive?: false }) | null): boolean;
-export function mkdirSync(path: PathLike, options?: fs.Mode | fs.MakeDirectoryOptions | null): string | undefined;
+export function mkdirSync(path: PathLike, options: { recursive: true } & fs.MakeDirectoryOptions): string | undefined;
+export function mkdirSync(path: PathLike, options?: ({ recursive?: false } & fs.MakeDirectoryOptions) | fs.Mode | null): boolean;
+export function mkdirSync(path: PathLike, options?: fs.MakeDirectoryOptions | fs.Mode | null): string | undefined;
 export function mkdirSync(path: PathLike, options?: any) {
 	if (!fs.mkdirSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -233,7 +233,7 @@ export function mkdirSync(path: PathLike, options?: any) {
 export function mkdtempSync(prefix: string, options?: fs.EncodingOption): string | undefined;
 // @ts-expect-error Ignore this error.
 export function mkdtempSync(prefix: string, options: fs.BufferEncodingOption): Buffer | undefined;
-export function mkdtempSync(prefix: string, options?: fs.EncodingOption): string | Buffer | undefined;
+export function mkdtempSync(prefix: string, options?: fs.EncodingOption): Buffer | string | undefined;
 export function mkdtempSync(prefix: string, options?: any) {
 	if (!fs.mkdtempSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -244,11 +244,11 @@ export function mkdtempSync(prefix: string, options?: any) {
 /**
  * @see {@link fs.readdirSync}
  */
-export function readdirSync(path: PathLike, options?: { encoding: BufferEncoding | null; withFileTypes?: false; recursive?: boolean } | BufferEncoding | null): string[] | undefined;
+export function readdirSync(path: PathLike, options?: { encoding: BufferEncoding | null; recursive?: boolean; withFileTypes?: false } | BufferEncoding | null): string[] | undefined;
 // @ts-expect-error Ignore this error.
-export function readdirSync(path: PathLike, options: { encoding: 'buffer'; withFileTypes?: false; recursive?: boolean } | 'buffer'): Buffer[] | undefined;
-export function readdirSync(path: PathLike, options?: (fs.ObjectEncodingOptions & { withFileTypes?: false; recursive?: boolean }) | BufferEncoding | null): string[] | Buffer[] | undefined;
-export function readdirSync(path: PathLike, options: fs.ObjectEncodingOptions & { withFileTypes: true; recursive?: boolean }): fs.Dirent[] | undefined;
+export function readdirSync(path: PathLike, options: 'buffer' | { encoding: 'buffer'; recursive?: boolean; withFileTypes?: false }): Buffer[] | undefined;
+export function readdirSync(path: PathLike, options?: ({ recursive?: boolean; withFileTypes?: false } & fs.ObjectEncodingOptions) | BufferEncoding | null): Buffer[] | string[] | undefined;
+export function readdirSync(path: PathLike, options: { recursive?: boolean; withFileTypes: true } & fs.ObjectEncodingOptions): fs.Dirent[] | undefined;
 export function readdirSync(path: PathLike, options?: any) {
 	if (!fs.readdirSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -259,8 +259,8 @@ export function readdirSync(path: PathLike, options?: any) {
 /**
  * @see {@link fs.writeSync}
  */
-export function writeSync(fd: number, buffer: NodeJS.ArrayBufferView, offset?: number | null, length?: number | null, position?: number | null): number | undefined;
-export function writeSync(fd: number, string: string, position?: number | null, encoding?: BufferEncoding | null): number | undefined;
+export function writeSync(fd: number, buffer: NodeJS.ArrayBufferView, offset?: null | number, length?: null | number, position?: null | number): number | undefined;
+export function writeSync(fd: number, string: string, position?: null | number, encoding?: BufferEncoding | null): number | undefined;
 export function writeSync(...args: any[]) {
 	if (!fs.writeSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -288,7 +288,7 @@ export function readSync(...args: any[]) {
 export function readFileSync(path: fs.PathOrFileDescriptor, options?: { encoding?: null; flag?: string } | null): Buffer | undefined;
 // @ts-expect-error Ignore this error.
 export function readFileSync(path: fs.PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string } | BufferEncoding): string | undefined;
-export function readFileSync(path: fs.PathOrFileDescriptor, options?: (fs.ObjectEncodingOptions & { flag?: string }) | BufferEncoding | null): string | Buffer | undefined;
+export function readFileSync(path: fs.PathOrFileDescriptor, options?: ({ flag?: string } & fs.ObjectEncodingOptions) | BufferEncoding | null): Buffer | string | undefined;
 export function readFileSync(path: fs.PathOrFileDescriptor, options?: any) {
 	if (!fs.readFileSync) throw toWrapFunctionIsUndefinedError;
 	try {
@@ -299,10 +299,10 @@ export function readFileSync(path: fs.PathOrFileDescriptor, options?: any) {
 /**
  * @see {@link fs.statSync}
  */
-export function statSync(path: PathLike, options?: fs.StatSyncOptions & { bigint?: false }): fs.Stats | undefined;
+export function statSync(path: PathLike, options?: { bigint?: false } & fs.StatSyncOptions): fs.Stats | undefined;
 // @ts-expect-error Ignore this error.
-export function statSync(path: PathLike, options: fs.StatSyncOptions & { bigint: true }): fs.BigIntStats | undefined;
-export function statSync(path: PathLike, options?: fs.StatSyncOptions): fs.Stats | fs.BigIntStats | undefined;
+export function statSync(path: PathLike, options: { bigint: true } & fs.StatSyncOptions): fs.BigIntStats | undefined;
+export function statSync(path: PathLike, options?: fs.StatSyncOptions): fs.BigIntStats | fs.Stats | undefined;
 export function statSync(path: PathLike, options?: any) {
 	if (!fs.statSync) throw toWrapFunctionIsUndefinedError;
 	try {

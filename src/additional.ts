@@ -15,10 +15,10 @@ import { readFile, readFileSync, stat, statSync } from './fs';
  * @param {StatOptions & { bigint: true }} [opts] - Options to pass to stat. If bigint is set to true, the size is returned as a BigInt.
  * @returns {Promise<number | bigint | undefined>} A promise that resolves to the size of the file in bytes, or undefined if the file does not exist or an error occurs.
  */
-export async function getFileSize(path: PathLike, opts?: StatOptions & { bigint?: false }): Promise<number | undefined>;
+export async function getFileSize(path: PathLike, opts?: { bigint?: false } & StatOptions): Promise<number | undefined>;
 // @ts-expect-error Ignore this error.
-export async function getFileSize(path: PathLike, opts: StatOptions & { bigint: true }): Promise<bigint | undefined>;
-export async function getFileSize(path: PathLike, opts?: StatOptions): Promise<number | bigint | undefined>;
+export async function getFileSize(path: PathLike, opts: { bigint: true } & StatOptions): Promise<bigint | undefined>;
+export async function getFileSize(path: PathLike, opts?: StatOptions): Promise<bigint | number | undefined>;
 export async function getFileSize(path: PathLike, opts: any) {
 	return (await stat(path, opts))?.size;
 }
@@ -34,10 +34,10 @@ export async function getFileSize(path: PathLike, opts: any) {
  * @param {StatSyncOptions & { bigint: true }} [options] - Options to pass to statSync. If bigint is set to true, the size is returned as a BigInt.
  * @returns {number | bigint | undefined} The size of the file in bytes, or undefined if the file does not exist or an error occurs.
  */
-export function getFileSizeSync(path: PathLike, options?: StatSyncOptions & { bigint?: false }): number | undefined;
+export function getFileSizeSync(path: PathLike, options?: { bigint?: false } & StatSyncOptions): number | undefined;
 // @ts-expect-error Ignore this error.
-export function getFileSizeSync(path: PathLike, options: StatSyncOptions & { bigint: true }): bigint | undefined;
-export function getFileSizeSync(path: PathLike, options?: StatSyncOptions): number | bigint | undefined;
+export function getFileSizeSync(path: PathLike, options: { bigint: true } & StatSyncOptions): bigint | undefined;
+export function getFileSizeSync(path: PathLike, options?: StatSyncOptions): bigint | number | undefined;
 export function getFileSizeSync(path: PathLike, options?: any) {
 	return statSync(path, options)?.size;
 }
@@ -202,7 +202,7 @@ export function pathIsSymbolicLinkSync(path: PathLike) {
 // @ts-expect-error Ignore this error.
 export async function readFileToBlob(path: PathLike | fsp.FileHandle, options?: ({ encoding?: null; flag?: OpenMode } & Abortable) | null): Promise<Blob | undefined>;
 export async function readFileToBlob(path: PathLike | fsp.FileHandle, options: ({ encoding: BufferEncoding; flag?: OpenMode } & Abortable) | BufferEncoding): Promise<Blob | undefined>;
-export async function readFileToBlob(path: PathLike | fsp.FileHandle, options?: (ObjectEncodingOptions & Abortable & { flag?: OpenMode }) | BufferEncoding | null): Promise<Blob | undefined>;
+export async function readFileToBlob(path: PathLike | fsp.FileHandle, options?: ({ flag?: OpenMode } & Abortable & ObjectEncodingOptions) | BufferEncoding | null): Promise<Blob | undefined>;
 export async function readFileToBlob(path: PathLike, options?: any) {
 	const file = await readFile(path, options);
 	if (file) return new Blob([file]);
@@ -217,7 +217,7 @@ export async function readFileToBlob(path: PathLike, options?: any) {
  */
 export function readFileToBlobSync(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string } | null): Blob | undefined;
 export function readFileToBlobSync(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string } | BufferEncoding): Blob | undefined;
-export function readFileToBlobSync(path: PathOrFileDescriptor, options?: (ObjectEncodingOptions & { flag?: string }) | BufferEncoding | null): Blob | undefined;
+export function readFileToBlobSync(path: PathOrFileDescriptor, options?: ({ flag?: string } & ObjectEncodingOptions) | BufferEncoding | null): Blob | undefined;
 export function readFileToBlobSync(path: PathOrFileDescriptor, options?: any) {
 	const file = readFileSync(path, options);
 	if (file) return new Blob([file]);

@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.3.8
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.7...v2.3.8)
+
+### 🩹 Fixes
+
+- Resolve type error in `throwToWrapFunctionIsUndefinedError` ([63a32a2](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/63a32a2))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.3.7
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.6...v2.3.7)

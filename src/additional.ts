@@ -1,6 +1,6 @@
-import type { Abortable } from 'events';
-import type { ObjectEncodingOptions, OpenMode, PathLike, PathOrFileDescriptor, StatOptions, StatSyncOptions } from 'fs';
-import type fsp from 'fs/promises';
+import type { Abortable } from 'node:events';
+import type { ObjectEncodingOptions, OpenMode, PathLike, PathOrFileDescriptor, StatOptions, StatSyncOptions } from 'node:fs';
+import type fsp from 'node:fs/promises';
 
 import { readFile, readFileSync, stat, statSync } from './fs';
 
@@ -16,7 +16,7 @@ import { readFile, readFileSync, stat, statSync } from './fs';
  * @returns {Promise<number | bigint | undefined>} A promise that resolves to the size of the file in bytes, or undefined if the file does not exist or an error occurs.
  */
 export async function getFileSize(path: PathLike, opts?: StatOptions & { bigint?: false }): Promise<number | undefined>;
-// @ts-expect-error
+// @ts-expect-error Ignore this error.
 export async function getFileSize(path: PathLike, opts: StatOptions & { bigint: true }): Promise<bigint | undefined>;
 export async function getFileSize(path: PathLike, opts?: StatOptions): Promise<number | bigint | undefined>;
 export async function getFileSize(path: PathLike, opts: any) {
@@ -35,7 +35,7 @@ export async function getFileSize(path: PathLike, opts: any) {
  * @returns {number | bigint | undefined} The size of the file in bytes, or undefined if the file does not exist or an error occurs.
  */
 export function getFileSizeSync(path: PathLike, options?: StatSyncOptions & { bigint?: false }): number | undefined;
-// @ts-expect-error
+// @ts-expect-error Ignore this error.
 export function getFileSizeSync(path: PathLike, options: StatSyncOptions & { bigint: true }): bigint | undefined;
 export function getFileSizeSync(path: PathLike, options?: StatSyncOptions): number | bigint | undefined;
 export function getFileSizeSync(path: PathLike, options?: any) {
@@ -199,7 +199,7 @@ export function pathIsSymbolicLinkSync(path: PathLike) {
  * @param {ObjectEncodingOptions & Abortable & { flag?: OpenMode } | BufferEncoding | null} [options] - The options for reading the file.
  * @returns {Promise<Blob | undefined>} - A promise that resolves to a Blob containing the file contents, or undefined if an error occurs.
  */
-// @ts-expect-error
+// @ts-expect-error Ignore this error.
 export async function readFileToBlob(path: PathLike | fsp.FileHandle, options?: ({ encoding?: null; flag?: OpenMode } & Abortable) | null): Promise<Blob | undefined>;
 export async function readFileToBlob(path: PathLike | fsp.FileHandle, options: ({ encoding: BufferEncoding; flag?: OpenMode } & Abortable) | BufferEncoding): Promise<Blob | undefined>;
 export async function readFileToBlob(path: PathLike | fsp.FileHandle, options?: (ObjectEncodingOptions & Abortable & { flag?: OpenMode }) | BufferEncoding | null): Promise<Blob | undefined>;

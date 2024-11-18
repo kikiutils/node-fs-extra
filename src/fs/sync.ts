@@ -1,9 +1,10 @@
-import fs from 'fs';
-import type { PathLike } from 'fs';
+import type { Buffer } from 'node:buffer';
+import fs from 'node:fs';
+import type { PathLike } from 'node:fs';
 
 import { tB, tD, toWrapFunctionIsUndefinedError } from '../wrappers';
 
-export { existsSync } from 'fs';
+export { existsSync } from 'node:fs';
 
 /**
  * @see {@link fs.appendFileSync}
@@ -63,6 +64,7 @@ export const fchmodSync = tB(fs.fchmodSync);
 /**
  * @see {@link fs.lchmodSync}
  */
+// eslint-disable-next-line node/no-deprecated-api
 export const lchmodSync = tB(fs.lchmodSync);
 
 /**
@@ -154,56 +156,56 @@ export const opendirSync = tD(fs.opendirSync);
  * @see {@link fs.fstatSync}
  */
 export function fstatSync(fd: number, options?: fs.StatOptions & { bigint?: false }): fs.Stats | undefined;
-// @ts-expect-error
+// @ts-expect-error Ignore this error.
 export function fstatSync(fd: number, options: fs.StatOptions & { bigint: true }): fs.BigIntStats | undefined;
 export function fstatSync(fd: number, options?: fs.StatOptions): fs.Stats | fs.BigIntStats | undefined;
 export function fstatSync(fd: number, options?: any) {
 	if (!fs.fstatSync) throw toWrapFunctionIsUndefinedError;
 	try {
 		return fs.fstatSync(fd, options);
-	} catch (error) {}
+	} catch {}
 }
 
 /**
  * @see {@link fs.statfsSync}
  */
 export function statfsSync(path: PathLike, options?: fs.StatFsOptions & { bigint?: false }): fs.StatsFs | undefined;
-// @ts-expect-error
+// @ts-expect-error Ignore this error.
 export function statfsSync(path: PathLike, options: fs.StatFsOptions & { bigint: true }): fs.BigIntStatsFs | undefined;
 export function statfsSync(path: PathLike, options?: fs.StatFsOptions): fs.StatsFs | fs.BigIntStatsFs | undefined;
 export function statfsSync(path: PathLike, options?: any) {
 	if (!fs.statfsSync) throw toWrapFunctionIsUndefinedError;
 	try {
 		return fs.statfsSync(path, options);
-	} catch (error) {}
+	} catch {}
 }
 
 /**
  * @see {@link fs.readlinkSync}
  */
 export function readlinkSync(path: PathLike, options?: fs.EncodingOption): string | undefined;
-// @ts-expect-error
+// @ts-expect-error Ignore this error.
 export function readlinkSync(path: PathLike, options: fs.BufferEncodingOption): Buffer | undefined;
 export function readlinkSync(path: PathLike, options?: fs.EncodingOption): string | Buffer | undefined;
 export function readlinkSync(path: PathLike, options?: any) {
 	if (!fs.readlinkSync) throw toWrapFunctionIsUndefinedError;
 	try {
 		return fs.readlinkSync(path, options);
-	} catch (error) {}
+	} catch {}
 }
 
 /**
  * @see {@link fs.realpathSync}
  */
 export function realpathSync(path: PathLike, options?: fs.EncodingOption): string | undefined;
-// @ts-expect-error
+// @ts-expect-error Ignore this error.
 export function realpathSync(path: PathLike, options: fs.BufferEncodingOption): Buffer | undefined;
 export function realpathSync(path: PathLike, options?: fs.EncodingOption): string | Buffer | undefined;
 export function realpathSync(path: PathLike, options?: any) {
 	if (!fs.realpathSync) throw toWrapFunctionIsUndefinedError;
 	try {
 		return fs.realpathSync(path, options);
-	} catch (error) {}
+	} catch {}
 }
 
 /**
@@ -218,7 +220,7 @@ export function mkdirSync(path: PathLike, options?: any) {
 		const result = fs.mkdirSync(path, options);
 		if (options?.recursive === true) return result;
 		return true;
-	} catch (error) {}
+	} catch {}
 	if (options?.recursive === true) return;
 	return false;
 }
@@ -227,21 +229,21 @@ export function mkdirSync(path: PathLike, options?: any) {
  * @see {@link fs.mkdtempSync}
  */
 export function mkdtempSync(prefix: string, options?: fs.EncodingOption): string | undefined;
-// @ts-expect-error
+// @ts-expect-error Ignore this error.
 export function mkdtempSync(prefix: string, options: fs.BufferEncodingOption): Buffer | undefined;
 export function mkdtempSync(prefix: string, options?: fs.EncodingOption): string | Buffer | undefined;
 export function mkdtempSync(prefix: string, options?: any) {
 	if (!fs.mkdtempSync) throw toWrapFunctionIsUndefinedError;
 	try {
 		return fs.mkdtempSync(prefix, options);
-	} catch (error) {}
+	} catch {}
 }
 
 /**
  * @see {@link fs.readdirSync}
  */
 export function readdirSync(path: PathLike, options?: { encoding: BufferEncoding | null; withFileTypes?: false; recursive?: boolean } | BufferEncoding | null): string[] | undefined;
-// @ts-expect-error
+// @ts-expect-error Ignore this error.
 export function readdirSync(path: PathLike, options: { encoding: 'buffer'; withFileTypes?: false; recursive?: boolean } | 'buffer'): Buffer[] | undefined;
 export function readdirSync(path: PathLike, options?: (fs.ObjectEncodingOptions & { withFileTypes?: false; recursive?: boolean }) | BufferEncoding | null): string[] | Buffer[] | undefined;
 export function readdirSync(path: PathLike, options: fs.ObjectEncodingOptions & { withFileTypes: true; recursive?: boolean }): fs.Dirent[] | undefined;
@@ -249,7 +251,7 @@ export function readdirSync(path: PathLike, options?: any) {
 	if (!fs.readdirSync) throw toWrapFunctionIsUndefinedError;
 	try {
 		return fs.readdirSync(path, options);
-	} catch (error) {}
+	} catch {}
 }
 
 /**
@@ -260,9 +262,9 @@ export function writeSync(fd: number, string: string, position?: number | null, 
 export function writeSync(...args: any[]) {
 	if (!fs.writeSync) throw toWrapFunctionIsUndefinedError;
 	try {
-		// @ts-expect-error
+		// @ts-expect-error Ignore this error.
 		return fs.writeSync(...args);
-	} catch (error) {}
+	} catch {}
 }
 
 /**
@@ -273,37 +275,37 @@ export function readSync(fd: number, buffer: NodeJS.ArrayBufferView, opts?: fs.R
 export function readSync(...args: any[]) {
 	if (!fs.readSync) throw toWrapFunctionIsUndefinedError;
 	try {
-		// @ts-expect-error
+		// @ts-expect-error Ignore this error.
 		return fs.readSync(...args);
-	} catch (error) {}
+	} catch {}
 }
 
 /**
  * @see {@link fs.readFileSync}
  */
 export function readFileSync(path: fs.PathOrFileDescriptor, options?: { encoding?: null; flag?: string } | null): Buffer | undefined;
-// @ts-expect-error
+// @ts-expect-error Ignore this error.
 export function readFileSync(path: fs.PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string } | BufferEncoding): string | undefined;
 export function readFileSync(path: fs.PathOrFileDescriptor, options?: (fs.ObjectEncodingOptions & { flag?: string }) | BufferEncoding | null): string | Buffer | undefined;
 export function readFileSync(path: fs.PathOrFileDescriptor, options?: any) {
 	if (!fs.readFileSync) throw toWrapFunctionIsUndefinedError;
 	try {
 		return fs.readFileSync(path, options);
-	} catch (error) {}
+	} catch {}
 }
 
 /**
  * @see {@link fs.statSync}
  */
 export function statSync(path: PathLike, options?: fs.StatSyncOptions & { bigint?: false }): fs.Stats | undefined;
-// @ts-expect-error
+// @ts-expect-error Ignore this error.
 export function statSync(path: PathLike, options: fs.StatSyncOptions & { bigint: true }): fs.BigIntStats | undefined;
 export function statSync(path: PathLike, options?: fs.StatSyncOptions): fs.Stats | fs.BigIntStats | undefined;
 export function statSync(path: PathLike, options?: any) {
 	if (!fs.statSync) throw toWrapFunctionIsUndefinedError;
 	try {
 		return fs.statSync(path, options);
-	} catch (error) {}
+	} catch {}
 }
 
 /**

@@ -1,5 +1,33 @@
 # Changelog
 
+## v2.3.7
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.6...v2.3.7)
+
+### 💅 Refactors
+
+- Remove node: prefix when importing fs module ([73c13d1](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/73c13d1))
+- Replace `@ts-ignore` with `@ts-expect-error` ([85635a9](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/85635a9))
+
+### 🏡 Chore
+
+- Modify tsconfig.json ([122644b](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/122644b))
+- Upgrade dependencies and modify release script ([f00fab4](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/f00fab4))
+- Update minimum Node.js version ([adcec5a](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/adcec5a))
+- Update release script ([f787cf5](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/f787cf5))
+- Upgrade dependencies ([bcdf5d2](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/bcdf5d2))
+- Replace Prettier with ESLint, add related files, and update VSCode settings ([695ea8e](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/695ea8e))
+- Modify scripts in package.json ([5568f62](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/5568f62))
+- Mark `lchmodSync` as deprecated ([53b8634](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/53b8634))
+
+### 🎨 Styles
+
+- Format and lint all files ([49d023d](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/49d023d))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.3.6
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.5...v2.3.6)

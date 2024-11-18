@@ -63,6 +63,8 @@ export const fchmodSync = tB(fs.fchmodSync);
 
 /**
  * @see {@link fs.lchmodSync}
+ *
+ * @deprecated
  */
 // eslint-disable-next-line node/no-deprecated-api
 export const lchmodSync = tB(fs.lchmodSync);

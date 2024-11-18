@@ -11,10 +11,6 @@ export class ToWrapFunctionIsUndefinedError extends Error {
 
 export const toWrapFunctionIsUndefinedError = new ToWrapFunctionIsUndefinedError();
 
-function throwToWrapFunctionIsUndefinedError() {
-	throw toWrapFunctionIsUndefinedError;
-}
-
 export function pTB<P extends any[], R>(toWrapFunction?: AnyPromiseFunction<P, R>) {
 	if (!toWrapFunction) return throwToWrapFunctionIsUndefinedError;
 	return async (...args: P) => {
@@ -53,4 +49,8 @@ export function tD<P extends any[], R>(toWrapFunction?: AnyFunction<P, R>) {
 			return toWrapFunction(...args);
 		} catch {}
 	};
+}
+
+function throwToWrapFunctionIsUndefinedError(): never {
+	throw toWrapFunctionIsUndefinedError;
 }

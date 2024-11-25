@@ -1,5 +1,26 @@
 # Changelog
 
+## v2.3.9
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.8...v2.3.9)
+
+### 💅 Refactors
+
+- Simplify wrapper functions by removing async/await ([2460d16](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/2460d16))
+
+### 🏡 Chore
+
+- Update eslint-config and format codes ([359531a](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/359531a))
+- Upgrade dependencies ([73918ce](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/73918ce))
+
+### 🎨 Styles
+
+- Format all files ([15ba1da](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/15ba1da))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.3.8
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.7...v2.3.8)

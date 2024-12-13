@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.3.10
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.9...v2.3.10)
+
+### 🏡 Chore
+
+- Upgrade dependencies ([1988fba](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/1988fba))
+
+### 🎨 Styles
+
+- Format and lint all files ([39d4602](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/39d4602))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.3.9
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.8...v2.3.9)

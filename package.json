@@ -60,9 +60,9 @@
   },
   "devDependencies": {
     "@kikiutils/changelogen": "^0.7.0",
-    "@kikiutils/eslint-config": "^0.5.0",
+    "@kikiutils/eslint-config": "^0.7.1",
     "@kikiutils/tsconfigs": "^3.0.2",
-    "@types/node": "^22.9.3",
-    "ts-project-builder": "3.3.2"
+    "@types/node": "^22.10.2",
+    "ts-project-builder": "3.3.3"
   }
 }

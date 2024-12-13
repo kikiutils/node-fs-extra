@@ -1,6 +1,9 @@
 import fse from 'fs-extra';
 
-import { tB, tD } from '../wrappers';
+import {
+    tB,
+    tD,
+} from '../wrappers';
 
 import type { FseParameters } from './types';
 

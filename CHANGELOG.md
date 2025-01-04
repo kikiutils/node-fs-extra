@@ -1,5 +1,26 @@
 # Changelog
 
+## v2.3.11
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.10...v2.3.11)
+
+### 💅 Refactors
+
+- Convert some functions to arrow functions ([e823d3f](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/e823d3f))
+
+### 📦 Build
+
+- Enable sourcemap output in build process ([faebcef](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/faebcef))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([f7fd3dc](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/f7fd3dc))
+- Include src folder in the package published to npm ([f91abea](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/f91abea))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.3.10
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.9...v2.3.10)

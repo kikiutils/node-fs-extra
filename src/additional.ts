@@ -60,9 +60,7 @@ export function getFileSizeSync(path: PathLike, options?: any) {
  * @param {PathLike} path - The path to check.
  * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a block device, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export async function pathIsBlockDevice(path: PathLike) {
-    return (await stat(path))?.isBlockDevice();
-}
+export const pathIsBlockDevice = async (path: PathLike) => (await stat(path))?.isBlockDevice();
 
 /**
  * Synchronously checks if the given path is a block device.
@@ -70,9 +68,7 @@ export async function pathIsBlockDevice(path: PathLike) {
  * @param {PathLike} path - The path to check.
  * @returns {boolean | undefined} - Returns true if the path is a block device, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export function pathIsBlockDeviceSync(path: PathLike) {
-    return statSync(path)?.isBlockDevice();
-}
+export const pathIsBlockDeviceSync = (path: PathLike) => statSync(path)?.isBlockDevice();
 
 /**
  * Asynchronously checks if the given path is a character device.
@@ -80,9 +76,7 @@ export function pathIsBlockDeviceSync(path: PathLike) {
  * @param {PathLike} path - The path to check.
  * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a character device, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export async function pathIsCharacterDevice(path: PathLike) {
-    return (await stat(path))?.isCharacterDevice();
-}
+export const pathIsCharacterDevice = async (path: PathLike) => (await stat(path))?.isCharacterDevice();
 
 /**
  * Synchronously checks if the given path is a character device.
@@ -90,9 +84,7 @@ export async function pathIsCharacterDevice(path: PathLike) {
  * @param {PathLike} path - The path to check.
  * @returns {boolean | undefined} - Returns true if the path is a character device, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export function pathIsCharacterDeviceSync(path: PathLike) {
-    return statSync(path)?.isCharacterDevice();
-}
+export const pathIsCharacterDeviceSync = (path: PathLike) => statSync(path)?.isCharacterDevice();
 
 /**
  * Asynchronously checks if the given path is a directory.
@@ -100,9 +92,7 @@ export function pathIsCharacterDeviceSync(path: PathLike) {
  * @param {PathLike} path - The path to check.
  * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a directory, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export async function pathIsDirectory(path: PathLike) {
-    return (await stat(path))?.isDirectory();
-}
+export const pathIsDirectory = async (path: PathLike) => (await stat(path))?.isDirectory();
 
 /**
  * Synchronously checks if the given path is a directory.
@@ -110,9 +100,7 @@ export async function pathIsDirectory(path: PathLike) {
  * @param {PathLike} path - The path to check.
  * @returns {boolean | undefined} - Returns true if the path is a directory, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export function pathIsDirectorySync(path: PathLike) {
-    return statSync(path)?.isDirectory();
-}
+export const pathIsDirectorySync = (path: PathLike) => statSync(path)?.isDirectory();
 
 /**
  * @see {@link isDirectory}
@@ -130,9 +118,7 @@ export const pathIsDirSync = pathIsDirectorySync;
  * @param {PathLike} path - The path to check.
  * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a FIFO, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export async function pathIsFIFO(path: PathLike) {
-    return (await stat(path))?.isFIFO();
-}
+export const pathIsFIFO = async (path: PathLike) => (await stat(path))?.isFIFO();
 
 /**
  * Synchronously checks if the given path is a FIFO (named pipe).
@@ -140,9 +126,7 @@ export async function pathIsFIFO(path: PathLike) {
  * @param {PathLike} path - The path to check.
  * @returns {boolean | undefined} - Returns true if the path is a FIFO, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export function pathIsFIFOSync(path: PathLike) {
-    return statSync(path)?.isFIFO();
-}
+export const pathIsFIFOSync = (path: PathLike) => statSync(path)?.isFIFO();
 
 /**
  * Asynchronously checks if the given path is a file.
@@ -150,9 +134,7 @@ export function pathIsFIFOSync(path: PathLike) {
  * @param {PathLike} path - The path to check.
  * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a file, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export async function pathIsFile(path: PathLike) {
-    return (await stat(path))?.isFile();
-}
+export const pathIsFile = async (path: PathLike) => (await stat(path))?.isFile();
 
 /**
  * Synchronously checks if the given path is a file.
@@ -160,9 +142,7 @@ export async function pathIsFile(path: PathLike) {
  * @param {PathLike} path - The path to check.
  * @returns {boolean | undefined} - Returns true if the path is a file, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export function pathIsFileSync(path: PathLike) {
-    return statSync(path)?.isFile();
-}
+export const pathIsFileSync = (path: PathLike) => statSync(path)?.isFile();
 
 /**
  * Asynchronously checks if the given path is a socket.
@@ -170,9 +150,7 @@ export function pathIsFileSync(path: PathLike) {
  * @param {PathLike} path - The path to check.
  * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a socket, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export async function pathIsSocket(path: PathLike) {
-    return (await stat(path))?.isSocket();
-}
+export const pathIsSocket = async (path: PathLike) => (await stat(path))?.isSocket();
 
 /**
  * Synchronously checks if the given path is a socket.
@@ -180,9 +158,7 @@ export async function pathIsSocket(path: PathLike) {
  * @param {PathLike} path - The path to check.
  * @returns {boolean | undefined} - Returns true if the path is a socket, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export function pathIsSocketSync(path: PathLike) {
-    return statSync(path)?.isSocket();
-}
+export const pathIsSocketSync = (path: PathLike) => statSync(path)?.isSocket();
 
 /**
  * Asynchronously checks if the given path is a symbolic link.
@@ -190,9 +166,7 @@ export function pathIsSocketSync(path: PathLike) {
  * @param {PathLike} path - The path to check.
  * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a symbolic link, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export async function pathIsSymbolicLink(path: PathLike) {
-    return (await stat(path))?.isSymbolicLink();
-}
+export const pathIsSymbolicLink = async (path: PathLike) => (await stat(path))?.isSymbolicLink();
 
 /**
  * Synchronously checks if the given path is a symbolic link.
@@ -200,9 +174,7 @@ export async function pathIsSymbolicLink(path: PathLike) {
  * @param {PathLike} path - The path to check.
  * @returns {boolean | undefined} - Returns true if the path is a symbolic link, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export function pathIsSymbolicLinkSync(path: PathLike) {
-    return statSync(path)?.isSymbolicLink();
-}
+export const pathIsSymbolicLinkSync = (path: PathLike) => statSync(path)?.isSymbolicLink();
 
 /**
  * Reads a file and returns its contents as a Blob.

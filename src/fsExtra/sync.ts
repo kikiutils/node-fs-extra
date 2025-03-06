@@ -88,24 +88,9 @@ export const mkdirpSync = ensureDirSync;
 export const readJsonSync = tD(<T = any>(...args: FseParameters['readJsonSync']) => fse.readJsonSync(...args) as T);
 
 /**
- * @see {@link fse.readJsonSync}
- */
-export const readJSONSync = readJsonSync;
-
-/**
  * @see {@link fse.writeJsonSync}
  */
 export const writeJsonSync = tB(fse.writeJsonSync);
-
-/**
- * @see {@link fse.writeJsonSync}
- */
-export const writeJSONSync = writeJsonSync;
-
-/**
- * @see {@link fse.outputJsonSync}
- */
-export const outputJSONSync = outputJsonSync;
 
 /**
  * @see {@link fse.emptyDirSync}

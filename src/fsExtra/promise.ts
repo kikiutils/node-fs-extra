@@ -73,29 +73,14 @@ export const outputFile = pTB((...args: FseParameters['outputFileSync']) => fse.
 export const readJson = pTD(<T = any>(...args: FseParameters['readJsonSync']): Promise<T> => fse.readJson(...args));
 
 /**
- * @see {@link fse.readJson}
- */
-export const readJSON = readJson;
-
-/**
  * @see {@link fse.writeJson}
  */
 export const writeJson = pTB((...args: FseParameters['writeJsonSync']) => fse.writeJson(...args));
 
 /**
- * @see {@link fse.writeJson}
- */
-export const writeJSON = writeJson;
-
-/**
  * @see {@link fse.outputJson}
  */
 export const outputJson = pTB((...args: FseParameters['outputJsonSync']) => fse.outputJson(...args));
-
-/**
- * @see {@link fse.outputJson}
- */
-export const outputJSON = outputJson;
 
 /**
  * @see {@link fse.remove}

@@ -79,7 +79,7 @@ The following functions have corresponding sync versions.
 - pathIsBlockDevice - Uses `stat` to check if a path is a block device.
 - pathIsCharacterDevice - Uses `stat` to check if a path is a character device.
 - pathIsDirectory, pathIsDir - Uses `stat` to check if a path is a directory.
-- pathIsFIFO - Uses `stat` to check if a path is a FIFO (named pipe).
+- pathIsFifo - Uses `stat` to check if a path is a FIFO (named pipe).
 - pathIsFile - Uses `stat` to check if a path is a file.
 - pathIsSocket - Uses `stat` to check if a path is a socket.
 - pathIsSymbolicLink - Uses `stat` to check if a path is a symbolic link.

@@ -118,7 +118,7 @@ export const pathIsDirSync = pathIsDirectorySync;
  * @param {PathLike} path - The path to check.
  * @returns {Promise<boolean | undefined>} - A promise that resolves to true if the path is a FIFO, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export const pathIsFIFO = async (path: PathLike) => (await stat(path))?.isFIFO();
+export const pathIsFifo = async (path: PathLike) => (await stat(path))?.isFIFO();
 
 /**
  * Synchronously checks if the given path is a FIFO (named pipe).
@@ -126,7 +126,7 @@ export const pathIsFIFO = async (path: PathLike) => (await stat(path))?.isFIFO()
  * @param {PathLike} path - The path to check.
  * @returns {boolean | undefined} - Returns true if the path is a FIFO, otherwise false, or undefined if the path does not exist or an error occurs.
  */
-export const pathIsFIFOSync = (path: PathLike) => statSync(path)?.isFIFO();
+export const pathIsFifoSync = (path: PathLike) => statSync(path)?.isFIFO();
 
 /**
  * Asynchronously checks if the given path is a file.

@@ -57,13 +57,13 @@
   "dependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/jsonfile": "^6.1.4",
-    "fs-extra": "^11.2.0"
+    "fs-extra": "^11.3.0"
   },
   "devDependencies": {
-    "@kikiutils/changelogen": "^0.7.0",
-    "@kikiutils/eslint-config": "^0.7.3",
+    "@kikiutils/changelogen": "^0.7.1",
+    "@kikiutils/eslint-config": "^0.8.2",
     "@kikiutils/tsconfigs": "^3.0.2",
-    "@types/node": "^22.10.5",
+    "@types/node": "^22.13.9",
     "ts-project-builder": "3.4.0"
   }
 }

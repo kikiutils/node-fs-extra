@@ -1,6 +1,6 @@
 {
   "name": "@kikiutils/fs-extra",
-  "version": "2.3.11",
+  "version": "3.0.0",
   "description": "Wraps node:fs, node:fs/promises, and fs-extra functions with try-catch, returning success/failure indicators. Includes additional file and path utilities.",
   "author": "kiki-kanri",
   "license": "MIT",

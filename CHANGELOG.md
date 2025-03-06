@@ -1,5 +1,25 @@
 # Changelog
 
+## v3.0.0
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.11...v3.0.0)
+
+### 💅 Refactors
+
+- ⚠️ Update naming conventions for functions and variables ([6ff9f30](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/6ff9f30))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([89ca9db](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/89ca9db))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️ Update naming conventions for functions and variables ([6ff9f30](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/6ff9f30))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.3.11
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.10...v2.3.11)

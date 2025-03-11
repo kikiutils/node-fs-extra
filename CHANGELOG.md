@@ -2,19 +2,19 @@
 
 ## v3.0.0
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.11...v3.0.0)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.3.11...v3.0.0)
 
 ### 💅 Refactors
 
-- ⚠️ Update naming conventions for functions and variables ([6ff9f30](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/6ff9f30))
+- ⚠️ Update naming conventions for functions and variables ([6ff9f30](https://github.com/kikiutils/node-fs-extra/commit/6ff9f30))
 
 ### 🏡 Chore
 
-- Upgrade dependencies ([89ca9db](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/89ca9db))
+- Upgrade dependencies ([89ca9db](https://github.com/kikiutils/node-fs-extra/commit/89ca9db))
 
 #### ⚠️ Breaking Changes
 
-- ⚠️ Update naming conventions for functions and variables ([6ff9f30](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/6ff9f30))
+- ⚠️ Update naming conventions for functions and variables ([6ff9f30](https://github.com/kikiutils/node-fs-extra/commit/6ff9f30))
 
 ### ❤️ Contributors
 
@@ -22,20 +22,20 @@
 
 ## v2.3.11
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.10...v2.3.11)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.3.10...v2.3.11)
 
 ### 💅 Refactors
 
-- Convert some functions to arrow functions ([e823d3f](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/e823d3f))
+- Convert some functions to arrow functions ([e823d3f](https://github.com/kikiutils/node-fs-extra/commit/e823d3f))
 
 ### 📦 Build
 
-- Enable sourcemap output in build process ([faebcef](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/faebcef))
+- Enable sourcemap output in build process ([faebcef](https://github.com/kikiutils/node-fs-extra/commit/faebcef))
 
 ### 🏡 Chore
 
-- Upgrade dependencies ([f7fd3dc](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/f7fd3dc))
-- Include src folder in the package published to npm ([f91abea](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/f91abea))
+- Upgrade dependencies ([f7fd3dc](https://github.com/kikiutils/node-fs-extra/commit/f7fd3dc))
+- Include src folder in the package published to npm ([f91abea](https://github.com/kikiutils/node-fs-extra/commit/f91abea))
 
 ### ❤️ Contributors
 
@@ -43,15 +43,15 @@
 
 ## v2.3.10
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.9...v2.3.10)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.3.9...v2.3.10)
 
 ### 🏡 Chore
 
-- Upgrade dependencies ([1988fba](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/1988fba))
+- Upgrade dependencies ([1988fba](https://github.com/kikiutils/node-fs-extra/commit/1988fba))
 
 ### 🎨 Styles
 
-- Format and lint all files ([39d4602](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/39d4602))
+- Format and lint all files ([39d4602](https://github.com/kikiutils/node-fs-extra/commit/39d4602))
 
 ### ❤️ Contributors
 
@@ -59,20 +59,20 @@
 
 ## v2.3.9
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.8...v2.3.9)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.3.8...v2.3.9)
 
 ### 💅 Refactors
 
-- Simplify wrapper functions by removing async/await ([2460d16](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/2460d16))
+- Simplify wrapper functions by removing async/await ([2460d16](https://github.com/kikiutils/node-fs-extra/commit/2460d16))
 
 ### 🏡 Chore
 
-- Update eslint-config and format codes ([359531a](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/359531a))
-- Upgrade dependencies ([73918ce](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/73918ce))
+- Update eslint-config and format codes ([359531a](https://github.com/kikiutils/node-fs-extra/commit/359531a))
+- Upgrade dependencies ([73918ce](https://github.com/kikiutils/node-fs-extra/commit/73918ce))
 
 ### 🎨 Styles
 
-- Format all files ([15ba1da](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/15ba1da))
+- Format all files ([15ba1da](https://github.com/kikiutils/node-fs-extra/commit/15ba1da))
 
 ### ❤️ Contributors
 
@@ -80,11 +80,11 @@
 
 ## v2.3.8
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.7...v2.3.8)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.3.7...v2.3.8)
 
 ### 🩹 Fixes
 
-- Resolve type error in `throwToWrapFunctionIsUndefinedError` ([63a32a2](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/63a32a2))
+- Resolve type error in `throwToWrapFunctionIsUndefinedError` ([63a32a2](https://github.com/kikiutils/node-fs-extra/commit/63a32a2))
 
 ### ❤️ Contributors
 
@@ -92,27 +92,27 @@
 
 ## v2.3.7
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.6...v2.3.7)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.3.6...v2.3.7)
 
 ### 💅 Refactors
 
-- Remove node: prefix when importing fs module ([73c13d1](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/73c13d1))
-- Replace `@ts-ignore` with `@ts-expect-error` ([85635a9](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/85635a9))
+- Remove node: prefix when importing fs module ([73c13d1](https://github.com/kikiutils/node-fs-extra/commit/73c13d1))
+- Replace `@ts-ignore` with `@ts-expect-error` ([85635a9](https://github.com/kikiutils/node-fs-extra/commit/85635a9))
 
 ### 🏡 Chore
 
-- Modify tsconfig.json ([122644b](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/122644b))
-- Upgrade dependencies and modify release script ([f00fab4](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/f00fab4))
-- Update minimum Node.js version ([adcec5a](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/adcec5a))
-- Update release script ([f787cf5](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/f787cf5))
-- Upgrade dependencies ([bcdf5d2](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/bcdf5d2))
-- Replace Prettier with ESLint, add related files, and update VSCode settings ([695ea8e](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/695ea8e))
-- Modify scripts in package.json ([5568f62](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/5568f62))
-- Mark `lchmodSync` as deprecated ([53b8634](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/53b8634))
+- Modify tsconfig.json ([122644b](https://github.com/kikiutils/node-fs-extra/commit/122644b))
+- Upgrade dependencies and modify release script ([f00fab4](https://github.com/kikiutils/node-fs-extra/commit/f00fab4))
+- Update minimum Node.js version ([adcec5a](https://github.com/kikiutils/node-fs-extra/commit/adcec5a))
+- Update release script ([f787cf5](https://github.com/kikiutils/node-fs-extra/commit/f787cf5))
+- Upgrade dependencies ([bcdf5d2](https://github.com/kikiutils/node-fs-extra/commit/bcdf5d2))
+- Replace Prettier with ESLint, add related files, and update VSCode settings ([695ea8e](https://github.com/kikiutils/node-fs-extra/commit/695ea8e))
+- Modify scripts in package.json ([5568f62](https://github.com/kikiutils/node-fs-extra/commit/5568f62))
+- Mark `lchmodSync` as deprecated ([53b8634](https://github.com/kikiutils/node-fs-extra/commit/53b8634))
 
 ### 🎨 Styles
 
-- Format and lint all files ([49d023d](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/49d023d))
+- Format and lint all files ([49d023d](https://github.com/kikiutils/node-fs-extra/commit/49d023d))
 
 ### ❤️ Contributors
 
@@ -120,15 +120,15 @@
 
 ## v2.3.6
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.5...v2.3.6)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.3.5...v2.3.6)
 
 ### 🩹 Fixes
 
-- Add missing types field in package.json ([5787f8f](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/5787f8f))
+- Add missing types field in package.json ([5787f8f](https://github.com/kikiutils/node-fs-extra/commit/5787f8f))
 
 ### 🏡 Chore
 
-- Upgrade dependencies ([044d515](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/044d515))
+- Upgrade dependencies ([044d515](https://github.com/kikiutils/node-fs-extra/commit/044d515))
 
 ### ❤️ Contributors
 
@@ -136,20 +136,20 @@
 
 ## v2.3.5
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.4...v2.3.5)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.3.4...v2.3.5)
 
 ### 📖 Documentation
 
-- Update CHANGELOG ([5a2b29a](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/5a2b29a))
+- Update CHANGELOG ([5a2b29a](https://github.com/kikiutils/node-fs-extra/commit/5a2b29a))
 
 ### 🏡 Chore
 
-- Modify files permissions ([7b2f399](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/7b2f399))
-- Upgrade dependencies ([b6320b2](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/b6320b2))
-- Switch changelog generation package ([e9ec6b7](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/e9ec6b7))
-- Add release script to package.json ([e7f7fec](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/e7f7fec))
-- Remove main, module, and types fields from package.json and add exports configuration ([b0ee2e4](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/b0ee2e4))
-- Upgrade dependencies ([d35bf46](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/d35bf46))
+- Modify files permissions ([7b2f399](https://github.com/kikiutils/node-fs-extra/commit/7b2f399))
+- Upgrade dependencies ([b6320b2](https://github.com/kikiutils/node-fs-extra/commit/b6320b2))
+- Switch changelog generation package ([e9ec6b7](https://github.com/kikiutils/node-fs-extra/commit/e9ec6b7))
+- Add release script to package.json ([e7f7fec](https://github.com/kikiutils/node-fs-extra/commit/e7f7fec))
+- Remove main, module, and types fields from package.json and add exports configuration ([b0ee2e4](https://github.com/kikiutils/node-fs-extra/commit/b0ee2e4))
+- Upgrade dependencies ([d35bf46](https://github.com/kikiutils/node-fs-extra/commit/d35bf46))
 
 ### ❤️ Contributors
 
@@ -157,15 +157,15 @@
 
 ## v2.3.4
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.3...v2.3.4)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.3.3...v2.3.4)
 
 ### 📖 Documentation
 
-- Update README ([b0d6061](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/b0d6061))
+- Update README ([b0d6061](https://github.com/kikiutils/node-fs-extra/commit/b0d6061))
 
 ### 🏡 Chore
 
-- Remove rollup files and dependencies and switch to builder build ([405ea7d](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/405ea7d))
+- Remove rollup files and dependencies and switch to builder build ([405ea7d](https://github.com/kikiutils/node-fs-extra/commit/405ea7d))
 
 ### ❤️ Contributors
 
@@ -173,15 +173,15 @@
 
 ## v2.3.3
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.2...v2.3.3)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.3.2...v2.3.3)
 
 ### 🩹 Fixes
 
-- Add default export to entry point ([c69f00a](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/c69f00a))
+- Add default export to entry point ([c69f00a](https://github.com/kikiutils/node-fs-extra/commit/c69f00a))
 
 ### 🏡 Chore
 
-- Update tsconfig.json ([c0f51dd](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/c0f51dd))
+- Update tsconfig.json ([c0f51dd](https://github.com/kikiutils/node-fs-extra/commit/c0f51dd))
 
 ### ❤️ Contributors
 
@@ -189,15 +189,15 @@
 
 ## v2.3.2
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.1...v2.3.2)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.3.1...v2.3.2)
 
 ### 📖 Documentation
 
-- Update README and package.json description field ([a12ddfb](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/a12ddfb))
+- Update README and package.json description field ([a12ddfb](https://github.com/kikiutils/node-fs-extra/commit/a12ddfb))
 
 ### 📦 Build
 
-- Update rollup configuration ([d36a641](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/d36a641))
+- Update rollup configuration ([d36a641](https://github.com/kikiutils/node-fs-extra/commit/d36a641))
 
 ### ❤️ Contributors
 
@@ -205,11 +205,11 @@
 
 ## v2.3.1
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.3.0...v2.3.1)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.3.0...v2.3.1)
 
 ### 📦 Build
 
-- Add ESM format files to build output ([059619c](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/059619c))
+- Add ESM format files to build output ([059619c](https://github.com/kikiutils/node-fs-extra/commit/059619c))
 
 ### ❤️ Contributors
 
@@ -217,20 +217,20 @@
 
 ## v2.3.0
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.2.3...v2.3.0)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.2.3...v2.3.0)
 
 ### 💅 Refactors
 
-- Update dependencies and modify build script ([a25cdcd](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/a25cdcd))
+- Update dependencies and modify build script ([a25cdcd](https://github.com/kikiutils/node-fs-extra/commit/a25cdcd))
 
 ### 📦 Build
 
-- Switch to Rollup ([4ebe54c](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/4ebe54c))
+- Switch to Rollup ([4ebe54c](https://github.com/kikiutils/node-fs-extra/commit/4ebe54c))
 
 ### 🏡 Chore
 
-- Update .gitignore ([ea937a5](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/ea937a5))
-- Update dependencies, description, and README ([8530d02](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/8530d02))
+- Update .gitignore ([ea937a5](https://github.com/kikiutils/node-fs-extra/commit/ea937a5))
+- Update dependencies, description, and README ([8530d02](https://github.com/kikiutils/node-fs-extra/commit/8530d02))
 
 ### ❤️ Contributors
 
@@ -238,13 +238,13 @@
 
 ## v2.2.3
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.2.2...v2.2.3)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.2.2...v2.2.3)
 
 ### 💅 Refactors
 
-- Change export method for pathExists and pathExistsSync ([12dc4c9](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/12dc4c9))
-- Modify entry point and method of exporting all functions ([5cc8b4f](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/5cc8b4f))
-- Modify build process ([1cadbda](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/1cadbda))
+- Change export method for pathExists and pathExistsSync ([12dc4c9](https://github.com/kikiutils/node-fs-extra/commit/12dc4c9))
+- Modify entry point and method of exporting all functions ([5cc8b4f](https://github.com/kikiutils/node-fs-extra/commit/5cc8b4f))
+- Modify build process ([1cadbda](https://github.com/kikiutils/node-fs-extra/commit/1cadbda))
 
 ### ❤️ Contributors
 
@@ -252,12 +252,12 @@
 
 ## v2.2.2
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.2.1...v2.2.2)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.2.1...v2.2.2)
 
 ### 🩹 Fixes
 
-- Resolve type errors ([932cf1f](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/932cf1f))
-- Ensure entry point exports default ([945d7b2](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/945d7b2))
+- Resolve type errors ([932cf1f](https://github.com/kikiutils/node-fs-extra/commit/932cf1f))
+- Ensure entry point exports default ([945d7b2](https://github.com/kikiutils/node-fs-extra/commit/945d7b2))
 
 ### ❤️ Contributors
 
@@ -265,20 +265,20 @@
 
 ## v2.2.1
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.2.0...v2.2.1)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.2.0...v2.2.1)
 
 ### 🩹 Fixes
 
-- Resolve type errors ([b2c57f5](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/b2c57f5))
+- Resolve type errors ([b2c57f5](https://github.com/kikiutils/node-fs-extra/commit/b2c57f5))
 
 ### 💅 Refactors
 
-- Change import method for some parameter types ([6f701be](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/6f701be))
-- Modify creation method and update comments for some fs-extra functions ([ffdb348](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/ffdb348))
+- Change import method for some parameter types ([6f701be](https://github.com/kikiutils/node-fs-extra/commit/6f701be))
+- Modify creation method and update comments for some fs-extra functions ([ffdb348](https://github.com/kikiutils/node-fs-extra/commit/ffdb348))
 
 ### 🏡 Chore
 
-- Upgrade dependencies ([0c55f60](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/0c55f60))
+- Upgrade dependencies ([0c55f60](https://github.com/kikiutils/node-fs-extra/commit/0c55f60))
 
 ### ❤️ Contributors
 
@@ -286,17 +286,17 @@
 
 ## v2.2.0
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.1.0...v2.2.0)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.1.0...v2.2.0)
 
 ### 🚀 Enhancements
 
-- Add ToWrapFunctionIsUndefinedError class and update error handling in wrapper ([1843d59](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/1843d59))
-- Add runtime checks for availability of corresponding features in overloaded functions ([e237101](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/e237101))
-- Add functions and corresponding sync versions ([66f40ee](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/66f40ee))
+- Add ToWrapFunctionIsUndefinedError class and update error handling in wrapper ([1843d59](https://github.com/kikiutils/node-fs-extra/commit/1843d59))
+- Add runtime checks for availability of corresponding features in overloaded functions ([e237101](https://github.com/kikiutils/node-fs-extra/commit/e237101))
+- Add functions and corresponding sync versions ([66f40ee](https://github.com/kikiutils/node-fs-extra/commit/66f40ee))
 
 ### 📖 Documentation
 
-- Update README ([a350071](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/a350071))
+- Update README ([a350071](https://github.com/kikiutils/node-fs-extra/commit/a350071))
 
 ### ❤️ Contributors
 
@@ -304,11 +304,11 @@
 
 ## v2.1.0
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v2.0.0...v2.1.0)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.0.0...v2.1.0)
 
 ### 🚀 Enhancements
 
-- Add `appendFileSync` function ([32bf2ab](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/32bf2ab))
+- Add `appendFileSync` function ([32bf2ab](https://github.com/kikiutils/node-fs-extra/commit/32bf2ab))
 
 ### ❤️ Contributors
 
@@ -316,49 +316,49 @@
 
 ## v2.0.0
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.3.2...v2.0.0)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.3.2...v2.0.0)
 
 ### 🚀 Enhancements
 
-- Add wrapper functions ([9ade4ab](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/9ade4ab))
-- Add functions related to fs/promises ([fa78d14](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/fa78d14))
-- Return an error-throwing function when undefined function values are received in wrapped function creation ([87623fd](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/87623fd))
-- Add functions related to fs ([d8da205](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/d8da205))
-- Add index file to export all functions ([ba2bb6e](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/ba2bb6e))
-- Add sync functions related to fs-extra ([392f762](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/392f762))
-- Add promise functions related to fs-extra ([5a7b19e](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/5a7b19e))
-- Add index file to export all functions ([a50d0f9](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/a50d0f9))
-- Add `statSync` and `lstatSync` functions ([45cc5db](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/45cc5db))
-- Add changelogen dependency and bumplog command ([4eb9dab](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/4eb9dab))
-- Add `getFileSize` and `getFileSizeSync` functions ([93aec34](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/93aec34))
+- Add wrapper functions ([9ade4ab](https://github.com/kikiutils/node-fs-extra/commit/9ade4ab))
+- Add functions related to fs/promises ([fa78d14](https://github.com/kikiutils/node-fs-extra/commit/fa78d14))
+- Return an error-throwing function when undefined function values are received in wrapped function creation ([87623fd](https://github.com/kikiutils/node-fs-extra/commit/87623fd))
+- Add functions related to fs ([d8da205](https://github.com/kikiutils/node-fs-extra/commit/d8da205))
+- Add index file to export all functions ([ba2bb6e](https://github.com/kikiutils/node-fs-extra/commit/ba2bb6e))
+- Add sync functions related to fs-extra ([392f762](https://github.com/kikiutils/node-fs-extra/commit/392f762))
+- Add promise functions related to fs-extra ([5a7b19e](https://github.com/kikiutils/node-fs-extra/commit/5a7b19e))
+- Add index file to export all functions ([a50d0f9](https://github.com/kikiutils/node-fs-extra/commit/a50d0f9))
+- Add `statSync` and `lstatSync` functions ([45cc5db](https://github.com/kikiutils/node-fs-extra/commit/45cc5db))
+- Add changelogen dependency and bumplog command ([4eb9dab](https://github.com/kikiutils/node-fs-extra/commit/4eb9dab))
+- Add `getFileSize` and `getFileSizeSync` functions ([93aec34](https://github.com/kikiutils/node-fs-extra/commit/93aec34))
 
 ### 🩹 Fixes
 
-- Update type definitions for wrappers and resolve issues ([62a7c58](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/62a7c58))
-- Add missing type hints after build ([e06ec37](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/e06ec37))
+- Update type definitions for wrappers and resolve issues ([62a7c58](https://github.com/kikiutils/node-fs-extra/commit/62a7c58))
+- Add missing type hints after build ([e06ec37](https://github.com/kikiutils/node-fs-extra/commit/e06ec37))
 
 ### 💅 Refactors
 
-- Modify or remove specific fields in package.json ([ecfcf24](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/ecfcf24))
-- Remove all code-related files and unused dependencies ([d7a7fb4](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/d7a7fb4))
-- ⚠️ Set minimum Node.js version to 18 and change type field to module in package.json ([a428bd8](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/a428bd8))
-- Move fs-extra and jsonfile type dependencies to dependencies ([2781ea0](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/2781ea0))
-- Update tsconfig settings ([0f2b321](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/0f2b321))
-- Change build process ([76af162](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/76af162))
-- Use different wrappers for promise and non-promise functions ([dc57399](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/dc57399))
+- Modify or remove specific fields in package.json ([ecfcf24](https://github.com/kikiutils/node-fs-extra/commit/ecfcf24))
+- Remove all code-related files and unused dependencies ([d7a7fb4](https://github.com/kikiutils/node-fs-extra/commit/d7a7fb4))
+- ⚠️ Set minimum Node.js version to 18 and change type field to module in package.json ([a428bd8](https://github.com/kikiutils/node-fs-extra/commit/a428bd8))
+- Move fs-extra and jsonfile type dependencies to dependencies ([2781ea0](https://github.com/kikiutils/node-fs-extra/commit/2781ea0))
+- Update tsconfig settings ([0f2b321](https://github.com/kikiutils/node-fs-extra/commit/0f2b321))
+- Change build process ([76af162](https://github.com/kikiutils/node-fs-extra/commit/76af162))
+- Use different wrappers for promise and non-promise functions ([dc57399](https://github.com/kikiutils/node-fs-extra/commit/dc57399))
 
 ### 📖 Documentation
 
-- Update README ([ef32957](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/ef32957))
+- Update README ([ef32957](https://github.com/kikiutils/node-fs-extra/commit/ef32957))
 
 ### 🏡 Chore
 
-- Rename script file ([a58526c](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/a58526c))
-- Upgrade dependencies ([b722adf](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/b722adf))
+- Rename script file ([a58526c](https://github.com/kikiutils/node-fs-extra/commit/a58526c))
+- Upgrade dependencies ([b722adf](https://github.com/kikiutils/node-fs-extra/commit/b722adf))
 
 #### ⚠️ Breaking Changes
 
-- ⚠️ Set minimum Node.js version to 18 and change type field to module in package.json ([a428bd8](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/a428bd8))
+- ⚠️ Set minimum Node.js version to 18 and change type field to module in package.json ([a428bd8](https://github.com/kikiutils/node-fs-extra/commit/a428bd8))
 
 ### ❤️ Contributors
 
@@ -366,16 +366,16 @@
 
 ## v1.3.2
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.3.1...v1.3.2)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.3.1...v1.3.2)
 
 ### 🏡 Chore
 
-- Upgrade dependencies ([be5f594](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/be5f594))
-- Add prettier ([25a92e5](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/25a92e5))
+- Upgrade dependencies ([be5f594](https://github.com/kikiutils/node-fs-extra/commit/be5f594))
+- Add prettier ([25a92e5](https://github.com/kikiutils/node-fs-extra/commit/25a92e5))
 
 ### 🎨 Styles
 
-- Format codes ([36285ed](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/36285ed))
+- Format codes ([36285ed](https://github.com/kikiutils/node-fs-extra/commit/36285ed))
 
 ### ❤️ Contributors
 
@@ -383,15 +383,15 @@
 
 ## v1.3.1
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.3.0...v1.3.1)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.3.0...v1.3.1)
 
 ### 🩹 Fixes
 
-- Fixed bun and deno error ([c214116](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/c214116))
+- Fixed bun and deno error ([c214116](https://github.com/kikiutils/node-fs-extra/commit/c214116))
 
 ### 🏡 Chore
 
-- Upgrade dependencies ([c2c8e7b](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/c2c8e7b))
+- Upgrade dependencies ([c2c8e7b](https://github.com/kikiutils/node-fs-extra/commit/c2c8e7b))
 
 ### ❤️ Contributors
 
@@ -399,19 +399,19 @@
 
 ## v1.3.0
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.11...v1.3.0)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.2.11...v1.3.0)
 
 ### 🚀 Enhancements
 
-- Add get file size function ([b29c44e](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/b29c44e))
+- Add get file size function ([b29c44e](https://github.com/kikiutils/node-fs-extra/commit/b29c44e))
 
 ### 📖 Documentation
 
-- Edit readme ([e4b0b61](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/e4b0b61))
+- Edit readme ([e4b0b61](https://github.com/kikiutils/node-fs-extra/commit/e4b0b61))
 
 ### 🏡 Chore
 
-- Upgrade dependencies and edit build script ([ce14fb6](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/ce14fb6))
+- Upgrade dependencies and edit build script ([ce14fb6](https://github.com/kikiutils/node-fs-extra/commit/ce14fb6))
 
 ### ❤️ Contributors
 
@@ -419,11 +419,11 @@
 
 ## v1.2.11
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.10...v1.2.11)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.2.10...v1.2.11)
 
 ### 🩹 Fixes
 
-- Upgrade build tool to fix output files cjs error ([cd579b4](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/cd579b4))
+- Upgrade build tool to fix output files cjs error ([cd579b4](https://github.com/kikiutils/node-fs-extra/commit/cd579b4))
 
 ### ❤️ Contributors
 
@@ -431,12 +431,12 @@
 
 ## v1.2.10
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.9...v1.2.10)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.2.9...v1.2.10)
 
 ### 🏡 Chore
 
-- Upgrade dependencies ([5eefba0](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/5eefba0))
-- Change tsconfig extends target ([068407c](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/068407c))
+- Upgrade dependencies ([5eefba0](https://github.com/kikiutils/node-fs-extra/commit/5eefba0))
+- Change tsconfig extends target ([068407c](https://github.com/kikiutils/node-fs-extra/commit/068407c))
 
 ### ❤️ Contributors
 
@@ -444,19 +444,19 @@
 
 ## v1.2.9
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.8...v1.2.9)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.2.8...v1.2.9)
 
 ### 💅 Refactors
 
-- Tsconfig use package to extends ([d658442](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/d658442))
+- Tsconfig use package to extends ([d658442](https://github.com/kikiutils/node-fs-extra/commit/d658442))
 
 ### 📦 Build
 
-- Change method and tool ([d193956](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/d193956))
+- Change method and tool ([d193956](https://github.com/kikiutils/node-fs-extra/commit/d193956))
 
 ### 🏡 Chore
 
-- Upgrade dependencies ([8683230](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/8683230))
+- Upgrade dependencies ([8683230](https://github.com/kikiutils/node-fs-extra/commit/8683230))
 
 ### ❤️ Contributors
 
@@ -464,15 +464,15 @@
 
 ## v1.2.8
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.7...v1.2.8)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.2.7...v1.2.8)
 
 ### 📦 Build
 
-- Set externalLiveBindings to false ([ed8869f](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/ed8869f))
+- Set externalLiveBindings to false ([ed8869f](https://github.com/kikiutils/node-fs-extra/commit/ed8869f))
 
 ### 🏡 Chore
 
-- Edit dependencies identifier ([db54a6d](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/db54a6d))
+- Edit dependencies identifier ([db54a6d](https://github.com/kikiutils/node-fs-extra/commit/db54a6d))
 
 ### ❤️ Contributors
 
@@ -480,15 +480,15 @@
 
 ## v1.2.7
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.6...v1.2.7)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.2.6...v1.2.7)
 
 ### 📦 Build
 
-- Change method and add or edit configs ([3b5d43d](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/3b5d43d))
+- Change method and add or edit configs ([3b5d43d](https://github.com/kikiutils/node-fs-extra/commit/3b5d43d))
 
 ### 🏡 Chore
 
-- Upgrade dependencies ([aa5812e](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/aa5812e))
+- Upgrade dependencies ([aa5812e](https://github.com/kikiutils/node-fs-extra/commit/aa5812e))
 
 ### ❤️ Contributors
 
@@ -496,15 +496,15 @@
 
 ## v1.2.6
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.5...v1.2.6)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.2.5...v1.2.6)
 
 ### 📦 Build
 
-- Disable minify ([8403cb1](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/8403cb1))
+- Disable minify ([8403cb1](https://github.com/kikiutils/node-fs-extra/commit/8403cb1))
 
 ### 🏡 Chore
 
-- Upgrade dependencies ([1d95c60](https://github.com/kiki-kanri/kikiutils-node-fs-extra/commit/1d95c60))
+- Upgrade dependencies ([1d95c60](https://github.com/kikiutils/node-fs-extra/commit/1d95c60))
 
 ### ❤️ Contributors
 
@@ -512,7 +512,7 @@
 
 ## v1.2.5
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.4...v1.2.5)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.2.4...v1.2.5)
 
 ### Commits
 
@@ -524,7 +524,7 @@
 
 ## v1.2.4
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.3...v1.2.4)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.2.3...v1.2.4)
 
 ### Commits
 
@@ -536,7 +536,7 @@
 
 ## v1.2.3
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.2...v1.2.3)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.2.2...v1.2.3)
 
 ### Commits
 
@@ -548,7 +548,7 @@
 
 ## v1.2.2
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.1...v1.2.2)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.2.1...v1.2.2)
 
 ### Commits
 
@@ -561,7 +561,7 @@
 
 ## v1.2.1
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.2.0...v1.2.1)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.2.0...v1.2.1)
 
 ### Commits
 
@@ -574,7 +574,7 @@
 
 ## v1.2.0
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.1.2...v1.2.0)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.1.2...v1.2.0)
 
 ### Commits
 
@@ -589,7 +589,7 @@
 
 ## v1.1.2
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.1.1...v1.1.2)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.1.1...v1.1.2)
 
 ### Commits
 
@@ -602,7 +602,7 @@
 
 ## v1.1.1
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.1.0...v1.1.1)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.1.0...v1.1.1)
 
 ### Commits
 
@@ -614,7 +614,7 @@
 
 ## v1.1.0
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.0.3...v1.1.0)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.0.3...v1.1.0)
 
 ### Commits
 
@@ -628,7 +628,7 @@
 
 ## v1.0.3
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.0.2...v1.0.3)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.0.2...v1.0.3)
 
 ### Commits
 
@@ -642,7 +642,7 @@
 
 ## v1.0.2
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.0.1...v1.0.2)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.0.1...v1.0.2)
 
 ### Commits
 
@@ -654,7 +654,7 @@
 
 ## v1.0.1
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/v1.0.0...v1.0.1)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v1.0.0...v1.0.1)
 
 ### Commits
 
@@ -666,7 +666,7 @@
 
 ## v1.0.0
 
-[compare changes](https://github.com/kiki-kanri/kikiutils-node-fs-extra/compare/cf438595502ad0f54e859100d984b772535ebc2b...v1.0.0)
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/cf438595502ad0f54e859100d984b772535ebc2b...v1.0.0)
 
 ### Commits
 

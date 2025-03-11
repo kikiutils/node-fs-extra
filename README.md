@@ -107,4 +107,4 @@ The following functions do not need to be wrapped with try-catch. If you need to
 [npm-downloads-href]: https://npmjs.com/package/@kikiutils/fs-extra
 
 [license-src]: https://img.shields.io/npm/l/@kikiutils/fs-extra.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://github.com/kiki-kanri/kikiutils-node-fs-extra/blob/main/LICENSE
+[license-href]: https://github.com/kikiutils/node-fs-extra/blob/main/LICENSE

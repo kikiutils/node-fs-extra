@@ -1,5 +1,19 @@
 # Changelog
 
+## v3.0.1
+
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v3.0.0...v3.0.1)
+
+### 🏡 Chore
+
+- Upgrade dependencies ([0004969](https://github.com/kikiutils/node-fs-extra/commit/0004969))
+- Update repository URL ([4900206](https://github.com/kikiutils/node-fs-extra/commit/4900206))
+- Set hideAuthorEmail arg in changelog command ([5a2416a](https://github.com/kikiutils/node-fs-extra/commit/5a2416a))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v3.0.0
 
 [compare changes](https://github.com/kikiutils/node-fs-extra/compare/v2.3.11...v3.0.0)

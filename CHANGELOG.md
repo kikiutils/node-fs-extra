@@ -1,5 +1,22 @@
 # Changelog
 
+## v3.0.2
+
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v3.0.1...v3.0.2)
+
+### 💅 Refactors
+
+- Remove some `try-catch` blocks and use `promise.catch` for error handling ([2752b93](https://github.com/kikiutils/node-fs-extra/commit/2752b93))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([03c4049](https://github.com/kikiutils/node-fs-extra/commit/03c4049))
+- Format and lint codes ([ae39c3d](https://github.com/kikiutils/node-fs-extra/commit/ae39c3d))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v3.0.1
 
 [compare changes](https://github.com/kikiutils/node-fs-extra/compare/v3.0.0...v3.0.1)

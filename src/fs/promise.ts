@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import type { PathLike } from 'node:fs';
 import fsp from 'node:fs/promises';
 
+import { noop } from '../_internals';
 import {
     pTB,
     pTD,
@@ -178,154 +179,132 @@ export async function mkdir(path: PathLike, options?: any) {
 /**
  * @see {@link fsp.readdir}
  */
-export async function readdir(path: PathLike, options?: BufferEncoding | (fs.ObjectEncodingOptions & { recursive?: boolean; withFileTypes?: false }) | null): Promise<string[] | undefined>;
+export function readdir(path: PathLike, options?: BufferEncoding | (fs.ObjectEncodingOptions & { recursive?: boolean; withFileTypes?: false }) | null): Promise<string[] | undefined>;
 // @ts-expect-error Ignore this error.
-export async function readdir(path: PathLike, options: 'buffer' | { encoding: 'buffer'; recursive?: boolean; withFileTypes?: false }): Promise<Buffer[] | undefined>;
-export async function readdir(path: PathLike, options?: BufferEncoding | (fs.ObjectEncodingOptions & { recursive?: boolean; withFileTypes?: false }) | null): Promise<Buffer[] | string[] | undefined>;
-export async function readdir(path: PathLike, options: fs.ObjectEncodingOptions & { recursive?: boolean; withFileTypes: true }): Promise<fs.Dirent[] | undefined>;
-export async function readdir(path: PathLike, options?: any) {
+export function readdir(path: PathLike, options: 'buffer' | { encoding: 'buffer'; recursive?: boolean; withFileTypes?: false }): Promise<Buffer[] | undefined>;
+export function readdir(path: PathLike, options?: BufferEncoding | (fs.ObjectEncodingOptions & { recursive?: boolean; withFileTypes?: false }) | null): Promise<Buffer[] | string[] | undefined>;
+export function readdir(path: PathLike, options: fs.ObjectEncodingOptions & { recursive?: boolean; withFileTypes: true }): Promise<fs.Dirent[] | undefined>;
+export function readdir(path: PathLike, options?: any) {
     if (!fsp.readdir) throw toWrapFunctionIsUndefinedError;
-    try {
-        return await fsp.readdir(path, options);
-    } catch {}
+    return fsp.readdir(path, options).catch(noop);
 }
 
 /**
  * @see {@link fsp.readlink}
  */
-export async function readlink(path: PathLike, options?: BufferEncoding | fs.ObjectEncodingOptions | null): Promise<string | undefined>;
+export function readlink(path: PathLike, options?: BufferEncoding | fs.ObjectEncodingOptions | null): Promise<string | undefined>;
 // @ts-expect-error Ignore this error.
-export async function readlink(path: PathLike, options: fs.BufferEncodingOption): Promise<Buffer | undefined>;
-export async function readlink(path: PathLike, options?: fs.ObjectEncodingOptions | null | string): Promise<Buffer | string | undefined>;
-export async function readlink(path: PathLike, options?: any) {
+export function readlink(path: PathLike, options: fs.BufferEncodingOption): Promise<Buffer | undefined>;
+export function readlink(path: PathLike, options?: fs.ObjectEncodingOptions | null | string): Promise<Buffer | string | undefined>;
+export function readlink(path: PathLike, options?: any) {
     if (!readlink) throw toWrapFunctionIsUndefinedError;
-    try {
-        return await fsp.readlink(path, options);
-    } catch {}
+    return fsp.readlink(path, options).catch(noop);
 }
 
 /**
  * @see {@link fsp.lstat}
  */
-export async function lstat(path: PathLike, opts?: fs.StatOptions & { bigint?: false }): Promise<fs.Stats | undefined>;
+export function lstat(path: PathLike, opts?: fs.StatOptions & { bigint?: false }): Promise<fs.Stats | undefined>;
 // @ts-expect-error Ignore this error.
-export async function lstat(path: PathLike, opts: fs.StatOptions & { bigint: true }): Promise<fs.BigIntStats | undefined>;
-export async function lstat(path: PathLike, opts?: fs.StatOptions): Promise<fs.BigIntStats | fs.Stats | undefined>;
-export async function lstat(path: PathLike, opts?: any) {
+export function lstat(path: PathLike, opts: fs.StatOptions & { bigint: true }): Promise<fs.BigIntStats | undefined>;
+export function lstat(path: PathLike, opts?: fs.StatOptions): Promise<fs.BigIntStats | fs.Stats | undefined>;
+export function lstat(path: PathLike, opts?: any) {
     if (!fsp.lstat) throw toWrapFunctionIsUndefinedError;
-    try {
-        return await fsp.lstat(path, opts);
-    } catch {}
+    return fsp.lstat(path, opts).catch(noop);
 }
 
 /**
  * @see {@link fsp.stat}
  */
-export async function stat(path: PathLike, opts?: fs.StatOptions & { bigint?: false }): Promise<fs.Stats | undefined>;
+export function stat(path: PathLike, opts?: fs.StatOptions & { bigint?: false }): Promise<fs.Stats | undefined>;
 // @ts-expect-error Ignore this error.
-export async function stat(path: PathLike, opts: fs.StatOptions & { bigint: true }): Promise<fs.BigIntStats | undefined>;
-export async function stat(path: PathLike, opts?: fs.StatOptions): Promise<fs.BigIntStats | fs.Stats | undefined>;
-export async function stat(path: PathLike, opts?: any) {
+export function stat(path: PathLike, opts: fs.StatOptions & { bigint: true }): Promise<fs.BigIntStats | undefined>;
+export function stat(path: PathLike, opts?: fs.StatOptions): Promise<fs.BigIntStats | fs.Stats | undefined>;
+export function stat(path: PathLike, opts?: any) {
     if (!fsp.stat) throw toWrapFunctionIsUndefinedError;
-    try {
-        return await fsp.stat(path, opts);
-    } catch {}
+    return fsp.stat(path, opts).catch(noop);
 }
 
 /**
  * @see {@link fsp.statfs}
  */
-export async function statfs(path: PathLike, opts?: fs.StatFsOptions & { bigint?: false }): Promise<fs.StatsFs | undefined>;
+export function statfs(path: PathLike, opts?: fs.StatFsOptions & { bigint?: false }): Promise<fs.StatsFs | undefined>;
 // @ts-expect-error Ignore this error.
-export async function statfs(path: PathLike, opts: fs.StatFsOptions & { bigint: true }): Promise<fs.BigIntStatsFs | undefined>;
-export async function statfs(path: PathLike, opts?: fs.StatFsOptions): Promise<fs.BigIntStatsFs | fs.StatsFs | undefined>;
-export async function statfs(path: PathLike, opts?: any) {
+export function statfs(path: PathLike, opts: fs.StatFsOptions & { bigint: true }): Promise<fs.BigIntStatsFs | undefined>;
+export function statfs(path: PathLike, opts?: fs.StatFsOptions): Promise<fs.BigIntStatsFs | fs.StatsFs | undefined>;
+export function statfs(path: PathLike, opts?: any) {
     if (!fsp.statfs) throw toWrapFunctionIsUndefinedError;
-    try {
-        return await fsp.statfs(path, opts);
-    } catch {}
+    return fsp.statfs(path, opts).catch(noop);
 }
 
 /**
  * @see {@link fsp.realpath}
  */
-export async function realpath(path: PathLike, options?: BufferEncoding | fs.ObjectEncodingOptions | null): Promise<string | undefined>;
+export function realpath(path: PathLike, options?: BufferEncoding | fs.ObjectEncodingOptions | null): Promise<string | undefined>;
 // @ts-expect-error Ignore this error.
-export async function realpath(path: PathLike, options: fs.BufferEncodingOption): Promise<Buffer | undefined>;
-export async function realpath(path: PathLike, options?: BufferEncoding | fs.ObjectEncodingOptions | null): Promise<Buffer | string | undefined>;
-export async function realpath(path: PathLike, options?: any) {
+export function realpath(path: PathLike, options: fs.BufferEncodingOption): Promise<Buffer | undefined>;
+export function realpath(path: PathLike, options?: BufferEncoding | fs.ObjectEncodingOptions | null): Promise<Buffer | string | undefined>;
+export function realpath(path: PathLike, options?: any) {
     if (!fsp.realpath) throw toWrapFunctionIsUndefinedError;
-    try {
-        return await fsp.realpath(path, options);
-    } catch {}
+    return fsp.realpath(path, options).catch(noop);
 }
 
 /**
  * @see {@link fsp.mkdtemp}
  */
-export async function mkdtemp(prefix: string, options?: BufferEncoding | fs.ObjectEncodingOptions | null): Promise<string | undefined>;
+export function mkdtemp(prefix: string, options?: BufferEncoding | fs.ObjectEncodingOptions | null): Promise<string | undefined>;
 // @ts-expect-error Ignore this error.
-export async function mkdtemp(prefix: string, options: fs.BufferEncodingOption): Promise<Buffer | undefined>;
-export async function mkdtemp(prefix: string, options?: BufferEncoding | fs.ObjectEncodingOptions | null): Promise<Buffer | string | undefined>;
-export async function mkdtemp(prefix: string, options?: any) {
+export function mkdtemp(prefix: string, options: fs.BufferEncodingOption): Promise<Buffer | undefined>;
+export function mkdtemp(prefix: string, options?: BufferEncoding | fs.ObjectEncodingOptions | null): Promise<Buffer | string | undefined>;
+export function mkdtemp(prefix: string, options?: any) {
     if (!fsp.mkdtemp) throw toWrapFunctionIsUndefinedError;
-    try {
-        return await fsp.mkdtemp(prefix, options);
-    } catch {}
+    return fsp.mkdtemp(prefix, options).catch(noop);
 }
 
 /**
  * @see {@link fsp.readFile}
  */
-export async function readFile(path: fsp.FileHandle | PathLike, options?: (Abortable & { encoding?: null; flag?: fs.OpenMode }) | null): Promise<Buffer | undefined>;
+export function readFile(path: fsp.FileHandle | PathLike, options?: (Abortable & { encoding?: null; flag?: fs.OpenMode }) | null): Promise<Buffer | undefined>;
 // @ts-expect-error Ignore this error.
-export async function readFile(path: fsp.FileHandle | PathLike, options: (Abortable & { encoding: BufferEncoding; flag?: fs.OpenMode }) | BufferEncoding): Promise<string | undefined>;
-export async function readFile(path: fsp.FileHandle | PathLike, options?: (Abortable & fs.ObjectEncodingOptions & { flag?: fs.OpenMode }) | BufferEncoding | null): Promise<Buffer | string | undefined>;
-export async function readFile(path: fsp.FileHandle | PathLike, options?: any) {
+export function readFile(path: fsp.FileHandle | PathLike, options: (Abortable & { encoding: BufferEncoding; flag?: fs.OpenMode }) | BufferEncoding): Promise<string | undefined>;
+export function readFile(path: fsp.FileHandle | PathLike, options?: (Abortable & fs.ObjectEncodingOptions & { flag?: fs.OpenMode }) | BufferEncoding | null): Promise<Buffer | string | undefined>;
+export function readFile(path: fsp.FileHandle | PathLike, options?: any) {
     if (!fsp.readFile) throw toWrapFunctionIsUndefinedError;
-    try {
-        return await fsp.readFile(path, options);
-    } catch {}
+    return fsp.readFile(path, options).catch(noop);
 }
 
 /**
  * @see {@link fs.fstat.__promisify__}
  */
-export async function fstat(fd: number, options?: fs.StatOptions & { bigint?: false }): Promise<fs.Stats | undefined>;
+export function fstat(fd: number, options?: fs.StatOptions & { bigint?: false }): Promise<fs.Stats | undefined>;
 // @ts-expect-error Ignore this error.
-export async function fstat(fd: number, options: fs.StatOptions & { bigint: true }): Promise<fs.BigIntStats | undefined>;
-export async function fstat(fd: number, options?: fs.StatOptions): Promise<fs.BigIntStats | fs.Stats | undefined>;
-export async function fstat(fd: number, options?: any) {
+export function fstat(fd: number, options: fs.StatOptions & { bigint: true }): Promise<fs.BigIntStats | undefined>;
+export function fstat(fd: number, options?: fs.StatOptions): Promise<fs.BigIntStats | fs.Stats | undefined>;
+export function fstat(fd: number, options?: any) {
     if (!fs.fstat?.__promisify__) throw toWrapFunctionIsUndefinedError;
-    try {
-        return await fs.fstat.__promisify__(fd, options);
-    } catch {}
+    return fs.fstat.__promisify__(fd, options).catch(noop);
 }
 
 /**
  * @see {@link fs.write.__promisify__}
  */
-export async function write<TBuffer extends NodeJS.ArrayBufferView>(fd: number, buffer?: TBuffer, offset?: number, length?: number, position?: null | number): Promise<undefined | { buffer: TBuffer; bytesWritten: number }>;
+export function write<TBuffer extends NodeJS.ArrayBufferView>(fd: number, buffer?: TBuffer, offset?: number, length?: number, position?: null | number): Promise<undefined | { buffer: TBuffer; bytesWritten: number }>;
 // @ts-expect-error Ignore this error.
-export async function write(fd: number, string: string, position?: null | number, encoding?: BufferEncoding | null): Promise<undefined | { buffer: string; bytesWritten: number }>;
-export async function write(...args: any[]) {
+export function write(fd: number, string: string, position?: null | number, encoding?: BufferEncoding | null): Promise<undefined | { buffer: string; bytesWritten: number }>;
+export function write(...args: any[]) {
     if (!fs.write?.__promisify__) throw toWrapFunctionIsUndefinedError;
-    try {
-        // @ts-expect-error Ignore this error.
-        return await fs.write.__promisify__(...args);
-    } catch {}
+    // @ts-expect-error Ignore this error.
+    return fs.write.__promisify__(...args).catch(noop);
 }
 
 /**
  * @see {@link fs.read.__promisify__}
  */
-export async function read<TBuffer extends NodeJS.ArrayBufferView>(fd: number, buffer: TBuffer, offset: number, length: number, position: null | number): Promise<undefined | { buffer: TBuffer; bytesRead: number }>;
-export async function read<TBuffer extends NodeJS.ArrayBufferView>(fd: number, options: fs.ReadAsyncOptions<TBuffer>): Promise<undefined | { buffer: TBuffer; bytesRead: number }>;
-export async function read(fd: number): Promise<undefined | { buffer: NodeJS.ArrayBufferView; bytesRead: number }>;
-export async function read(...args: any[]) {
+export function read<TBuffer extends NodeJS.ArrayBufferView>(fd: number, buffer: TBuffer, offset: number, length: number, position: null | number): Promise<undefined | { buffer: TBuffer; bytesRead: number }>;
+export function read<TBuffer extends NodeJS.ArrayBufferView>(fd: number, options: fs.ReadAsyncOptions<TBuffer>): Promise<undefined | { buffer: TBuffer; bytesRead: number }>;
+export function read(fd: number): Promise<undefined | { buffer: NodeJS.ArrayBufferView; bytesRead: number }>;
+export function read(...args: any[]) {
     if (!fs.read?.__promisify__) throw toWrapFunctionIsUndefinedError;
-    try {
-        // @ts-expect-error Ignore this error.
-        return await fs.read.__promisify__(...args);
-    } catch {}
+    // @ts-expect-error Ignore this error.
+    return fs.read.__promisify__(...args).catch(noop);
 }

@@ -1,3 +1,5 @@
+import { noop } from './_internals';
+
 type AnyFunction<P extends any[], R> = (...args: P) => R;
 type AnyPromiseFunction<P extends any[], R> = (...args: P) => Promise<R>;
 
@@ -24,11 +26,7 @@ export function pTB<P extends any[], R>(toWrapFunction?: AnyPromiseFunction<P, R
 
 export function pTD<P extends any[], R>(toWrapFunction?: AnyPromiseFunction<P, R>) {
     if (!toWrapFunction) return throwToWrapFunctionIsUndefinedError;
-    return async (...args: P) => {
-        try {
-            return await toWrapFunction(...args);
-        } catch {}
-    };
+    return (...args: P) => toWrapFunction(...args).catch(noop);
 }
 
 export function tB<P extends any[], R>(toWrapFunction?: AnyFunction<P, R>) {

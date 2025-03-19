@@ -218,7 +218,10 @@ export function realpathSync(path: PathLike, options?: any) {
  * @see {@link fs.mkdirSync}
  */
 export function mkdirSync(path: PathLike, options: fs.MakeDirectoryOptions & { recursive: true }): string | undefined;
-export function mkdirSync(path: PathLike, options?: (fs.MakeDirectoryOptions & { recursive?: false }) | fs.Mode | null): boolean;
+export function mkdirSync(
+    path: PathLike,
+    options?: (fs.MakeDirectoryOptions & { recursive?: false }) | fs.Mode | null
+): boolean;
 export function mkdirSync(path: PathLike, options?: fs.MakeDirectoryOptions | fs.Mode | null): string | undefined;
 export function mkdirSync(path: PathLike, options?: any) {
     if (!fs.mkdirSync) throw toWrapFunctionIsUndefinedError;
@@ -248,11 +251,23 @@ export function mkdtempSync(prefix: string, options?: any) {
 /**
  * @see {@link fs.readdirSync}
  */
-export function readdirSync(path: PathLike, options?: BufferEncoding | null | { encoding: BufferEncoding | null; recursive?: boolean; withFileTypes?: false }): string[] | undefined;
+export function readdirSync(
+    path: PathLike,
+    options?: BufferEncoding | null | { encoding: BufferEncoding | null; recursive?: boolean; withFileTypes?: false }
+): string[] | undefined;
 // @ts-expect-error Ignore this error.
-export function readdirSync(path: PathLike, options: 'buffer' | { encoding: 'buffer'; recursive?: boolean; withFileTypes?: false }): Buffer[] | undefined;
-export function readdirSync(path: PathLike, options?: BufferEncoding | (fs.ObjectEncodingOptions & { recursive?: boolean; withFileTypes?: false }) | null): Buffer[] | string[] | undefined;
-export function readdirSync(path: PathLike, options: fs.ObjectEncodingOptions & { recursive?: boolean; withFileTypes: true }): fs.Dirent[] | undefined;
+export function readdirSync(
+    path: PathLike,
+    options: 'buffer' | { encoding: 'buffer'; recursive?: boolean; withFileTypes?: false }
+): Buffer[] | undefined;
+export function readdirSync(
+    path: PathLike,
+    options?: BufferEncoding | (fs.ObjectEncodingOptions & { recursive?: boolean; withFileTypes?: false }) | null
+): Buffer[] | string[] | undefined;
+export function readdirSync(
+    path: PathLike,
+    options: fs.ObjectEncodingOptions & { recursive?: boolean; withFileTypes: true }
+): fs.Dirent[] | undefined;
 export function readdirSync(path: PathLike, options?: any) {
     if (!fs.readdirSync) throw toWrapFunctionIsUndefinedError;
     try {
@@ -263,8 +278,18 @@ export function readdirSync(path: PathLike, options?: any) {
 /**
  * @see {@link fs.writeSync}
  */
-export function writeSync(fd: number, buffer: NodeJS.ArrayBufferView, offset?: null | number, length?: null | number, position?: null | number): number | undefined;
-export function writeSync(fd: number, string: string, position?: null | number, encoding?: BufferEncoding | null): number | undefined;
+export function writeSync(
+    fd: number,
+    buffer: NodeJS.ArrayBufferView,
+    offset?: null | number,
+    length?: null | number, position?: null | number
+): number | undefined;
+export function writeSync(
+    fd: number,
+    string: string,
+    position?: null | number,
+    encoding?: BufferEncoding | null
+): number | undefined;
 export function writeSync(...args: any[]) {
     if (!fs.writeSync) throw toWrapFunctionIsUndefinedError;
     try {
@@ -276,7 +301,13 @@ export function writeSync(...args: any[]) {
 /**
  * @see {@link fs.readSync}
  */
-export function readSync(fd: number, buffer: NodeJS.ArrayBufferView, offset: number, length: number, position: fs.ReadPosition | null): number | undefined;
+export function readSync(
+    fd: number,
+    buffer: NodeJS.ArrayBufferView,
+    offset: number,
+    length: number,
+    position: fs.ReadPosition | null
+): number | undefined;
 export function readSync(fd: number, buffer: NodeJS.ArrayBufferView, opts?: fs.ReadSyncOptions): number | undefined;
 export function readSync(...args: any[]) {
     if (!fs.readSync) throw toWrapFunctionIsUndefinedError;
@@ -289,10 +320,19 @@ export function readSync(...args: any[]) {
 /**
  * @see {@link fs.readFileSync}
  */
-export function readFileSync(path: fs.PathOrFileDescriptor, options?: null | { encoding?: null; flag?: string }): Buffer | undefined;
+export function readFileSync(
+    path: fs.PathOrFileDescriptor,
+    options?: null | { encoding?: null; flag?: string }
+): Buffer | undefined;
 // @ts-expect-error Ignore this error.
-export function readFileSync(path: fs.PathOrFileDescriptor, options: BufferEncoding | { encoding: BufferEncoding; flag?: string }): string | undefined;
-export function readFileSync(path: fs.PathOrFileDescriptor, options?: BufferEncoding | (fs.ObjectEncodingOptions & { flag?: string }) | null): Buffer | string | undefined;
+export function readFileSync(
+    path: fs.PathOrFileDescriptor,
+    options: BufferEncoding | { encoding: BufferEncoding; flag?: string }
+): string | undefined;
+export function readFileSync(
+    path: fs.PathOrFileDescriptor,
+    options?: BufferEncoding | (fs.ObjectEncodingOptions & { flag?: string }) | null
+): Buffer | string | undefined;
 export function readFileSync(path: fs.PathOrFileDescriptor, options?: any) {
     if (!fs.readFileSync) throw toWrapFunctionIsUndefinedError;
     try {

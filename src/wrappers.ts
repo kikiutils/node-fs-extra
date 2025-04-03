@@ -6,7 +6,7 @@ type AnyPromiseFunction<P extends any[], R> = (...args: P) => Promise<R>;
 export class ToWrapFunctionIsUndefinedError extends Error {
     constructor() {
         // eslint-disable-next-line style/max-len
-        super(`The funciton passed to the wrapper is not realized, please check if the Node.js/deno/bun version supports this function.`);
+        super(`The function passed to the wrapper is not realized, please check if the Node.js/deno/bun version supports this function.`);
         this.name = this.constructor.name;
         Error.captureStackTrace?.(this, this.constructor);
     }

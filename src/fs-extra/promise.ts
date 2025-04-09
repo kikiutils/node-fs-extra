@@ -1,3 +1,4 @@
+import type fse from 'fs-extra';
 import {
     copy as fseCopy,
     emptyDir as fseEmptyDir,
@@ -12,8 +13,7 @@ import {
     readJson as fseReadJson,
     remove as fseRemove,
     writeJson as fseWriteJson,
-} from 'fs-extra';
-import type fse from 'fs-extra';
+} from 'fs-extra/esm';
 
 import {
     pTB,

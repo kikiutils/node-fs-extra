@@ -1,3 +1,5 @@
+// eslint-disable-next-line unused-imports/no-unused-imports
+import type fse from 'fs-extra';
 import {
     copySync as fseCopySync,
     emptyDirSync as fseEmptyDirSync,
@@ -12,9 +14,7 @@ import {
     readJsonSync as fseReadJsonSync,
     removeSync as fseRemoveSync,
     writeJsonSync as fseWriteJsonSync,
-} from 'fs-extra';
-// eslint-disable-next-line unused-imports/no-unused-imports
-import type fse from 'fs-extra';
+} from 'fs-extra/esm';
 
 import {
     tB,

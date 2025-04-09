@@ -22,7 +22,6 @@ import {
     chown as fspChown,
     copyFile as fspCopyFile,
     cp as fspCp,
-    lchmod as fspLchmod,
     lchown as fspLchown,
     link as fspLink,
     lstat as fspLstat,
@@ -109,11 +108,6 @@ export const unlink = pTB(fspUnlink);
  * @see {@link fsp.chmod}
  */
 export const chmod = pTB(fspChmod);
-
-/**
- * @see {@link fsp.lchmod}
- */
-export const lchmod = pTB(fspLchmod);
 
 /**
  * @see {@link fsp.lchown}

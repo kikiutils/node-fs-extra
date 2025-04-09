@@ -14,7 +14,6 @@ import {
     fsyncSync as fsFsyncSync,
     ftruncateSync as fsFtruncateSync,
     futimesSync as fsFutimesSync,
-    lchmodSync as fsLchmodSync,
     lchownSync as fsLchownSync,
     linkSync as fsLinkSync,
     lutimesSync as fsLutimesSync,
@@ -105,13 +104,6 @@ export const chmodSync = tB(fsChmodSync);
  * @see {@link fs.fchmodSync}
  */
 export const fchmodSync = tB(fsFchmodSync);
-
-/**
- * @see {@link fs.lchmodSync}
- *
- * @deprecated
- */
-export const lchmodSync = tB(fsLchmodSync);
 
 /**
  * @see {@link fs.linkSync}

@@ -209,7 +209,10 @@ export function fstatSync(fd: number, options?: any) {
  */
 export function statfsSync(path: fs.PathLike, options?: fs.StatFsOptions & { bigint?: false }): fs.StatsFs | undefined;
 // @ts-expect-error Ignore this error.
-export function statfsSync(path: fs.PathLike, options: fs.StatFsOptions & { bigint: true }): fs.BigIntStatsFs | undefined;
+export function statfsSync(
+    path: fs.PathLike,
+    options: fs.StatFsOptions & { bigint: true }
+): fs.BigIntStatsFs | undefined;
 export function statfsSync(path: fs.PathLike, options?: fs.StatFsOptions): fs.BigIntStatsFs | fs.StatsFs | undefined;
 export function statfsSync(path: fs.PathLike, options?: any) {
     if (!fsStatfsSync) throw toWrapFunctionIsUndefinedError;
@@ -249,7 +252,10 @@ export function realpathSync(path: fs.PathLike, options?: any) {
 /**
  * @see {@link fs.mkdirSync}
  */
-export function mkdirSync(path: fs.PathLike, options: fs.MakeDirectoryOptions & { recursive: true }): string | undefined;
+export function mkdirSync(
+    path: fs.PathLike,
+    options: fs.MakeDirectoryOptions & { recursive: true }
+): string | undefined;
 export function mkdirSync(
     path: fs.PathLike,
     options?: (fs.MakeDirectoryOptions & { recursive?: false }) | fs.Mode | null

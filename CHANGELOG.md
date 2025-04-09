@@ -1,5 +1,22 @@
 # Changelog
 
+## v4.0.1
+
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v4.0.0...v4.0.1)
+
+### 💅 Refactors
+
+- Simplify `pTB` return function by using `then/catch` instead of `try/catch` ([1bf2766](https://github.com/kikiutils/node-fs-extra/commit/1bf2766))
+- Update type definition for `readJsonSync` ([7646e70](https://github.com/kikiutils/node-fs-extra/commit/7646e70))
+
+### 🏡 Chore
+
+- Set `sideEffects` to false in package.json ([94d667b](https://github.com/kikiutils/node-fs-extra/commit/94d667b))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v4.0.0
 
 [compare changes](https://github.com/kikiutils/node-fs-extra/compare/v3.0.2...v4.0.0)

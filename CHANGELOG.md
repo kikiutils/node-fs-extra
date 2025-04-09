@@ -1,5 +1,38 @@
 # Changelog
 
+## v4.0.0
+
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v3.0.2...v4.0.0)
+
+### 🩹 Fixes
+
+- Correct typo ([711dd67](https://github.com/kikiutils/node-fs-extra/commit/711dd67))
+
+### 💅 Refactors
+
+- ⚠️ Update imports and exports ([a8e1384](https://github.com/kikiutils/node-fs-extra/commit/a8e1384))
+- ⚠️ Remove deprecated features ([249d9d9](https://github.com/kikiutils/node-fs-extra/commit/249d9d9))
+
+### 📖 Documentation
+
+- Update readme ([b7ab36c](https://github.com/kikiutils/node-fs-extra/commit/b7ab36c))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([eff397d](https://github.com/kikiutils/node-fs-extra/commit/eff397d))
+- Upgrade dependencies ([3686e08](https://github.com/kikiutils/node-fs-extra/commit/3686e08))
+- Format code ([96b87cb](https://github.com/kikiutils/node-fs-extra/commit/96b87cb))
+- Modify `fs-extra` import path ([68e124b](https://github.com/kikiutils/node-fs-extra/commit/68e124b))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️ Update imports and exports ([a8e1384](https://github.com/kikiutils/node-fs-extra/commit/a8e1384))
+- ⚠️ Remove deprecated features ([249d9d9](https://github.com/kikiutils/node-fs-extra/commit/249d9d9))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v3.0.2
 
 [compare changes](https://github.com/kikiutils/node-fs-extra/compare/v3.0.1...v3.0.2)

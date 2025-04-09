@@ -16,13 +16,7 @@ export const toWrapFunctionIsUndefinedError = new ToWrapFunctionIsUndefinedError
 
 export function pTB<P extends any[], R>(toWrapFunction?: AnyPromiseFunction<P, R>) {
     if (!toWrapFunction) return throwToWrapFunctionIsUndefinedError;
-    return async (...args: P) => {
-        try {
-            await toWrapFunction(...args);
-            return true;
-        } catch {}
-        return false;
-    };
+    return (...args: P) => toWrapFunction(...args).then(() => true).catch(() => false);
 }
 
 export function pTD<P extends any[], R>(toWrapFunction?: AnyPromiseFunction<P, R>) {

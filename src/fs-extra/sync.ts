@@ -101,7 +101,7 @@ export const mkdirpSync = ensureDirSync;
 /**
  * @see {@link fse.readJsonSync}
  */
-export const readJsonSync = tD(<T = any>(...args: FseParameters['readJsonSync']) => fseReadJsonSync(...args) as T);
+export const readJsonSync = tD(<T = any>(...args: FseParameters['readJsonSync']): T => fseReadJsonSync(...args));
 
 /**
  * @see {@link fse.writeJsonSync}

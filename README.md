@@ -46,9 +46,12 @@ Functions that originally return data now return the data on success and `undefi
 > If the function you are executing does not have a corresponding feature in the runtime, it will throw a `ToWrapFunctionIsUndefinedError` error.
 
 ```typescript
-import kFse, { rename } from '@kikiutils/fs-extra';
+import {
+    readJson,
+    rename
+} from '@kikiutils/fs-extra';
 
-const data = await kFse.readJson(path);
+const data = await readJson(path);
 // Any json data - successfully read
 // undefined - an error occurred
 

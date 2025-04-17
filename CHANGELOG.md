@@ -1,5 +1,21 @@
 # Changelog
 
+## v4.0.2
+
+[compare changes](https://github.com/kikiutils/node-fs-extra/compare/v4.0.1...v4.0.2)
+
+### 🩹 Fixes
+
+- Import types using `* as` to avoid types becoming any when `allowSyntheticDefaultImports` is false ([02ae1c3](https://github.com/kikiutils/node-fs-extra/commit/02ae1c3))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([9510d15](https://github.com/kikiutils/node-fs-extra/commit/9510d15))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v4.0.1
 
 [compare changes](https://github.com/kikiutils/node-fs-extra/compare/v4.0.0...v4.0.1)

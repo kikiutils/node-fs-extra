@@ -40,7 +40,7 @@ import {
     writeSync as fsWriteSync,
     writevSync as fsWritevSync,
 } from 'node:fs';
-import type fs from 'node:fs';
+import type * as fs from 'node:fs';
 
 import {
     tB,

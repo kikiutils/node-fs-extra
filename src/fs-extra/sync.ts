@@ -1,5 +1,5 @@
 // eslint-disable-next-line unused-imports/no-unused-imports
-import type fse from 'fs-extra';
+import type * as fse from 'fs-extra';
 import {
     copySync as fseCopySync,
     emptyDirSync as fseEmptyDirSync,

@@ -1,4 +1,4 @@
-import type fse from 'fs-extra';
+import type * as fse from 'fs-extra';
 
 type FunctionName =
   | 'ensureDir'

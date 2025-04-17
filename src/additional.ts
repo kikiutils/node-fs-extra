@@ -7,7 +7,7 @@ import type {
     StatOptions,
     StatSyncOptions,
 } from 'node:fs';
-import type fsp from 'node:fs/promises';
+import type * as fsp from 'node:fs/promises';
 
 import {
     readFile,

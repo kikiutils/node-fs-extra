@@ -14,7 +14,7 @@ import {
     write as fsWrite,
     writev as fsWritev,
 } from 'node:fs';
-import type fs from 'node:fs';
+import type * as fs from 'node:fs';
 import {
     access as fspAccess,
     appendFile as fspAppendFile,
@@ -45,7 +45,7 @@ import {
     utimes as fspUtimes,
     writeFile as fspWriteFile,
 } from 'node:fs/promises';
-import type fsp from 'node:fs/promises';
+import type * as fsp from 'node:fs/promises';
 
 import { noop } from '../_internals';
 import {
